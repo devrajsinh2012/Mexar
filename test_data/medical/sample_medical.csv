@@ -1,0 +1,36 @@
+id,symptom,disease,treatment,medication,dosage,notes
+1,fever,common cold,rest and fluids,acetaminophen,500mg every 6 hours,avoid aspirin in children
+2,headache,migraine,pain relief and rest,ibuprofen,400mg as needed,do not exceed 1200mg daily
+3,cough,bronchitis,cough suppressants,dextromethorphan,30mg every 6-8 hours,avoid in children under 4
+4,sore throat,strep throat,antibiotics,amoxicillin,500mg three times daily,complete full course
+5,runny nose,allergic rhinitis,antihistamines,cetirizine,10mg once daily,may cause drowsiness
+6,chest pain,angina,nitroglycerin,nitroglycerin,0.4mg sublingual,seek emergency care if persists
+7,shortness of breath,asthma,bronchodilators,albuterol,2 puffs every 4-6 hours,use spacer device
+8,fatigue,anemia,iron supplementation,ferrous sulfate,325mg daily,take with vitamin C
+9,joint pain,arthritis,anti-inflammatory drugs,naproxen,250mg twice daily,take with food
+10,stomach pain,gastritis,antacids,omeprazole,20mg before breakfast,avoid spicy foods
+11,nausea,food poisoning,fluids and rest,ondansetron,4mg as needed,stay hydrated
+12,dizziness,vertigo,vestibular rehabilitation,meclizine,25mg three times daily,avoid sudden movements
+13,skin rash,eczema,topical steroids,hydrocortisone cream,apply twice daily,avoid scratching
+14,back pain,muscle strain,physical therapy,muscle relaxants,rest and gentle stretching,apply ice/heat
+15,insomnia,sleep disorder,sleep hygiene,melatonin,3mg before bedtime,avoid screens before bed
+16,anxiety,generalized anxiety,therapy and medication,sertraline,50mg daily,takes 2-4 weeks to work
+17,depression,major depression,antidepressants,fluoxetine,20mg daily,do not stop suddenly
+18,high blood pressure,hypertension,lifestyle changes,lisinopril,10mg daily,monitor regularly
+19,high cholesterol,hyperlipidemia,statins,atorvastatin,20mg daily,take in evening
+20,diabetes type 2,diabetes mellitus,blood sugar control,metformin,500mg twice daily,monitor glucose
+21,urinary tract infection,UTI,antibiotics,ciprofloxacin,500mg twice daily for 7 days,drink plenty of water
+22,ear infection,otitis media,antibiotics,amoxicillin-clavulanate,875mg twice daily,complete full course
+23,pink eye,conjunctivitis,antibiotic drops,erythromycin ointment,apply 4 times daily,avoid touching eyes
+24,sinusitis,sinus infection,decongestants,pseudoephedrine,60mg every 4-6 hours,avoid in high blood pressure
+25,pneumonia,lung infection,antibiotics,azithromycin,500mg day 1 then 250mg days 2-5,rest important
+26,bronchitis,bronchial inflammation,rest and fluids,guaifenesin,400mg every 4 hours,increases mucus clearance
+27,heartburn,GERD,proton pump inhibitors,esomeprazole,40mg daily,take before meals
+28,constipation,bowel irregularity,fiber supplements,psyllium husk,1 tablespoon daily,increase water intake
+29,diarrhea,gastroenteritis,oral rehydration,loperamide,2mg after each loose stool,max 8mg daily
+30,muscle cramps,electrolyte imbalance,electrolyte replacement,potassium supplement,20mEq daily,eat bananas
+31,cold sores,herpes simplex,antiviral medication,acyclovir,400mg three times daily,start at first symptom
+32,yeast infection,candidiasis,antifungal medication,fluconazole,150mg single dose,may repeat in 3 days
+33,athletes foot,tinea pedis,antifungal cream,clotrimazole,apply twice daily for 4 weeks,keep feet dry
+34,poison ivy,contact dermatitis,topical steroids,prednisone,60mg tapering dose,avoid scratching
+35,sunburn,UV radiation damage,aloe vera and cooling,ibuprofen,400mg as needed,stay hydrated

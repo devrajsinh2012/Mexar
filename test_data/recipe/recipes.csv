@@ -1,0 +1,31 @@
+recipe_id,recipe_name,cuisine,difficulty,prep_time_min,cook_time_min,total_time_min,servings,meal_type,calories_per_serving,protein_g,carbs_g,fat_g,fiber_g,main_ingredient,cooking_method,dietary_tags,spice_level,cost_estimate,popularity_rating
+IT_001,Classic Margherita Pizza,Italian,Medium,30,15,45,4,Main Course,520,18,72,16,3,Flour,Baking,Vegetarian,Mild,$12,4.8
+IT_002,Fettuccine Alfredo,Italian,Easy,10,20,30,4,Main Course,720,22,68,42,3,Pasta,Stovetop,Vegetarian,None,$10,4.6
+IT_003,Spaghetti Carbonara,Italian,Medium,10,20,30,4,Main Course,620,28,68,24,3,Pasta,Stovetop,None,None,$14,4.9
+IT_004,Lasagna Bolognese,Italian,Hard,45,60,105,8,Main Course,580,32,48,28,4,Pasta,Baking,None,Mild,$22,4.7
+IN_001,Butter Chicken,Indian,Medium,30,40,70,6,Main Course,420,32,18,26,3,Chicken,Stovetop,Gluten-free,Medium,$18,4.9
+IN_002,Palak Paneer,Indian,Easy,15,25,40,4,Main Course,320,16,14,23,4,Spinach,Stovetop,Vegetarian|Gluten-free,Mild,$12,4.5
+IN_003,Vegetable Biryani,Indian,Medium,30,45,75,6,Main Course,380,9,62,11,5,Rice,Stovetop,Vegetarian|Vegan option,Medium,$15,4.6
+IN_004,Chicken Tikka Masala,Indian,Medium,30,35,65,6,Main Course,450,34,22,28,4,Chicken,Stovetop,Gluten-free,Medium,$19,4.8
+MEX_001,Chicken Tacos,Mexican,Easy,20,25,45,4,Main Course,450,32,38,18,6,Chicken,Stovetop,Gluten-free option,Medium,$14,4.7
+MEX_002,Beef Enchiladas,Mexican,Medium,25,30,55,6,Main Course,520,28,42,26,5,Beef,Baking,None,Medium,$16,4.6
+MEX_003,Guacamole,Mexican,Easy,10,0,10,6,Appetizer,180,2,12,15,7,Avocado,No cooking,Vegetarian|Vegan|Gluten-free,Mild,$8,4.8
+TH_001,Pad Thai,Thai,Medium,25,15,40,4,Main Course,480,28,52,16,3,Rice Noodles,Stir-fry,Gluten-free option,Mild,$15,4.9
+TH_002,Green Curry,Thai,Medium,20,25,45,4,Main Course,420,24,18,28,4,Coconut Milk,Stovetop,Gluten-free,Spicy,$16,4.7
+TH_003,Tom Yum Soup,Thai,Easy,15,20,35,4,Soup,120,12,8,4,2,Shrimp,Stovetop,Gluten-free,Spicy,$12,4.6
+CHN_001,Kung Pao Chicken,Chinese,Medium,20,15,35,4,Main Course,380,32,28,16,3,Chicken,Stir-fry,None,Spicy,$14,4.7
+CHN_002,Fried Rice,Chinese,Easy,15,10,25,4,Main Course,420,12,58,14,2,Rice,Stir-fry,None,Mild,$8,4.5
+CHN_003,Sweet and Sour Pork,Chinese,Medium,25,20,45,4,Main Course,520,26,54,22,3,Pork,Stir-fry,None,Mild,$15,4.6
+USA_001,Classic Beef Burger,American,Easy,15,10,25,4,Main Course,580,35,32,32,2,Beef,Grilling,None,Mild,$16,4.8
+USA_002,BBQ Ribs,American,Medium,20,120,140,6,Main Course,680,42,28,42,1,Pork Ribs,Grilling,None,Mild,$24,4.9
+USA_003,Mac and Cheese,American,Easy,10,25,35,6,Main Course,520,18,52,26,2,Pasta,Stovetop,Vegetarian,None,$10,4.7
+FR_001,Coq au Vin,French,Hard,30,90,120,6,Main Course,480,38,12,28,3,Chicken,Braising,None,Mild,$22,4.8
+FR_002,Ratatouille,French,Medium,25,40,65,6,Side Dish,140,3,18,7,6,Vegetables,Stovetop,Vegetarian|Vegan|Gluten-free,Mild,$12,4.5
+JPN_001,Chicken Teriyaki,Japanese,Easy,15,20,35,4,Main Course,380,32,38,10,2,Chicken,Stovetop,None,Mild,$14,4.7
+JPN_002,Miso Soup,Japanese,Easy,5,10,15,4,Soup,80,6,8,3,2,Tofu,Stovetop,Vegetarian|Vegan,Mild,$6,4.6
+JPN_003,Sushi Rolls,Japanese,Hard,45,0,45,4,Main Course,320,18,48,6,3,Rice,No cooking,None,Mild,$20,4.9
+DESS_001,Chocolate Chip Cookies,American,Easy,15,12,27,24,Dessert,180,2,24,9,1,Flour,Baking,Vegetarian,None,$8,4.9
+DESS_002,Tiramisu,Italian,Medium,30,0,30,8,Dessert,420,8,42,24,1,Mascarpone,No cooking,Vegetarian,None,$18,4.8
+DESS_003,Crème Brûlée,French,Hard,20,45,65,6,Dessert,380,6,32,26,0,Cream,Baking,Vegetarian|Gluten-free,None,$15,4.7
+DESS_004,Mango Sticky Rice,Thai,Easy,10,25,35,4,Dessert,320,4,58,8,2,Rice,Stovetop,Vegetarian|Vegan option|Gluten-free,None,$10,4.6
+DESS_005,Churros,Spanish,Medium,20,15,35,6,Dessert,280,4,36,14,2,Flour,Deep-frying,Vegetarian,None,$10,4.7

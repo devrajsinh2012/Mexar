@@ -1,0 +1,32 @@
+product_id,product_name,category,provider,annual_fee,interest_rate_apy,minimum_deposit,monthly_fee,fee_waiver_condition,fdic_insured,risk_level,best_for,key_feature_1,key_feature_2,key_feature_3,liquidity,tax_treatment,credit_score_required
+BANK_CHK_001,Chase Total Checking,Checking Account,Chase Bank,0,0.01,0,12,Direct deposit $500+ or balance $1500+,Yes,Very Low,Daily transactions,Unlimited transactions,16000+ ATMs,Mobile deposit,Very High,Taxable interest,None
+BANK_SAV_001,Marcus High-Yield Savings,Savings Account,Marcus by Goldman Sachs,0,4.50,0,0,No fee,Yes,Very Low,Emergency fund,High interest rate,No minimum balance,Online banking,High,Taxable interest,None
+BANK_SAV_002,Ally Online Savings,Savings Account,Ally Bank,0,4.35,0,0,No fee,Yes,Very Low,Emergency fund,Competitive rate,No fees,24/7 customer service,High,Taxable interest,None
+BANK_MMA_001,Capital One 360 Money Market,Money Market Account,Capital One,0,4.25,0,0,No fee,Yes,Very Low,Larger savings,Check writing,Debit card access,High interest,High,Taxable interest,None
+BANK_CD_001,Ally 12-Month CD,Certificate of Deposit,Ally Bank,0,5.00,0,0,No fee,Yes,Very Low,Guaranteed returns,Fixed rate,FDIC insured,Auto renewal option,Low,Taxable interest,None
+BANK_CD_002,Marcus 18-Month CD,Certificate of Deposit,Marcus by Goldman Sachs,0,5.15,500,0,No fee,Yes,Very Low,Medium-term savings,Higher rate,No penalty CD option,Online management,Very Low,Taxable interest,None
+CC_REWARD_001,Chase Sapphire Preferred,Travel Rewards Card,Chase,95,21.49-28.49,0,0,N/A,No,Medium,Travel rewards,2-3x points,60k signup bonus,Travel insurance,N/A,N/A,Good (690+)
+CC_REWARD_002,Capital One Venture,Travel Rewards Card,Capital One,95,19.99-29.99,0,0,N/A,No,Medium,Travel rewards,2x miles everywhere,75k signup bonus,No foreign fees,N/A,N/A,Good (690+)
+CC_CASH_001,Citi Double Cash,Cash Back Card,Citi,0,19.24-29.24,0,0,N/A,No,Medium,Simple cash back,2% on everything,0% BT for 18mo,No annual fee,N/A,N/A,Good (700+)
+CC_CASH_002,Chase Freedom Unlimited,Cash Back Card,Chase,0,20.49-29.24,0,0,N/A,No,Medium,Cash back,1.5% unlimited,5% on travel via Chase,3% dining/drugstore,N/A,N/A,Good (670+)
+CC_SECURED_001,Discover it Secured,Secured Credit Card,Discover,0,28.24,200,0,N/A,No,Low,Build credit,5% rotating categories,Cashback match year 1,Graduates to unsecured,N/A,N/A,Limited/Poor
+CC_STUDENT_001,Discover it Student,Student Credit Card,Discover,0,18.24-27.24,0,0,N/A,No,Low,Students,5% rotating categories,Good grade rewards,Cashback match year 1,N/A,N/A,Limited (Student)
+INV_ETF_001,SPDR S&P 500 ETF (SPY),Stock ETF,State Street,0,N/A,450,0,Expense ratio 0.09%,No,Medium,Core holding,Tracks S&P 500,High liquidity,1.5% dividend yield,Very High,Capital gains,None
+INV_ETF_002,Vanguard Total Stock (VTI),Stock ETF,Vanguard,0,N/A,250,0,Expense ratio 0.03%,No,Medium,Total market exposure,Entire US market,Low cost,Diversification,Very High,Capital gains,None
+INV_ETF_003,iShares Aggregate Bond (AGG),Bond ETF,BlackRock,0,4.20,100,0,Expense ratio 0.03%,No,Low,Stability,Investment-grade bonds,Income generation,Low volatility,High,Interest income,None
+INV_ETF_004,Vanguard Real Estate (VNQ),REIT ETF,Vanguard,0,4.20,90,0,Expense ratio 0.12%,No,Medium,Real estate exposure,REIT diversification,4.2% dividend yield,Inflation hedge,High,Dividend income,None
+INV_MF_001,Vanguard 500 Index (VFIAX),Index Mutual Fund,Vanguard,0,N/A,3000,0,Expense ratio 0.04%,No,Medium,S&P 500 tracking,Low cost,Passive investing,Long-term growth,Daily,Capital gains,None
+INV_MF_002,Fidelity Total Market (FSKAX),Index Mutual Fund,Fidelity,0,N/A,0,0,Expense ratio 0.015%,No,Medium,Total market,Entire US market,Ultra-low cost,No minimum,Daily,Capital gains,None
+RET_401K_TRAD,Traditional 401(k),Retirement Account,Employer-sponsored,0,Varies,0,0,N/A,No,Varies,Tax deduction now,Pre-tax contributions,$23500 limit 2026,Employer match,Low,Tax-deferred,None
+RET_401K_ROTH,Roth 401(k),Retirement Account,Employer-sponsored,0,Varies,0,0,N/A,No,Varies,Tax-free retirement,After-tax contributions,$23500 limit 2026,Tax-free withdrawals,Low,Tax-free growth,None
+RET_IRA_TRAD,Traditional IRA,Retirement Account,Self-directed,0,Varies,0,0,N/A,No,Varies,Tax deduction,Pre-tax contributions,$7000 limit 2026,Tax-deferred growth,Low,Tax-deferred,None
+RET_IRA_ROTH,Roth IRA,Retirement Account,Self-directed,0,Varies,0,0,N/A,No,Varies,Tax-free retirement,After-tax contributions,$7000 limit 2026,No RMDs,Low,Tax-free growth,None
+RET_HSA,Health Savings Account,Tax-advantaged Account,Self-directed,0,Varies,0,0,Requires HDHP,No,Low,Triple tax advantage,Medical expenses,$4150 limit individual,Tax-free medical withdrawals,Medium,Triple tax-free,None
+LOAN_MORT_001,30-Year Fixed Mortgage,Mortgage,Various lenders,0,6.75,0,0,N/A,No,Medium,Home purchase,Fixed rate,Predictable payments,Tax-deductible interest,Very Low,Interest deduction,Good (620+)
+LOAN_MORT_002,15-Year Fixed Mortgage,Mortgage,Various lenders,0,6.25,0,0,N/A,No,Medium,Faster payoff,Lower rate than 30yr,Build equity faster,Less total interest,Very Low,Interest deduction,Good (640+)
+LOAN_PERS_001,Personal Loan,Unsecured Loan,Various lenders,0,8.99-35.99,0,0,N/A,No,Medium,Debt consolidation,Fixed rate,Fixed term,No collateral,Medium,Not deductible,Fair (580+)
+LOAN_AUTO_001,Auto Loan,Secured Loan,Various lenders,0,5.50-12.00,0,0,N/A,No,Low,Vehicle purchase,Secured by vehicle,3-7 year terms,Lower rate than personal,Low,Not deductible,Fair (600+)
+LOAN_STUDENT_FED,Federal Student Loan,Student Loan,US Department of Education,0,5.50,0,0,N/A,No,Low,Education,Fixed rate,Income-driven repayment,Loan forgiveness options,Very Low,Interest may be deductible,None
+LOAN_STUDENT_PRIV,Private Student Loan,Student Loan,Various lenders,0,4.50-14.00,0,0,N/A,No,Medium,Education,Variable or fixed,Credit-based,Fewer protections than federal,Low,Interest may be deductible,Good (670+)
+INS_TERM_LIFE,Term Life Insurance,Insurance,Various insurers,Varies,N/A,0,Varies,N/A,No,Low,Income protection,Coverage for set term,Lower premiums,Death benefit only,N/A,Tax-free benefit,Medical exam
+INS_WHOLE_LIFE,Whole Life Insurance,Insurance,Various insurers,Varies,N/A,0,Varies,N/A,No,Low,Lifetime coverage,Cash value growth,Guaranteed premiums,Lifetime coverage,Low,Tax-deferred growth,Medical exam

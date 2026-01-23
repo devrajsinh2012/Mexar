@@ -1,0 +1,773 @@
+{
+    "recipe_database": {
+        "version": "1.0",
+        "last_updated": "2026-01-21",
+        "total_recipes": 12,
+        "cuisines": [
+            {
+                "cuisine_type": "Italian",
+                "recipes": [
+                    {
+                        "recipe_id": "IT_001",
+                        "name": "Classic Margherita Pizza",
+                        "description": "Traditional Neapolitan pizza with fresh mozzarella, tomatoes, and basil",
+                        "difficulty": "Medium",
+                        "prep_time_minutes": 30,
+                        "cook_time_minutes": 15,
+                        "total_time_minutes": 45,
+                        "servings": 4,
+                        "meal_type": "Main Course",
+                        "dietary_tags": [
+                            "Vegetarian"
+                        ],
+                        "ingredients": [
+                            {
+                                "category": "Dough",
+                                "items": [
+                                    {
+                                        "name": "All-purpose flour",
+                                        "amount": 500,
+                                        "unit": "g"
+                                    },
+                                    {
+                                        "name": "Warm water",
+                                        "amount": 325,
+                                        "unit": "ml"
+                                    },
+                                    {
+                                        "name": "Active dry yeast",
+                                        "amount": 7,
+                                        "unit": "g"
+                                    },
+                                    {
+                                        "name": "Salt",
+                                        "amount": 2,
+                                        "unit": "tsp"
+                                    },
+                                    {
+                                        "name": "Olive oil",
+                                        "amount": 1,
+                                        "unit": "tbsp"
+                                    },
+                                    {
+                                        "name": "Sugar",
+                                        "amount": 1,
+                                        "unit": "tsp"
+                                    }
+                                ]
+                            },
+                            {
+                                "category": "Sauce",
+                                "items": [
+                                    {
+                                        "name": "San Marzano tomatoes (crushed)",
+                                        "amount": 400,
+                                        "unit": "g"
+                                    },
+                                    {
+                                        "name": "Garlic cloves (minced)",
+                                        "amount": 2,
+                                        "unit": "pieces"
+                                    },
+                                    {
+                                        "name": "Olive oil",
+                                        "amount": 2,
+                                        "unit": "tbsp"
+                                    },
+                                    {
+                                        "name": "Dried oregano",
+                                        "amount": 1,
+                                        "unit": "tsp"
+                                    },
+                                    {
+                                        "name": "Salt and pepper",
+                                        "amount": 1,
+                                        "unit": "to taste"
+                                    }
+                                ]
+                            },
+                            {
+                                "category": "Toppings",
+                                "items": [
+                                    {
+                                        "name": "Fresh mozzarella cheese",
+                                        "amount": 250,
+                                        "unit": "g"
+                                    },
+                                    {
+                                        "name": "Fresh basil leaves",
+                                        "amount": 1,
+                                        "unit": "handful"
+                                    },
+                                    {
+                                        "name": "Extra virgin olive oil",
+                                        "amount": 1,
+                                        "unit": "for drizzling"
+                                    }
+                                ]
+                            }
+                        ],
+                        "instructions": [
+                            {
+                                "step": 1,
+                                "action": "Prepare dough",
+                                "description": "Mix warm water, yeast, and sugar. Let stand 5 minutes until foamy.",
+                                "time_minutes": 5
+                            },
+                            {
+                                "step": 2,
+                                "action": "Make dough",
+                                "description": "Combine flour and salt in large bowl. Add yeast mixture and olive oil. Knead for 10 minutes until smooth and elastic.",
+                                "time_minutes": 10
+                            },
+                            {
+                                "step": 3,
+                                "action": "First rise",
+                                "description": "Place dough in oiled bowl, cover, and let rise for 1-2 hours until doubled in size.",
+                                "time_minutes": 90
+                            },
+                            {
+                                "step": 4,
+                                "action": "Make sauce",
+                                "description": "Sauté garlic in olive oil, add crushed tomatoes, oregano, salt, and pepper. Simmer for 15 minutes.",
+                                "time_minutes": 15
+                            },
+                            {
+                                "step": 5,
+                                "action": "Preheat oven",
+                                "description": "Preheat oven to 475°F (245°C) with pizza stone if available.",
+                                "time_minutes": 15
+                            },
+                            {
+                                "step": 6,
+                                "action": "Shape pizza",
+                                "description": "Divide dough into 4 portions. Roll each into 10-inch circle.",
+                                "time_minutes": 10
+                            },
+                            {
+                                "step": 7,
+                                "action": "Assemble",
+                                "description": "Spread sauce, add torn mozzarella pieces.",
+                                "time_minutes": 5
+                            },
+                            {
+                                "step": 8,
+                                "action": "Bake",
+                                "description": "Bake for 12-15 minutes until crust is golden and cheese is bubbling.",
+                                "time_minutes": 15
+                            },
+                            {
+                                "step": 9,
+                                "action": "Finish",
+                                "description": "Top with fresh basil and drizzle with olive oil before serving.",
+                                "time_minutes": 2
+                            }
+                        ],
+                        "nutrition_per_serving": {
+                            "calories": 520,
+                            "protein_g": 18,
+                            "carbohydrates_g": 72,
+                            "fat_g": 16,
+                            "fiber_g": 3,
+                            "sodium_mg": 890,
+                            "sugar_g": 4,
+                            "cholesterol_mg": 35
+                        },
+                        "tips": [
+                            "Use a pizza stone for crispier crust",
+                            "Let dough come to room temperature before stretching",
+                            "Don't overload with toppings - less is more for authentic Neapolitan pizza"
+                        ],
+                        "equipment_needed": [
+                            "Large mixing bowl",
+                            "Rolling pin",
+                            "Pizza stone or baking sheet",
+                            "Skillet for sauce"
+                        ]
+                    },
+                    {
+                        "recipe_id": "IT_002",
+                        "name": "Spaghetti Carbonara",
+                        "description": "Creamy Roman pasta with eggs, cheese, and guanciale",
+                        "difficulty": "Medium",
+                        "prep_time_minutes": 10,
+                        "cook_time_minutes": 20,
+                        "total_time_minutes": 30,
+                        "servings": 4,
+                        "meal_type": "Main Course",
+                        "dietary_tags": [],
+                        "ingredients": [
+                            {
+                                "category": "Main",
+                                "items": [
+                                    {
+                                        "name": "Spaghetti",
+                                        "amount": 400,
+                                        "unit": "g"
+                                    },
+                                    {
+                                        "name": "Guanciale or pancetta",
+                                        "amount": 200,
+                                        "unit": "g"
+                                    },
+                                    {
+                                        "name": "Eggs",
+                                        "amount": 4,
+                                        "unit": "large"
+                                    },
+                                    {
+                                        "name": "Pecorino Romano cheese (grated)",
+                                        "amount": 100,
+                                        "unit": "g"
+                                    },
+                                    {
+                                        "name": "Black pepper (freshly ground)",
+                                        "amount": 2,
+                                        "unit": "tsp"
+                                    },
+                                    {
+                                        "name": "Salt",
+                                        "amount": 1,
+                                        "unit": "to taste"
+                                    }
+                                ]
+                            }
+                        ],
+                        "instructions": [
+                            {
+                                "step": 1,
+                                "action": "Prepare ingredients",
+                                "description": "Cut guanciale into small strips. Beat eggs with grated Pecorino and black pepper.",
+                                "time_minutes": 5
+                            },
+                            {
+                                "step": 2,
+                                "action": "Cook pasta",
+                                "description": "Boil spaghetti in salted water until al dente. Reserve 1 cup pasta water.",
+                                "time_minutes": 10
+                            },
+                            {
+                                "step": 3,
+                                "action": "Cook guanciale",
+                                "description": "In large skillet, cook guanciale over medium heat until crispy. Remove from heat.",
+                                "time_minutes": 8
+                            },
+                            {
+                                "step": 4,
+                                "action": "Combine",
+                                "description": "Add drained pasta to skillet with guanciale. Remove from heat. Quickly stir in egg mixture, tossing constantly. Add pasta water to achieve creamy consistency.",
+                                "time_minutes": 3
+                            },
+                            {
+                                "step": 5,
+                                "action": "Serve",
+                                "description": "Serve immediately with extra Pecorino and black pepper.",
+                                "time_minutes": 2
+                            }
+                        ],
+                        "nutrition_per_serving": {
+                            "calories": 620,
+                            "protein_g": 28,
+                            "carbohydrates_g": 68,
+                            "fat_g": 24,
+                            "fiber_g": 3,
+                            "sodium_mg": 780,
+                            "sugar_g": 2,
+                            "cholesterol_mg": 245
+                        },
+                        "tips": [
+                            "Remove pan from heat before adding eggs to prevent scrambling",
+                            "Use freshly grated Pecorino Romano for authentic flavor",
+                            "Work quickly when combining to create creamy sauce"
+                        ]
+                    }
+                ]
+            },
+            {
+                "cuisine_type": "Indian",
+                "recipes": [
+                    {
+                        "recipe_id": "IN_001",
+                        "name": "Butter Chicken",
+                        "description": "Creamy tomato-based curry with tender chicken pieces",
+                        "difficulty": "Medium",
+                        "prep_time_minutes": 30,
+                        "cook_time_minutes": 40,
+                        "total_time_minutes": 70,
+                        "servings": 6,
+                        "meal_type": "Main Course",
+                        "dietary_tags": [
+                            "Gluten-free"
+                        ],
+                        "marination_time_hours": 2,
+                        "ingredients": [
+                            {
+                                "category": "Marinade",
+                                "items": [
+                                    {
+                                        "name": "Boneless chicken thighs",
+                                        "amount": 1,
+                                        "unit": "kg"
+                                    },
+                                    {
+                                        "name": "Plain yogurt",
+                                        "amount": 1,
+                                        "unit": "cup"
+                                    },
+                                    {
+                                        "name": "Lemon juice",
+                                        "amount": 2,
+                                        "unit": "tbsp"
+                                    },
+                                    {
+                                        "name": "Garam masala",
+                                        "amount": 2,
+                                        "unit": "tsp"
+                                    },
+                                    {
+                                        "name": "Turmeric powder",
+                                        "amount": 1,
+                                        "unit": "tsp"
+                                    },
+                                    {
+                                        "name": "Red chili powder",
+                                        "amount": 1,
+                                        "unit": "tsp"
+                                    },
+                                    {
+                                        "name": "Salt",
+                                        "amount": 1,
+                                        "unit": "tsp"
+                                    }
+                                ]
+                            },
+                            {
+                                "category": "Sauce",
+                                "items": [
+                                    {
+                                        "name": "Butter",
+                                        "amount": 4,
+                                        "unit": "tbsp"
+                                    },
+                                    {
+                                        "name": "Onion (finely chopped)",
+                                        "amount": 1,
+                                        "unit": "large"
+                                    },
+                                    {
+                                        "name": "Garlic cloves (minced)",
+                                        "amount": 4,
+                                        "unit": "pieces"
+                                    },
+                                    {
+                                        "name": "Ginger (grated)",
+                                        "amount": 2,
+                                        "unit": "inch piece"
+                                    },
+                                    {
+                                        "name": "Garam masala",
+                                        "amount": 2,
+                                        "unit": "tsp"
+                                    },
+                                    {
+                                        "name": "Cumin powder",
+                                        "amount": 1,
+                                        "unit": "tsp"
+                                    },
+                                    {
+                                        "name": "Coriander powder",
+                                        "amount": 1,
+                                        "unit": "tsp"
+                                    },
+                                    {
+                                        "name": "Red chili powder",
+                                        "amount": 0.5,
+                                        "unit": "tsp"
+                                    },
+                                    {
+                                        "name": "Crushed tomatoes",
+                                        "amount": 400,
+                                        "unit": "g"
+                                    },
+                                    {
+                                        "name": "Heavy cream",
+                                        "amount": 1,
+                                        "unit": "cup"
+                                    },
+                                    {
+                                        "name": "Honey or sugar",
+                                        "amount": 2,
+                                        "unit": "tbsp"
+                                    },
+                                    {
+                                        "name": "Fresh cilantro",
+                                        "amount": 1,
+                                        "unit": "for garnish"
+                                    }
+                                ]
+                            }
+                        ],
+                        "instructions": [
+                            {
+                                "step": 1,
+                                "action": "Marinate",
+                                "description": "Combine chicken with yogurt, lemon juice, and spices. Marinate for at least 2 hours or overnight.",
+                                "time_minutes": 10
+                            },
+                            {
+                                "step": 2,
+                                "action": "Grill chicken",
+                                "description": "Grill or broil marinated chicken until slightly charred. Set aside.",
+                                "time_minutes": 15
+                            },
+                            {
+                                "step": 3,
+                                "action": "Cook base",
+                                "description": "Melt butter in large pan. Sauté onions until golden brown (8-10 minutes).",
+                                "time_minutes": 10
+                            },
+                            {
+                                "step": 4,
+                                "action": "Add aromatics",
+                                "description": "Add garlic and ginger, cook for 2 minutes. Add all ground spices, cook for 1 minute.",
+                                "time_minutes": 3
+                            },
+                            {
+                                "step": 5,
+                                "action": "Make sauce",
+                                "description": "Add crushed tomatoes, simmer for 15 minutes until sauce thickens. Blend until smooth.",
+                                "time_minutes": 15
+                            },
+                            {
+                                "step": 6,
+                                "action": "Finish",
+                                "description": "Return sauce to pan, add cream and honey. Add grilled chicken, simmer for 10 minutes.",
+                                "time_minutes": 10
+                            },
+                            {
+                                "step": 7,
+                                "action": "Serve",
+                                "description": "Garnish with cilantro. Serve with naan or basmati rice.",
+                                "time_minutes": 2
+                            }
+                        ],
+                        "nutrition_per_serving": {
+                            "calories": 420,
+                            "protein_g": 32,
+                            "carbohydrates_g": 18,
+                            "fat_g": 26,
+                            "fiber_g": 3,
+                            "sodium_mg": 680,
+                            "sugar_g": 12,
+                            "cholesterol_mg": 145
+                        },
+                        "spice_level": "Medium",
+                        "tips": [
+                            "Marinating overnight enhances flavor significantly",
+                            "Add kasuri methi (dried fenugreek leaves) for authentic taste",
+                            "Use bone-in chicken for more flavor"
+                        ],
+                        "serving_suggestions": [
+                            "Naan bread",
+                            "Basmati rice",
+                            "Cucumber raita",
+                            "Pickled onions"
+                        ]
+                    },
+                    {
+                        "recipe_id": "IN_002",
+                        "name": "Palak Paneer",
+                        "description": "Creamy spinach curry with Indian cottage cheese",
+                        "difficulty": "Easy",
+                        "prep_time_minutes": 15,
+                        "cook_time_minutes": 25,
+                        "total_time_minutes": 40,
+                        "servings": 4,
+                        "meal_type": "Main Course",
+                        "dietary_tags": [
+                            "Vegetarian",
+                            "Gluten-free"
+                        ],
+                        "ingredients": [
+                            {
+                                "category": "Main",
+                                "items": [
+                                    {
+                                        "name": "Fresh spinach",
+                                        "amount": 500,
+                                        "unit": "g"
+                                    },
+                                    {
+                                        "name": "Paneer (cubed)",
+                                        "amount": 250,
+                                        "unit": "g"
+                                    },
+                                    {
+                                        "name": "Onion (chopped)",
+                                        "amount": 1,
+                                        "unit": "large"
+                                    },
+                                    {
+                                        "name": "Tomatoes (chopped)",
+                                        "amount": 2,
+                                        "unit": "medium"
+                                    },
+                                    {
+                                        "name": "Ginger-garlic paste",
+                                        "amount": 1,
+                                        "unit": "tbsp"
+                                    },
+                                    {
+                                        "name": "Green chilies",
+                                        "amount": 2,
+                                        "unit": "pieces"
+                                    },
+                                    {
+                                        "name": "Cumin seeds",
+                                        "amount": 1,
+                                        "unit": "tsp"
+                                    },
+                                    {
+                                        "name": "Garam masala",
+                                        "amount": 1,
+                                        "unit": "tsp"
+                                    },
+                                    {
+                                        "name": "Turmeric powder",
+                                        "amount": 0.5,
+                                        "unit": "tsp"
+                                    },
+                                    {
+                                        "name": "Heavy cream",
+                                        "amount": 0.25,
+                                        "unit": "cup"
+                                    },
+                                    {
+                                        "name": "Oil or ghee",
+                                        "amount": 3,
+                                        "unit": "tbsp"
+                                    },
+                                    {
+                                        "name": "Salt",
+                                        "amount": 1,
+                                        "unit": "to taste"
+                                    }
+                                ]
+                            }
+                        ],
+                        "instructions": [
+                            {
+                                "step": 1,
+                                "action": "Blanch spinach",
+                                "description": "Boil spinach for 2 minutes, then plunge in ice water. Blend to smooth puree.",
+                                "time_minutes": 5
+                            },
+                            {
+                                "step": 2,
+                                "action": "Fry paneer",
+                                "description": "Lightly fry paneer cubes until golden. Set aside.",
+                                "time_minutes": 5
+                            },
+                            {
+                                "step": 3,
+                                "action": "Cook base",
+                                "description": "Heat oil, add cumin seeds. Sauté onions until golden. Add ginger-garlic paste and green chilies.",
+                                "time_minutes": 8
+                            },
+                            {
+                                "step": 4,
+                                "action": "Add tomatoes",
+                                "description": "Add tomatoes and spices. Cook until tomatoes are soft and oil separates.",
+                                "time_minutes": 7
+                            },
+                            {
+                                "step": 5,
+                                "action": "Combine",
+                                "description": "Add spinach puree, cook for 5 minutes. Add cream and paneer. Simmer for 3 minutes.",
+                                "time_minutes": 8
+                            },
+                            {
+                                "step": 6,
+                                "action": "Serve",
+                                "description": "Serve hot with roti or rice.",
+                                "time_minutes": 2
+                            }
+                        ],
+                        "nutrition_per_serving": {
+                            "calories": 320,
+                            "protein_g": 16,
+                            "carbohydrates_g": 14,
+                            "fat_g": 23,
+                            "fiber_g": 4,
+                            "sodium_mg": 420,
+                            "sugar_g": 6,
+                            "cholesterol_mg": 45
+                        },
+                        "spice_level": "Mild to Medium"
+                    }
+                ]
+            },
+            {
+                "cuisine_type": "Thai",
+                "recipes": [
+                    {
+                        "recipe_id": "TH_001",
+                        "name": "Pad Thai",
+                        "description": "Stir-fried rice noodles with shrimp, peanuts, and tamarind sauce",
+                        "difficulty": "Medium",
+                        "prep_time_minutes": 25,
+                        "cook_time_minutes": 15,
+                        "total_time_minutes": 40,
+                        "servings": 4,
+                        "meal_type": "Main Course",
+                        "dietary_tags": [
+                            "Gluten-free option"
+                        ],
+                        "ingredients": [
+                            {
+                                "category": "Main",
+                                "items": [
+                                    {
+                                        "name": "Rice noodles (pad thai noodles)",
+                                        "amount": 200,
+                                        "unit": "g"
+                                    },
+                                    {
+                                        "name": "Shrimp or chicken",
+                                        "amount": 300,
+                                        "unit": "g"
+                                    },
+                                    {
+                                        "name": "Vegetable oil",
+                                        "amount": 3,
+                                        "unit": "tbsp"
+                                    },
+                                    {
+                                        "name": "Garlic (minced)",
+                                        "amount": 3,
+                                        "unit": "cloves"
+                                    },
+                                    {
+                                        "name": "Eggs",
+                                        "amount": 2,
+                                        "unit": "large"
+                                    },
+                                    {
+                                        "name": "Bean sprouts",
+                                        "amount": 1,
+                                        "unit": "cup"
+                                    },
+                                    {
+                                        "name": "Green onions",
+                                        "amount": 3,
+                                        "unit": "stalks"
+                                    },
+                                    {
+                                        "name": "Roasted peanuts (crushed)",
+                                        "amount": 0.25,
+                                        "unit": "cup"
+                                    },
+                                    {
+                                        "name": "Lime wedges",
+                                        "amount": 1,
+                                        "unit": "for serving"
+                                    }
+                                ]
+                            },
+                            {
+                                "category": "Sauce",
+                                "items": [
+                                    {
+                                        "name": "Tamarind paste",
+                                        "amount": 3,
+                                        "unit": "tbsp"
+                                    },
+                                    {
+                                        "name": "Fish sauce",
+                                        "amount": 3,
+                                        "unit": "tbsp"
+                                    },
+                                    {
+                                        "name": "Brown sugar",
+                                        "amount": 2,
+                                        "unit": "tbsp"
+                                    },
+                                    {
+                                        "name": "Rice vinegar",
+                                        "amount": 1,
+                                        "unit": "tbsp"
+                                    },
+                                    {
+                                        "name": "Red chili flakes",
+                                        "amount": 0.5,
+                                        "unit": "tsp"
+                                    }
+                                ]
+                            }
+                        ],
+                        "instructions": [
+                            {
+                                "step": 1,
+                                "action": "Prepare noodles",
+                                "description": "Soak rice noodles in warm water for 30 minutes until softened. Drain.",
+                                "time_minutes": 30
+                            },
+                            {
+                                "step": 2,
+                                "action": "Make sauce",
+                                "description": "Mix all sauce ingredients in small bowl. Set aside.",
+                                "time_minutes": 3
+                            },
+                            {
+                                "step": 3,
+                                "action": "Cook protein",
+                                "description": "Heat 2 tbsp oil in wok over high heat. Add garlic and protein, stir-fry until cooked. Remove.",
+                                "time_minutes": 5
+                            },
+                            {
+                                "step": 4,
+                                "action": "Scramble eggs",
+                                "description": "Add remaining oil. Pour in beaten eggs, scramble until just set.",
+                                "time_minutes": 2
+                            },
+                            {
+                                "step": 5,
+                                "action": "Combine",
+                                "description": "Add drained noodles and sauce. Toss to combine, cooking for 2-3 minutes.",
+                                "time_minutes": 3
+                            },
+                            {
+                                "step": 6,
+                                "action": "Finish",
+                                "description": "Return protein to wok. Add bean sprouts and green onions. Toss for 1 minute.",
+                                "time_minutes": 2
+                            },
+                            {
+                                "step": 7,
+                                "action": "Serve",
+                                "description": "Serve immediately, topped with crushed peanuts and lime wedges.",
+                                "time_minutes": 2
+                            }
+                        ],
+                        "nutrition_per_serving": {
+                            "calories": 480,
+                            "protein_g": 28,
+                            "carbohydrates_g": 52,
+                            "fat_g": 16,
+                            "fiber_g": 3,
+                            "sodium_mg": 1120,
+                            "sugar_g": 8,
+                            "cholesterol_mg": 185
+                        },
+                        "spice_level": "Mild",
+                        "tips": [
+                            "Don't oversoak noodles - they should still have some firmness",
+                            "High heat is essential for authentic wok flavor",
+                            "Have all ingredients prepped before starting to cook"
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

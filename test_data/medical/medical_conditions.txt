@@ -1,0 +1,121 @@
+MEDICAL CONDITIONS AND SYMPTOMS DATABASE
+
+=== CARDIOVASCULAR DISEASES ===
+
+Hypertension (High Blood Pressure)
+- Symptoms: Headaches, shortness of breath, nosebleeds, chest pain, visual changes, blood in urine
+- Risk Factors: Age over 60, family history, obesity, high sodium intake, lack of physical activity, excessive alcohol consumption
+- Treatment: ACE inhibitors, beta-blockers, diuretics, lifestyle modifications, regular monitoring
+- Complications: Stroke, heart attack, kidney damage, vision loss, peripheral artery disease
+
+Coronary Artery Disease
+- Symptoms: Chest pain (angina), shortness of breath, heart palpitations, weakness, nausea, sweating
+- Risk Factors: High cholesterol, smoking, diabetes, obesity, sedentary lifestyle, stress
+- Treatment: Statins, aspirin, beta-blockers, angioplasty, bypass surgery, cardiac rehabilitation
+- Complications: Heart attack, heart failure, arrhythmias, sudden cardiac death
+
+Atrial Fibrillation
+- Symptoms: Irregular heartbeat, palpitations, fatigue, dizziness, chest discomfort, shortness of breath
+- Risk Factors: High blood pressure, heart disease, thyroid problems, sleep apnea, age over 65
+- Treatment: Blood thinners, rate control medications, cardioversion, catheter ablation
+- Complications: Stroke, heart failure, blood clots, cognitive impairment
+
+=== RESPIRATORY DISEASES ===
+
+Asthma
+- Symptoms: Wheezing, coughing (especially at night), shortness of breath, chest tightness, difficulty breathing
+- Triggers: Allergens, cold air, exercise, stress, respiratory infections, air pollution
+- Treatment: Inhaled corticosteroids, bronchodilators, leukotriene modifiers, allergy medications
+- Management: Avoid triggers, use peak flow meter, action plan, regular check-ups
+
+Chronic Obstructive Pulmonary Disease (COPD)
+- Symptoms: Chronic cough, mucus production, shortness of breath, wheezing, chest tightness, fatigue
+- Risk Factors: Smoking, long-term exposure to lung irritants, alpha-1 antitrypsin deficiency, age over 40
+- Treatment: Bronchodilators, inhaled steroids, oxygen therapy, pulmonary rehabilitation, smoking cessation
+- Complications: Respiratory infections, heart problems, lung cancer, depression
+
+Pneumonia
+- Symptoms: Fever, chills, cough with phlegm, chest pain, shortness of breath, fatigue, confusion (in elderly)
+- Causes: Bacteria, viruses, fungi, aspiration
+- Treatment: Antibiotics, antiviral medications, rest, fluids, oxygen therapy if severe
+- Prevention: Vaccination, hand hygiene, avoid smoking
+
+=== ENDOCRINE DISORDERS ===
+
+Type 2 Diabetes
+- Symptoms: Increased thirst, frequent urination, increased hunger, fatigue, blurred vision, slow-healing sores, frequent infections
+- Risk Factors: Obesity, sedentary lifestyle, family history, age over 45, gestational diabetes history
+- Treatment: Metformin, insulin therapy, GLP-1 agonists, lifestyle modifications, blood sugar monitoring
+- Complications: Neuropathy, retinopathy, nephropathy, cardiovascular disease, foot problems
+
+Hypothyroidism
+- Symptoms: Fatigue, weight gain, cold sensitivity, dry skin, hair loss, constipation, depression, muscle weakness
+- Causes: Hashimoto's thyroiditis, thyroid surgery, radiation therapy, medications, iodine deficiency
+- Treatment: Levothyroxine replacement therapy, regular TSH monitoring, dose adjustments
+- Management: Take medication on empty stomach, avoid certain supplements, regular blood tests
+
+Hyperthyroidism
+- Symptoms: Weight loss, rapid heartbeat, increased appetite, nervousness, tremors, sweating, heat intolerance
+- Causes: Graves' disease, toxic nodular goiter, thyroiditis, excessive iodine intake
+- Treatment: Anti-thyroid medications, radioactive iodine, beta-blockers, surgery in severe cases
+- Complications: Osteoporosis, heart problems, thyroid storm
+
+=== GASTROINTESTINAL DISORDERS ===
+
+Gastroesophageal Reflux Disease (GERD)
+- Symptoms: Heartburn, regurgitation, chest pain, difficulty swallowing, chronic cough, sore throat
+- Risk Factors: Obesity, pregnancy, smoking, hiatal hernia, certain foods and beverages
+- Treatment: Proton pump inhibitors, H2 blockers, antacids, lifestyle modifications, surgery if severe
+- Complications: Esophagitis, Barrett's esophagus, esophageal stricture, respiratory problems
+
+Irritable Bowel Syndrome (IBS)
+- Symptoms: Abdominal pain, bloating, gas, diarrhea, constipation, mucus in stool
+- Triggers: Certain foods, stress, hormonal changes, medications
+- Treatment: Dietary changes (low FODMAP), fiber supplements, antispasmodics, probiotics, stress management
+- Management: Food diary, regular meals, adequate hydration, exercise
+
+Inflammatory Bowel Disease (IBD)
+- Types: Crohn's disease, Ulcerative colitis
+- Symptoms: Diarrhea, abdominal pain, blood in stool, weight loss, fatigue, reduced appetite
+- Treatment: Anti-inflammatory drugs, immunosuppressants, biologics, surgery, nutritional therapy
+- Complications: Malnutrition, colon cancer, fistulas, strictures
+
+=== NEUROLOGICAL DISORDERS ===
+
+Migraine
+- Symptoms: Severe headache, nausea, vomiting, sensitivity to light and sound, visual disturbances (aura)
+- Triggers: Stress, hormonal changes, certain foods, lack of sleep, weather changes, sensory stimuli
+- Treatment: Triptans, NSAIDs, anti-nausea medications, preventive medications, lifestyle modifications
+- Management: Identify triggers, maintain regular sleep schedule, stress reduction, hydration
+
+Alzheimer's Disease
+- Symptoms: Memory loss, confusion, difficulty with familiar tasks, language problems, poor judgment, personality changes
+- Risk Factors: Age, family history, genetics (APOE-e4), head trauma, cardiovascular disease
+- Treatment: Cholinesterase inhibitors, memantine, cognitive therapy, supportive care
+- Management: Structured routine, safety modifications, caregiver support, social engagement
+
+Parkinson's Disease
+- Symptoms: Tremor, bradykinesia, rigidity, postural instability, shuffling gait, soft speech
+- Causes: Loss of dopamine-producing neurons, genetic and environmental factors
+- Treatment: Levodopa, dopamine agonists, MAO-B inhibitors, deep brain stimulation, physical therapy
+- Management: Exercise, speech therapy, occupational therapy, support groups
+
+=== MUSCULOSKELETAL DISORDERS ===
+
+Osteoarthritis
+- Symptoms: Joint pain, stiffness, swelling, reduced range of motion, bone spurs, crepitus
+- Risk Factors: Age, obesity, joint injuries, repetitive stress, genetics, bone deformities
+- Treatment: NSAIDs, acetaminophen, corticosteroid injections, physical therapy, joint replacement
+- Management: Weight management, low-impact exercise, heat/cold therapy, assistive devices
+
+Rheumatoid Arthritis
+- Symptoms: Joint pain and swelling, morning stiffness, fatigue, fever, weight loss, symmetrical joint involvement
+- Causes: Autoimmune disorder, genetic predisposition, environmental triggers
+- Treatment: DMARDs, biologics, corticosteroids, NSAIDs, physical therapy
+- Complications: Joint deformity, cardiovascular disease, lung problems, osteoporosis
+
+Osteoporosis
+- Symptoms: Often asymptomatic until fracture, back pain, loss of height, stooped posture
+- Risk Factors: Age, female gender, menopause, low calcium intake, sedentary lifestyle, smoking
+- Treatment: Bisphosphonates, calcium and vitamin D supplements, hormone therapy, weight-bearing exercise
+- Prevention: Adequate calcium and vitamin D, regular exercise, avoid smoking and excessive alcohol
