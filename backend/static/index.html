@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEXAR Core Engine - API</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .header .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin: 0.5rem 0.3rem 0 0;
+        }
+        .content {
+            padding: 2rem;
+        }
+        .section {
+            margin-bottom: 2rem;
+        }
+        .section h2 {
+            color: #667eea;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        .endpoint {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 4px;
+        }
+        .endpoint code {
+            background: #e9ecef;
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #212529;
+        }
+        .method {
+            display: inline-block;
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            font-weight: bold;
+            margin-right: 0.5rem;
+            font-size: 0.85rem;
+        }
+        .method.get { background: #28a745; color: white; }
+        .method.post { background: #007bff; color: white; }
+        .method.delete { background: #dc3545; color: white; }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .feature-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+        }
+        .feature-card h3 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        .links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        .btn:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102,126,234,0.4);
+        }
+        .btn.secondary {
+            background: #6c757d;
+        }
+        .btn.secondary:hover {
+            background: #5a6268;
+        }
+        .footer {
+            background: #f8f9fa;
+            padding: 1.5rem 2rem;
+            text-align: center;
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🧠 MEXAR Core Engine</h1>
+            <p class="subtitle">Multimodal Explainable AI Reasoning Assistant</p>
+            <div>
+                <span class="badge">FastAPI 0.109</span>
+                <span class="badge">Python 3.9+</span>
+                <span class="badge">Status: Operational</span>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <h2>✨ Key Features</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3>🔍 Hybrid Search</h3>
+                        <p>Semantic + keyword search with RRF fusion</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>📊 Source Attribution</h3>
+                        <p>Inline citations linking to source data</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>🗣️ Multimodal</h3>
+                        <p>Audio, Images, Video support</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>✅ Faithfulness</h3>
+                        <p>Grounding verification for answers</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🔗 Quick Links</h2>
+                <div class="links">
+                    <a href="/docs" class="btn">📖 Interactive API Docs</a>
+                    <a href="/redoc" class="btn secondary">📑 ReDoc Documentation</a>
+                    <a href="https://mexar.vercel.app" class="btn secondary">🌐 Frontend App</a>
+                    <a href="https://github.com/devrajsinh2012/Mexar" class="btn secondary">💻 GitHub Repository</a>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🔧 API Endpoints</h2>
+                
+                <div class="endpoint">
+                    <span class="method post">POST</span>
+                    <code>/api/auth/register</code>
+                    <p style="margin-top: 0.5rem;">Register a new user account</p>
+                </div>
+
+                <div class="endpoint">
+                    <span class="method post">POST</span>
+                    <code>/api/auth/login</code>
+                    <p style="margin-top: 0.5rem;">Login and receive JWT token</p>
+                </div>
+
+                <div class="endpoint">
+                    <span class="method get">GET</span>
+                    <code>/api/agents/</code>
+                    <p style="margin-top: 0.5rem;">List all compiled agents</p>
+                </div>
+
+                <div class="endpoint">
+                    <span class="method post">POST</span>
+                    <code>/api/compile/</code>
+                    <p style="margin-top: 0.5rem;">Start agent compilation from uploaded files</p>
+                </div>
+
+                <div class="endpoint">
+                    <span class="method post">POST</span>
+                    <code>/api/chat/</code>
+                    <p style="margin-top: 0.5rem;">Send a message to an agent</p>
+                </div>
+
+                <div class="endpoint">
+                    <span class="method get">GET</span>
+                    <code>/api/health</code>
+                    <p style="margin-top: 0.5rem;">Check API health status</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🚀 Getting Started</h2>
+                <ol style="line-height: 2; padding-left: 1.5rem;">
+                    <li>Visit the <a href="/docs" style="color: #667eea;">interactive API documentation</a></li>
+                    <li>Register an account via <code>/api/auth/register</code></li>
+                    <li>Login to receive your JWT token</li>
+                    <li>Use the token in the <code>Authorization: Bearer {token}</code> header</li>
+                    <li>Start creating agents and chat!</li>
+                </ol>
+            </div>
+
+            <div class="section">
+                <h2>📊 Tech Stack</h2>
+                <p style="line-height: 1.8;">
+                    <strong>Framework:</strong> FastAPI<br>
+                    <strong>Database:</strong> PostgreSQL with pgvector<br>
+                    <strong>AI/LLM:</strong> Groq API (Llama 3.3, Whisper, Vision)<br>
+                    <strong>Embeddings:</strong> FastEmbed (BAAI/bge-small-en-v1.5)<br>
+                    <strong>Deployment:</strong> Hugging Face Spaces (Docker)
+                </p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>MEXAR Core Engine v2.0.0 | Built with ❤️ using FastAPI</p>
+            <p style="margin-top: 0.5rem;">
+                <a href="https://github.com/devrajsinh2012/Mexar" style="color: #667eea; text-decoration: none;">View on GitHub</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

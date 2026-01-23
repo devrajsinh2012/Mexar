@@ -110,13 +110,21 @@ app.include_router(diagnostics.router)
 
 @app.get("/")
 async def root():
-    """Root endpoint - health check."""
-    return {
-        "name": "MEXAR Core Engine",
-        "version": "2.0.0",
-        "status": "operational",
-        "docs": "/docs"
-    }
+    """Root endpoint - serves landing page."""
+    from fastapi.responses import FileResponse
+    from pathlib import Path
+    
+    html_path = Path(__file__).parent / "static" / "index.html"
+    if html_path.exists():
+        return FileResponse(html_path, media_type="text/html")
+    else:
+        # Fallback to JSON if HTML not found
+        return {
+            "name": "MEXAR Core Engine",
+            "version": "2.0.0",
+            "status": "operational",
+            "docs": "/docs"
+        }
 
 
 @app.get("/api/health")
