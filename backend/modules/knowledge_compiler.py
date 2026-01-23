@@ -48,8 +48,13 @@ class KnowledgeCompiler:
         
         # Initialize embedding model (384 dim default)
         try:
-            self.embedding_model = TextEmbedding(model_name="BAAI/bge-small-en-v1.5")
-            logger.info("FastEmbed model loaded")
+            # Force cache to /tmp for HF Spaces or use env var
+            cache_dir = os.getenv("FASTEMBED_CACHE_PATH", "/tmp/.cache/fastembed")
+            self.embedding_model = TextEmbedding(
+                model_name="BAAI/bge-small-en-v1.5", 
+                cache_dir=cache_dir
+            )
+            logger.info(f"FastEmbed model loaded (cache: {cache_dir})")
         except Exception as e:
             logger.warning(f"Failed to load embedding model: {e}")
             self.embedding_model = None
