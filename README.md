@@ -1,14 +1,3 @@
----
-title: MEXAR Ultimate
-emoji: 🧠
-colorFrom: blue
-colorTo: purple
-sdk: docker
-app_port: 7860
-pinned: false
-license: mit
----
-
 # MEXAR Ultimate 🧠
 
 **Multimodal Explainable AI Reasoning Assistant**
@@ -44,30 +33,46 @@ license: mit
 ## 🏗️ Architecture
 
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│                        MEXAR Ultimate Stack                      │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                   │
-│   [React Frontend - Vercel]                                       │
-│            ↓                                                      │
-│   [FastAPI Backend - Hugging Face Spaces]                        │
-│            ↓                                                      │
-│   ┌─────────────────────────────────────┐                       │
-│   │  🔄 Data Validator (5 file types)   │                       │
-│   │  🤖 Prompt Analyzer (LLM-based)     │                       │
-│   │  📦 Knowledge Compiler (FastEmbed)  │                       │
-│   │  🧠 Reasoning Engine                │                       │
-│   │     ├─ Hybrid Search                │                       │
-│   │     ├─ Cross-Encoder Reranker       │                       │
-│   │     ├─ Source Attribution            │                       │
-│   │     └─ Faithfulness Scorer           │                       │
-│   └─────────────────────────────────────┘                       │
-│            ↓                                                      │
-│   [External Services]                                             │
-│   ├─ Supabase (PostgreSQL + pgvector + Storage)                 │
-│   ├─ Groq API (LLM + Whisper + Vision)                          │
-│   └─ ElevenLabs (Text-to-Speech)                                │
-└─────────────────────────────────────────────────────────────────┘
+┌────────────────────────────────────────────────────────────────────────────┐
+│                              MEXAR Ultimate Stack                          │
+├────────────────────────────────────────────────────────────────────────────┤
+│                                                                            │
+│            ┌────────────────────────────────────────────┐                  │
+│            │        React Frontend (Vercel)             │                  │
+│            └────────────────────────────────────────────┘                  │
+│                               │                                            │
+│                               ▼                                            │
+│            ┌────────────────────────────────────────────┐                  │
+│            │     FastAPI Backend (Hugging Face Spaces)  │                  │
+│            └────────────────────────────────────────────┘                  │
+│                               │                                            │
+│                               ▼                                            │
+│   ┌────────────────────────────────────────────────────────────────────┐   │
+│   │                        Core Intelligence Layer                     │   │
+│   │                                                                    │   │
+│   │   🔄 Data Validator        (PDF / DOCX / CSV / TXT / JSON)         │   │
+│   │   🤖 Prompt Analyzer       (LLM-based Intent Parsing)              │   │
+│   │   📦 Knowledge Compiler    (FastEmbed + Chunking)                  │   │
+│   │   🧠 Reasoning Engine                                              │   │
+│   │      ├─ Hybrid Search       (Dense + Sparse)                       │   │
+│   │      ├─ Cross-Encoder       (Re-ranking)                           │   │
+│   │      ├─ Source Attribution  (Citation Tracking)                    │   │
+│   │      └─ Faithfulness Scorer (Hallucination Control)                │   │
+│   │                                                                    │   │
+│   └────────────────────────────────────────────────────────────────────┘   │
+│                               │                                            │
+│                               ▼                                            │
+│   ┌────────────────────────────────────────────────────────────────────┐   │
+│   │                        External Services Layer                     │   │
+│   │                                                                    │   │
+│   │   🗄 Supabase   → PostgreSQL + pgvector + File Storage             │   │
+│   │   ⚡ Groq API   → LLM Inference + Whisper + Vision                │   │
+│   │   🔊 ElevenLabs → Text-to-Speech                                  │   │
+│   │                                                                    │   │
+│   └────────────────────────────────────────────────────────────────────┘   │
+│                                                                            │
+└────────────────────────────────────────────────────────────────────────────┘
+
 ```
 
 ---
