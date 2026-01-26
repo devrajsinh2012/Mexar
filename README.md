@@ -342,12 +342,6 @@ Confidence score is calculated from:
 
 ---
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
 ## 🙏 Acknowledgments
 
 - [Groq](https://groq.com) - Fast AI inference with LPU technology
@@ -363,3 +357,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 This project is built by Devrajsinh Gohil and Jay Nasit under the guidance of Prof OM Prakash Suthar.
 
 **Built with ❤️ using modern AI technologies**
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
