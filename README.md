@@ -34,7 +34,7 @@
 
 ```
 ┌────────────────────────────────────────────────────────────────────────────┐
-│                              MEXAR Ultimate Stack                          │
+│                         MEXAR Ultimate Stack                               │
 ├────────────────────────────────────────────────────────────────────────────┤
 │                                                                            │
 │            ┌────────────────────────────────────────────┐                  │
@@ -48,7 +48,7 @@
 │                               │                                            │
 │                               ▼                                            │
 │   ┌────────────────────────────────────────────────────────────────────┐   │
-│   │                        Core Intelligence Layer                     │   │
+│   │                 Core Intelligence Layer                            │   │
 │   │                                                                    │   │
 │   │   🔄 Data Validator        (PDF / DOCX / CSV / TXT / JSON)         │   │
 │   │   🤖 Prompt Analyzer       (LLM-based Intent Parsing)              │   │
@@ -63,7 +63,7 @@
 │                               │                                            │
 │                               ▼                                            │
 │   ┌────────────────────────────────────────────────────────────────────┐   │
-│   │                        External Services Layer                     │   │
+│   │               External Services Layer                              │   │
 │   │                                                                    │   │
 │   │   🗄 Supabase   → PostgreSQL + pgvector + File Storage             │   │
 │   │   ⚡ Groq API   → LLM Inference + Whisper + Vision                │   │
