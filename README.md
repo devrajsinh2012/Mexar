@@ -360,6 +360,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🤝 Contribution
 
-This project is built by Devrajsinh Gohil and Jay Nasit under the guidance of Prof OM Prakash suthat.
+This project is built by Devrajsinh Gohil and Jay Nasit under the guidance of Prof OM Prakash Suthar.
 
 **Built with ❤️ using modern AI technologies**
