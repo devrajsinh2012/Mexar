@@ -32,14 +32,35 @@ class GroqClient:
         
         self.client = Groq(api_key=self.api_key)
         
-        # Model configurations (using fast model for better conversational responses)
-        self.models = {
-            "chat": "llama-3.1-8b-instant",  # Primary LLM (fast & conversational)
-            "advanced": "llama-3.3-70b-versatile",  # Advanced reasoning
-            "fast": "llama-3.1-8b-instant",      # Fast responses
-            "vision": "meta-llama/llama-4-scout-17b-16e-instruct",  # Llama 4 Vision model (Jan 2025)
-            "whisper": "whisper-large-v3"        # Audio transcription
-        }
+        from core.config import settings
+        
+        # Model configurations based on LLM_BACKBONE
+        backbone = getattr(settings, "LLM_BACKBONE", "llama3").lower()
+        
+        if backbone == "mixtral":
+            self.models = {
+                "chat": "mixtral-8x7b-32768",
+                "advanced": "mixtral-8x7b-32768",
+                "fast": "mixtral-8x7b-32768",
+                "vision": "meta-llama/llama-4-scout-17b-16e-instruct",
+                "whisper": "whisper-large-v3"
+            }
+        elif backbone == "gemma":
+            self.models = {
+                "chat": "gemma2-9b-it",
+                "advanced": "gemma2-9b-it",
+                "fast": "gemma2-9b-it",
+                "vision": "meta-llama/llama-4-scout-17b-16e-instruct",
+                "whisper": "whisper-large-v3"
+            }
+        else:
+            self.models = {
+                "chat": "llama-3.1-8b-instant",  # Primary LLM (fast & conversational)
+                "advanced": "llama-3.3-70b-versatile",  # Advanced reasoning
+                "fast": "llama-3.1-8b-instant",      # Fast responses
+                "vision": "meta-llama/llama-4-scout-17b-16e-instruct",  # Llama 4 Vision model (Jan 2025)
+                "whisper": "whisper-large-v3"        # Audio transcription
+            }
     
     def chat_completion(
         self,

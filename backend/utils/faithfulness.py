@@ -211,3 +211,79 @@ Answer NO if the claim cannot be verified from the context or contradicts it."""
 def create_faithfulness_scorer() -> FaithfulnessScorer:
     """Factory function to create FaithfulnessScorer."""
     return FaithfulnessScorer()
+
+
+class BartNLIScorer:
+    """
+    Evaluates faithfulness using a local NLI model (BART-Large-MNLI) 
+    to break the circular evaluation where the generator evaluates itself.
+    """
+    def __init__(self):
+        self._pipe = None
+        
+    @property
+    def pipe(self):
+        if self._pipe is None:
+            import logging
+            logger = logging.getLogger(__name__)
+            try:
+                from transformers import pipeline
+                logger.info("Loading BART NLI model...")
+                # 'contradiction' (0), 'neutral' (1), 'entailment' (2)
+                self._pipe = pipeline("text-classification", model="facebook/bart-large-mnli")
+                logger.info("BART NLI loaded.")
+            except ImportError:
+                logger.error("transformers not installed. Cannot use BartNLIScorer.")
+                self._pipe = "UNAVAILABLE"
+        return self._pipe
+
+    def score(self, answer: str, context: str) -> FaithfulnessResult:
+        if not answer or not context or self.pipe == "UNAVAILABLE":
+            return FaithfulnessResult(score=1.0, total_claims=0, supported_claims=0, unsupported_claims=[])
+            
+        import re
+        sentences = [s.strip() for s in re.split(r'(?<=[.!?])\s+', answer) if len(s.strip()) > 20][:10]
+        if not sentences:
+            return FaithfulnessResult(score=1.0, total_claims=0, supported_claims=0, unsupported_claims=[])
+            
+        supported = 0
+        unsupported = []
+        
+        try:
+            for sentence in sentences:
+                # Format for bart-large-mnli: premise </s></s> hypothesis
+                input_text = f"{context[:3000]} </s></s> {sentence}"
+                result = self.pipe(input_text, truncation=True, max_length=1024)[0]
+                label = result['label'].lower()
+                # Consider neutral or entailment as supported for broad QA, or strict entailment
+                if 'entail' in label:
+                    supported += 1
+                else:
+                    unsupported.append(sentence)
+        except Exception as e:
+            logger.error(f"BART NLI Error: {e}")
+            return FaithfulnessResult(score=0.5, total_claims=len(sentences), supported_claims=0, unsupported_claims=sentences[:5])
+
+        score = supported / len(sentences)
+        logger.info(f"BART NLI Faithfulness: {supported}/{len(sentences)} claims supported ({score*100:.0f}%)")
+        return FaithfulnessResult(
+            score=round(score, 3),
+            total_claims=len(sentences),
+            supported_claims=supported,
+            unsupported_claims=unsupported[:5]
+        )
+
+
+class FActScoreCompat:
+    """
+    Simulates the FActScore (Min et al., ACL 2023) evaluation.
+    Breaks answer into atomic facts, verifies each fact against context independently.
+    This acts as a wrapper around FaithfulnessScorer to explicitly mark it for FActScore baseline comparisons.
+    """
+    def __init__(self, groq_client=None):
+        self._scorer = FaithfulnessScorer(groq_client=groq_client)
+        
+    def score(self, answer: str, context: str) -> FaithfulnessResult:
+        result = self._scorer.score(answer, context)
+        logger.info(f"FActScore: {result.score * 100:.1f}% ({result.supported_claims}/{result.total_claims} facts)")
+        return result
