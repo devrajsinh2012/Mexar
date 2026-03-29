@@ -50,10 +50,14 @@ async def lifespan(app: FastAPI):
         from models.chunk import DocumentChunk
         from sqlalchemy import text
 
-        # Enable vector extension
-        with engine.connect() as conn:
-            conn.execute(text("CREATE EXTENSION IF NOT EXISTS vector"))
-            conn.commit()
+        # Enable vector extension only for postgres
+        if "sqlite" not in str(engine.url):
+            try:
+                with engine.connect() as conn:
+                    conn.execute(text("CREATE EXTENSION IF NOT EXISTS vector"))
+                    conn.commit()
+            except Exception as vector_err:
+                logger.warning(f"Vector extension check skipped: {vector_err}")
 
         Base.metadata.create_all(bind=engine)
         logger.info("Database tables created/verified successfully")
