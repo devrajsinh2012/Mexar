@@ -1,0 +1,504 @@
+{
+  "medical_database": {
+    "version": "1.0",
+    "last_updated": "2026-01-21",
+    "total_conditions": 15,
+    "categories": [
+      {
+        "category_id": "CARDIO_001",
+        "category_name": "Cardiovascular Diseases",
+        "conditions": [
+          {
+            "condition_id": "CVD_001",
+            "name": "Hypertension",
+            "common_name": "High Blood Pressure",
+            "severity": "moderate to severe",
+            "prevalence": "31% of adults worldwide",
+            "symptoms": [
+              {
+                "symptom": "Headaches",
+                "frequency": "common",
+                "severity": "mild to moderate"
+              },
+              {
+                "symptom": "Shortness of breath",
+                "frequency": "occasional",
+                "severity": "moderate"
+              },
+              {
+                "symptom": "Chest pain",
+                "frequency": "rare",
+                "severity": "severe"
+              },
+              {
+                "symptom": "Visual changes",
+                "frequency": "occasional",
+                "severity": "moderate"
+              }
+            ],
+            "risk_factors": [
+              "Age over 60",
+              "Family history",
+              "Obesity (BMI > 30)",
+              "High sodium intake (>2300mg/day)",
+              "Sedentary lifestyle",
+              "Excessive alcohol consumption"
+            ],
+            "diagnostic_tests": [
+              {
+                "test_name": "Blood pressure measurement",
+                "normal_range": "120/80 mmHg",
+                "hypertension_threshold": "140/90 mmHg"
+              },
+              {
+                "test_name": "24-hour ambulatory monitoring",
+                "purpose": "Confirm diagnosis and assess treatment"
+              }
+            ],
+            "treatments": [
+              {
+                "type": "medication",
+                "name": "ACE Inhibitors",
+                "examples": ["Lisinopril", "Enalapril"],
+                "mechanism": "Relax blood vessels"
+              },
+              {
+                "type": "medication",
+                "name": "Beta-blockers",
+                "examples": ["Metoprolol", "Atenolol"],
+                "mechanism": "Reduce heart rate and cardiac output"
+              },
+              {
+                "type": "lifestyle",
+                "interventions": [
+                  "Reduce sodium to <1500mg/day",
+                  "Exercise 150 minutes/week",
+                  "Maintain healthy weight",
+                  "Limit alcohol to 1-2 drinks/day"
+                ]
+              }
+            ],
+            "complications": [
+              "Stroke",
+              "Heart attack",
+              "Kidney damage",
+              "Vision loss",
+              "Peripheral artery disease"
+            ],
+            "prognosis": "Good with proper management and medication adherence"
+          },
+          {
+            "condition_id": "CVD_002",
+            "name": "Coronary Artery Disease",
+            "common_name": "CAD",
+            "severity": "severe",
+            "prevalence": "Leading cause of death globally",
+            "symptoms": [
+              {
+                "symptom": "Angina (chest pain)",
+                "frequency": "common",
+                "severity": "moderate to severe",
+                "characteristics": "Pressure, squeezing, or burning sensation"
+              },
+              {
+                "symptom": "Shortness of breath",
+                "frequency": "common",
+                "severity": "moderate"
+              },
+              {
+                "symptom": "Heart palpitations",
+                "frequency": "occasional",
+                "severity": "mild to moderate"
+              }
+            ],
+            "risk_factors": [
+              "High LDL cholesterol (>160 mg/dL)",
+              "Smoking",
+              "Diabetes mellitus",
+              "Obesity",
+              "Family history of early heart disease",
+              "Chronic stress"
+            ],
+            "diagnostic_tests": [
+              {
+                "test_name": "Electrocardiogram (ECG)",
+                "purpose": "Detect heart rhythm abnormalities"
+              },
+              {
+                "test_name": "Coronary angiography",
+                "purpose": "Visualize coronary artery blockages"
+              },
+              {
+                "test_name": "Stress test",
+                "purpose": "Assess heart function during exercise"
+              },
+              {
+                "test_name": "Lipid panel",
+                "normal_values": {
+                  "total_cholesterol": "<200 mg/dL",
+                  "LDL": "<100 mg/dL",
+                  "HDL": ">40 mg/dL (men), >50 mg/dL (women)",
+                  "triglycerides": "<150 mg/dL"
+                }
+              }
+            ],
+            "treatments": [
+              {
+                "type": "medication",
+                "name": "Statins",
+                "examples": ["Atorvastatin", "Rosuvastatin"],
+                "purpose": "Lower cholesterol"
+              },
+              {
+                "type": "procedure",
+                "name": "Percutaneous Coronary Intervention (PCI)",
+                "description": "Angioplasty with stent placement"
+              },
+              {
+                "type": "surgery",
+                "name": "Coronary Artery Bypass Grafting (CABG)",
+                "indication": "Severe multi-vessel disease"
+              }
+            ],
+            "emergency_signs": [
+              "Severe chest pain lasting >5 minutes",
+              "Pain radiating to arm, jaw, or back",
+              "Shortness of breath with chest discomfort",
+              "Nausea, cold sweat, lightheadedness"
+            ]
+          }
+        ]
+      },
+      {
+        "category_id": "RESP_001",
+        "category_name": "Respiratory Diseases",
+        "conditions": [
+          {
+            "condition_id": "RESP_001",
+            "name": "Asthma",
+            "severity": "mild to severe",
+            "prevalence": "262 million people worldwide",
+            "age_groups_affected": ["children", "adults", "elderly"],
+            "symptoms": [
+              {
+                "symptom": "Wheezing",
+                "frequency": "common",
+                "timing": "Often worse at night or early morning"
+              },
+              {
+                "symptom": "Shortness of breath",
+                "frequency": "common",
+                "severity": "variable"
+              },
+              {
+                "symptom": "Chest tightness",
+                "frequency": "common",
+                "description": "Feeling of pressure or constriction"
+              },
+              {
+                "symptom": "Coughing",
+                "frequency": "very common",
+                "timing": "Especially at night"
+              }
+            ],
+            "triggers": [
+              {
+                "category": "Allergens",
+                "examples": ["Pollen", "Dust mites", "Pet dander", "Mold"]
+              },
+              {
+                "category": "Environmental",
+                "examples": ["Cold air", "Air pollution", "Smoke", "Strong odors"]
+              },
+              {
+                "category": "Physical",
+                "examples": ["Exercise", "Respiratory infections"]
+              },
+              {
+                "category": "Emotional",
+                "examples": ["Stress", "Anxiety"]
+              }
+            ],
+            "diagnostic_tests": [
+              {
+                "test_name": "Spirometry",
+                "measures": "Lung function (FEV1, FVC)",
+                "diagnostic_criteria": "FEV1/FVC ratio <70%"
+              },
+              {
+                "test_name": "Peak flow meter",
+                "purpose": "Monitor daily lung function at home"
+              },
+              {
+                "test_name": "Allergy testing",
+                "purpose": "Identify specific triggers"
+              }
+            ],
+            "treatments": [
+              {
+                "type": "controller_medication",
+                "name": "Inhaled Corticosteroids",
+                "examples": ["Fluticasone", "Budesonide"],
+                "frequency": "Daily",
+                "purpose": "Reduce airway inflammation"
+              },
+              {
+                "type": "rescue_medication",
+                "name": "Short-acting Beta-agonists",
+                "examples": ["Albuterol", "Salbutamol"],
+                "frequency": "As needed",
+                "purpose": "Quick relief of symptoms"
+              },
+              {
+                "type": "combination_therapy",
+                "name": "ICS/LABA",
+                "examples": ["Fluticasone/Salmeterol"],
+                "indication": "Moderate to severe asthma"
+              }
+            ],
+            "asthma_action_plan": {
+              "green_zone": {
+                "description": "Doing well",
+                "peak_flow": "80-100% of personal best",
+                "action": "Continue regular medications"
+              },
+              "yellow_zone": {
+                "description": "Caution",
+                "peak_flow": "50-80% of personal best",
+                "action": "Use rescue inhaler, may need to increase controller medication"
+              },
+              "red_zone": {
+                "description": "Medical alert",
+                "peak_flow": "<50% of personal best",
+                "action": "Use rescue inhaler immediately and seek emergency care"
+              }
+            }
+          },
+          {
+            "condition_id": "RESP_002",
+            "name": "Chronic Obstructive Pulmonary Disease",
+            "abbreviation": "COPD",
+            "severity": "progressive, severe",
+            "prevalence": "3rd leading cause of death worldwide",
+            "subtypes": ["Chronic bronchitis", "Emphysema"],
+            "symptoms": [
+              {
+                "symptom": "Chronic cough",
+                "duration": "Present for at least 3 months in 2 consecutive years",
+                "characteristics": "Productive cough with mucus"
+              },
+              {
+                "symptom": "Shortness of breath",
+                "progression": "Worsens over time",
+                "severity": "Initially with exertion, later at rest"
+              },
+              {
+                "symptom": "Wheezing",
+                "frequency": "common"
+              },
+              {
+                "symptom": "Chest tightness",
+                "frequency": "common"
+              }
+            ],
+            "risk_factors": [
+              {
+                "factor": "Smoking",
+                "impact": "85-90% of COPD cases",
+                "pack_years": "Risk increases with >20 pack-years"
+              },
+              {
+                "factor": "Occupational exposures",
+                "examples": ["Coal dust", "Silica", "Chemical fumes"]
+              },
+              {
+                "factor": "Alpha-1 antitrypsin deficiency",
+                "type": "Genetic",
+                "prevalence": "Rare, 1-2% of COPD cases"
+              }
+            ],
+            "GOLD_stages": [
+              {
+                "stage": "GOLD 1 (Mild)",
+                "FEV1": "≥80% predicted",
+                "symptoms": "Minimal"
+              },
+              {
+                "stage": "GOLD 2 (Moderate)",
+                "FEV1": "50-79% predicted",
+                "symptoms": "Shortness of breath on exertion"
+              },
+              {
+                "stage": "GOLD 3 (Severe)",
+                "FEV1": "30-49% predicted",
+                "symptoms": "Significant limitation"
+              },
+              {
+                "stage": "GOLD 4 (Very Severe)",
+                "FEV1": "<30% predicted",
+                "symptoms": "Severe limitation, may need oxygen"
+              }
+            ],
+            "treatments": [
+              {
+                "type": "bronchodilator",
+                "name": "Long-acting Beta-agonists (LABA)",
+                "examples": ["Formoterol", "Salmeterol"]
+              },
+              {
+                "type": "bronchodilator",
+                "name": "Long-acting Muscarinic Antagonists (LAMA)",
+                "examples": ["Tiotropium", "Umeclidinium"]
+              },
+              {
+                "type": "therapy",
+                "name": "Pulmonary rehabilitation",
+                "components": ["Exercise training", "Education", "Nutritional counseling"]
+              },
+              {
+                "type": "oxygen_therapy",
+                "indication": "Severe COPD with hypoxemia",
+                "criteria": "PaO2 ≤55 mmHg or SpO2 ≤88%"
+              }
+            ],
+            "prevention": {
+              "primary": "Smoking cessation",
+              "vaccinations": ["Influenza (annual)", "Pneumococcal", "COVID-19"]
+            }
+          }
+        ]
+      },
+      {
+        "category_id": "ENDO_001",
+        "category_name": "Endocrine Disorders",
+        "conditions": [
+          {
+            "condition_id": "ENDO_001",
+            "name": "Type 2 Diabetes Mellitus",
+            "severity": "chronic, progressive",
+            "prevalence": "537 million adults worldwide",
+            "pathophysiology": "Insulin resistance and relative insulin deficiency",
+            "symptoms": [
+              {
+                "symptom": "Polyuria",
+                "description": "Increased urination",
+                "mechanism": "Glucose in urine draws water"
+              },
+              {
+                "symptom": "Polydipsia",
+                "description": "Increased thirst",
+                "mechanism": "Dehydration from polyuria"
+              },
+              {
+                "symptom": "Polyphagia",
+                "description": "Increased hunger",
+                "mechanism": "Cells unable to utilize glucose"
+              },
+              {
+                "symptom": "Fatigue",
+                "frequency": "very common"
+              },
+              {
+                "symptom": "Blurred vision",
+                "mechanism": "Glucose in lens causes swelling"
+              }
+            ],
+            "diagnostic_criteria": [
+              {
+                "test": "Fasting Plasma Glucose",
+                "normal": "<100 mg/dL",
+                "prediabetes": "100-125 mg/dL",
+                "diabetes": "≥126 mg/dL"
+              },
+              {
+                "test": "HbA1c",
+                "normal": "<5.7%",
+                "prediabetes": "5.7-6.4%",
+                "diabetes": "≥6.5%"
+              },
+              {
+                "test": "Oral Glucose Tolerance Test (2-hour)",
+                "normal": "<140 mg/dL",
+                "prediabetes": "140-199 mg/dL",
+                "diabetes": "≥200 mg/dL"
+              }
+            ],
+            "treatment_targets": {
+              "HbA1c": "<7% (individualized based on patient)",
+              "fasting_glucose": "80-130 mg/dL",
+              "postprandial_glucose": "<180 mg/dL",
+              "blood_pressure": "<140/90 mmHg",
+              "LDL_cholesterol": "<100 mg/dL"
+            },
+            "medications": [
+              {
+                "class": "Biguanides",
+                "drug": "Metformin",
+                "mechanism": "Reduces hepatic glucose production",
+                "first_line": true
+              },
+              {
+                "class": "GLP-1 Receptor Agonists",
+                "examples": ["Semaglutide", "Liraglutide"],
+                "benefits": ["Weight loss", "Cardiovascular protection"]
+              },
+              {
+                "class": "SGLT2 Inhibitors",
+                "examples": ["Empagliflozin", "Dapagliflozin"],
+                "benefits": ["Weight loss", "Cardiovascular and renal protection"]
+              },
+              {
+                "class": "Insulin",
+                "types": ["Rapid-acting", "Long-acting", "Intermediate"],
+                "indication": "Advanced disease or inadequate control"
+              }
+            ],
+            "complications": {
+              "microvascular": [
+                {
+                  "complication": "Diabetic retinopathy",
+                  "screening": "Annual dilated eye exam"
+                },
+                {
+                  "complication": "Diabetic nephropathy",
+                  "screening": "Annual urine albumin and eGFR"
+                },
+                {
+                  "complication": "Diabetic neuropathy",
+                  "screening": "Annual foot exam"
+                }
+              ],
+              "macrovascular": [
+                "Coronary artery disease",
+                "Stroke",
+                "Peripheral artery disease"
+              ]
+            },
+            "lifestyle_management": {
+              "diet": "Mediterranean or DASH diet, carbohydrate counting",
+              "exercise": "150 minutes/week moderate-intensity aerobic activity",
+              "weight_loss": "5-10% body weight can significantly improve glycemic control",
+              "monitoring": "Self-monitoring of blood glucose as recommended"
+            }
+          }
+        ]
+      }
+    ],
+    "emergency_protocols": {
+      "chest_pain": {
+        "action": "Call emergency services immediately",
+        "first_aid": ["Have patient sit and rest", "Give aspirin if not allergic", "Loosen tight clothing"],
+        "do_not": ["Give food or drink", "Leave patient alone"]
+      },
+      "severe_asthma_attack": {
+        "action": "Use rescue inhaler, call emergency if no improvement in 5-10 minutes",
+        "warning_signs": ["Difficulty speaking", "Blue lips or fingernails", "Severe shortness of breath"]
+      },
+      "hypoglycemia": {
+        "blood_glucose": "<70 mg/dL",
+        "symptoms": ["Shakiness", "Sweating", "Confusion", "Rapid heartbeat"],
+        "treatment": "15g fast-acting carbohydrate (juice, glucose tablets), recheck in 15 minutes"
+      }
+    }
+  }
+}

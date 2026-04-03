@@ -1,0 +1,187 @@
+{
+  "recipes": [
+    {
+      "id": 1,
+      "name": "Classic Spaghetti Bolognese",
+      "cuisine": "Italian",
+      "difficulty": "medium",
+      "prep_time": "20 minutes",
+      "cook_time": "45 minutes",
+      "servings": 4,
+      "ingredients": [
+        "400g spaghetti",
+        "500g ground beef",
+        "1 onion, diced",
+        "3 cloves garlic, minced",
+        "400g canned tomatoes",
+        "2 tbsp tomato paste",
+        "1 cup red wine",
+        "Fresh basil",
+        "Parmesan cheese",
+        "Salt and pepper"
+      ],
+      "instructions": [
+        "Brown the ground beef in a large pan",
+        "Add onion and garlic, cook until soft",
+        "Add tomato paste and cook for 2 minutes",
+        "Pour in wine and let it reduce",
+        "Add canned tomatoes and simmer for 30 minutes",
+        "Cook spaghetti according to package",
+        "Serve sauce over pasta with basil and parmesan"
+      ],
+      "tips": "Let the sauce simmer longer for deeper flavor"
+    },
+    {
+      "id": 2,
+      "name": "Chicken Tikka Masala",
+      "cuisine": "Indian",
+      "difficulty": "medium",
+      "prep_time": "30 minutes",
+      "cook_time": "40 minutes",
+      "servings": 6,
+      "ingredients": [
+        "800g chicken breast",
+        "1 cup yogurt",
+        "2 tbsp garam masala",
+        "1 tbsp turmeric",
+        "400g canned tomatoes",
+        "1 cup heavy cream",
+        "1 onion",
+        "4 cloves garlic",
+        "Fresh ginger",
+        "Cilantro"
+      ],
+      "instructions": [
+        "Marinate chicken in yogurt and spices for 2 hours",
+        "Grill or bake chicken until charred",
+        "Make sauce with onion, garlic, ginger, and tomatoes",
+        "Add cream and simmer",
+        "Add chicken to sauce",
+        "Serve with rice or naan"
+      ],
+      "tips": "Marinating overnight gives best results"
+    },
+    {
+      "id": 3,
+      "name": "Classic Beef Tacos",
+      "cuisine": "Mexican",
+      "difficulty": "easy",
+      "prep_time": "15 minutes",
+      "cook_time": "20 minutes",
+      "servings": 4,
+      "ingredients": [
+        "500g ground beef",
+        "1 packet taco seasoning",
+        "8 taco shells",
+        "Lettuce, shredded",
+        "Tomatoes, diced",
+        "Cheddar cheese, shredded",
+        "Sour cream",
+        "Salsa",
+        "Jalapeños"
+      ],
+      "instructions": [
+        "Brown beef in a pan",
+        "Add taco seasoning with water",
+        "Simmer until thickened",
+        "Warm taco shells",
+        "Assemble tacos with toppings"
+      ],
+      "tips": "Toast shells in oven for crispier tacos"
+    },
+    {
+      "id": 4,
+      "name": "Pad Thai",
+      "cuisine": "Thai",
+      "difficulty": "medium",
+      "prep_time": "25 minutes",
+      "cook_time": "15 minutes",
+      "servings": 4,
+      "ingredients": [
+        "300g rice noodles",
+        "300g shrimp",
+        "2 eggs",
+        "3 tbsp fish sauce",
+        "2 tbsp tamarind paste",
+        "2 tbsp brown sugar",
+        "Bean sprouts",
+        "Green onions",
+        "Peanuts",
+        "Lime wedges"
+      ],
+      "instructions": [
+        "Soak rice noodles in warm water",
+        "Make sauce with fish sauce, tamarind, and sugar",
+        "Stir-fry shrimp until pink",
+        "Push aside and scramble eggs",
+        "Add noodles and sauce",
+        "Toss with bean sprouts and onions",
+        "Serve with peanuts and lime"
+      ],
+      "tips": "High heat is essential for wok cooking"
+    },
+    {
+      "id": 5,
+      "name": "French Onion Soup",
+      "cuisine": "French",
+      "difficulty": "medium",
+      "prep_time": "20 minutes",
+      "cook_time": "60 minutes",
+      "servings": 6,
+      "ingredients": [
+        "4 large onions, sliced",
+        "4 tbsp butter",
+        "6 cups beef broth",
+        "1 cup dry white wine",
+        "French bread, sliced",
+        "Gruyère cheese",
+        "Fresh thyme",
+        "Salt and pepper"
+      ],
+      "instructions": [
+        "Caramelize onions in butter for 45 minutes",
+        "Add wine and let it reduce",
+        "Add broth and thyme, simmer 20 minutes",
+        "Ladle into oven-safe bowls",
+        "Top with bread and cheese",
+        "Broil until cheese is bubbly"
+      ],
+      "tips": "Low and slow caramelization is key"
+    }
+  ],
+  "cooking_techniques": [
+    {
+      "name": "Sautéing",
+      "description": "Cooking quickly in a small amount of oil over high heat"
+    },
+    {
+      "name": "Braising",
+      "description": "Slow cooking in liquid after initial browning"
+    },
+    {
+      "name": "Roasting",
+      "description": "Cooking in the oven with dry heat"
+    },
+    {
+      "name": "Poaching",
+      "description": "Cooking gently in barely simmering liquid"
+    }
+  ],
+  "ingredient_substitutions": [
+    {
+      "original": "buttermilk",
+      "substitute": "milk with 1 tbsp lemon juice",
+      "ratio": "1 cup : 1 cup"
+    },
+    {
+      "original": "heavy cream",
+      "substitute": "coconut cream",
+      "ratio": "1:1 for dairy-free option"
+    },
+    {
+      "original": "bread crumbs",
+      "substitute": "crushed crackers or oats",
+      "ratio": "1:1"
+    }
+  ]
+}

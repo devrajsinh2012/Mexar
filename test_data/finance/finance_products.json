@@ -1,0 +1,624 @@
+{
+    "finance_database": {
+        "version": "1.0",
+        "last_updated": "2026-01-21",
+        "categories": [
+            {
+                "category_id": "BANK_001",
+                "category_name": "Banking Products",
+                "products": [
+                    {
+                        "product_id": "BANK_CHK_001",
+                        "product_type": "Checking Account",
+                        "provider": "Chase Total Checking",
+                        "description": "Full-service checking account with nationwide branches",
+                        "features": [
+                            "Unlimited transactions",
+                            "ATM access at 16,000+ Chase ATMs",
+                            "Mobile check deposit",
+                            "Zelle integration",
+                            "Overdraft protection available"
+                        ],
+                        "fees": {
+                            "monthly_fee": 12,
+                            "monthly_fee_waiver_options": [
+                                "Direct deposit of $500+",
+                                "Average daily balance of $1,500+",
+                                "Combined balance of $5,000+ in Chase accounts"
+                            ],
+                            "overdraft_fee": 34,
+                            "out_of_network_atm_fee": 3
+                        },
+                        "interest_rate": {
+                            "apy": 0.01,
+                            "compounding": "monthly"
+                        },
+                        "minimum_opening_deposit": 0,
+                        "fdic_insured": true,
+                        "fdic_limit": 250000,
+                        "best_for": [
+                            "Daily transactions",
+                            "In-person banking",
+                            "Nationwide access"
+                        ]
+                    },
+                    {
+                        "product_id": "BANK_SAV_001",
+                        "product_type": "High-Yield Savings Account",
+                        "provider": "Marcus by Goldman Sachs",
+                        "description": "Online savings account with competitive interest rates",
+                        "features": [
+                            "No monthly fees",
+                            "No minimum deposit",
+                            "Easy online transfers",
+                            "FDIC insured",
+                            "24/7 customer service"
+                        ],
+                        "fees": {
+                            "monthly_fee": 0,
+                            "transaction_fees": 0,
+                            "excessive_withdrawal_fee": 0
+                        },
+                        "interest_rate": {
+                            "apy": 4.5,
+                            "compounding": "daily",
+                            "rate_type": "variable"
+                        },
+                        "minimum_opening_deposit": 0,
+                        "fdic_insured": true,
+                        "fdic_limit": 250000,
+                        "withdrawal_limits": {
+                            "monthly_limit": 6,
+                            "penalty": "Account may be closed or converted"
+                        },
+                        "best_for": [
+                            "Emergency fund",
+                            "High interest earnings",
+                            "Online banking comfort"
+                        ]
+                    },
+                    {
+                        "product_id": "BANK_CD_001",
+                        "product_type": "Certificate of Deposit",
+                        "provider": "Ally Bank 12-Month CD",
+                        "description": "Fixed-rate CD with guaranteed returns",
+                        "term_months": 12,
+                        "interest_rate": {
+                            "apy": 5.0,
+                            "compounding": "daily",
+                            "rate_type": "fixed"
+                        },
+                        "minimum_opening_deposit": 0,
+                        "early_withdrawal_penalty": {
+                            "penalty_period": "60 days interest",
+                            "description": "Forfeit 60 days of interest for early withdrawal"
+                        },
+                        "fdic_insured": true,
+                        "automatic_renewal": true,
+                        "best_for": [
+                            "Guaranteed returns",
+                            "Money not needed for 1 year",
+                            "Risk-averse savers"
+                        ]
+                    }
+                ]
+            },
+            {
+                "category_id": "CREDIT_001",
+                "category_name": "Credit Cards",
+                "products": [
+                    {
+                        "product_id": "CC_REWARDS_001",
+                        "card_name": "Chase Sapphire Preferred",
+                        "card_type": "Travel Rewards",
+                        "issuer": "Chase",
+                        "network": "Visa",
+                        "annual_fee": 95,
+                        "signup_bonus": {
+                            "points": 60000,
+                            "spending_requirement": 4000,
+                            "timeframe_months": 3,
+                            "estimated_value": 750
+                        },
+                        "rewards_structure": {
+                            "travel": {
+                                "rate": 2,
+                                "unit": "points per dollar",
+                                "categories": [
+                                    "Hotels",
+                                    "Flights",
+                                    "Rental cars"
+                                ]
+                            },
+                            "dining": {
+                                "rate": 3,
+                                "unit": "points per dollar",
+                                "categories": [
+                                    "Restaurants",
+                                    "Food delivery"
+                                ]
+                            },
+                            "online_grocery": {
+                                "rate": 3,
+                                "unit": "points per dollar",
+                                "annual_cap": 1000
+                            },
+                            "everything_else": {
+                                "rate": 1,
+                                "unit": "points per dollar"
+                            }
+                        },
+                        "redemption_options": [
+                            {
+                                "type": "Travel through Chase portal",
+                                "value": "1.25 cents per point"
+                            },
+                            {
+                                "type": "Transfer to airline/hotel partners",
+                                "value": "Variable, often 1.5-2+ cents per point"
+                            },
+                            {
+                                "type": "Cash back",
+                                "value": "1 cent per point"
+                            }
+                        ],
+                        "apr": {
+                            "purchase_apr": "21.49% - 28.49%",
+                            "balance_transfer_apr": "21.49% - 28.49%",
+                            "cash_advance_apr": "29.99%",
+                            "apr_type": "Variable"
+                        },
+                        "fees": {
+                            "balance_transfer_fee": "5% or $5 minimum",
+                            "cash_advance_fee": "5% or $10 minimum",
+                            "foreign_transaction_fee": 0,
+                            "late_payment_fee": "Up to $40"
+                        },
+                        "benefits": [
+                            "Primary rental car insurance",
+                            "Trip cancellation/interruption insurance",
+                            "Baggage delay insurance",
+                            "Purchase protection",
+                            "Extended warranty protection",
+                            "No foreign transaction fees"
+                        ],
+                        "credit_score_needed": "Good to Excellent (690+)",
+                        "best_for": [
+                            "Frequent travelers",
+                            "Dining enthusiasts",
+                            "Point maximizers"
+                        ]
+                    },
+                    {
+                        "product_id": "CC_CASHBACK_001",
+                        "card_name": "Citi Double Cash",
+                        "card_type": "Cash Back",
+                        "issuer": "Citi",
+                        "network": "Mastercard",
+                        "annual_fee": 0,
+                        "rewards_structure": {
+                            "all_purchases": {
+                                "earn_rate": 1,
+                                "unit": "% when you buy"
+                            },
+                            "payment": {
+                                "earn_rate": 1,
+                                "unit": "% when you pay",
+                                "total": "2% total cash back"
+                            }
+                        },
+                        "apr": {
+                            "purchase_apr": "19.24% - 29.24%",
+                            "balance_transfer_apr": "19.24% - 29.24%",
+                            "intro_balance_transfer_apr": "0% for 18 months",
+                            "apr_type": "Variable"
+                        },
+                        "fees": {
+                            "balance_transfer_fee": "3% or $5 minimum (intro period), then 5%",
+                            "cash_advance_fee": "5% or $10 minimum",
+                            "foreign_transaction_fee": "3%",
+                            "late_payment_fee": "Up to $41"
+                        },
+                        "redemption_options": [
+                            "Statement credit",
+                            "Direct deposit",
+                            "Check"
+                        ],
+                        "minimum_redemption": 25,
+                        "credit_score_needed": "Good to Excellent (700+)",
+                        "best_for": [
+                            "Simple cash back",
+                            "No category tracking",
+                            "Balance transfers"
+                        ]
+                    },
+                    {
+                        "product_id": "CC_SECURED_001",
+                        "card_name": "Discover it Secured",
+                        "card_type": "Secured Credit Card",
+                        "issuer": "Discover",
+                        "network": "Discover",
+                        "annual_fee": 0,
+                        "security_deposit": {
+                            "minimum": 200,
+                            "maximum": 2500,
+                            "becomes_credit_limit": true,
+                            "refundable": "Yes, when account closed in good standing or upgraded"
+                        },
+                        "rewards_structure": {
+                            "rotating_categories": {
+                                "rate": 5,
+                                "unit": "% cash back",
+                                "quarterly_cap": 1500,
+                                "activation_required": true
+                            },
+                            "everything_else": {
+                                "rate": 1,
+                                "unit": "% cash back"
+                            },
+                            "cashback_match": "100% of cash back earned in first year"
+                        },
+                        "apr": {
+                            "purchase_apr": "28.24%",
+                            "apr_type": "Variable"
+                        },
+                        "graduation": {
+                            "timeline": "8 months of responsible use",
+                            "outcome": "Automatic review for unsecured card",
+                            "deposit_return": "Security deposit returned"
+                        },
+                        "credit_score_needed": "Limited or poor credit",
+                        "best_for": [
+                            "Building credit",
+                            "Rebuilding credit",
+                            "First credit card"
+                        ]
+                    }
+                ]
+            },
+            {
+                "category_id": "INVEST_001",
+                "category_name": "Investment Products",
+                "products": [
+                    {
+                        "product_id": "INV_ETF_001",
+                        "product_type": "Exchange-Traded Fund",
+                        "ticker": "SPY",
+                        "name": "SPDR S&P 500 ETF Trust",
+                        "provider": "State Street Global Advisors",
+                        "description": "Tracks the S&P 500 index, providing exposure to 500 large-cap US companies",
+                        "asset_class": "Equity",
+                        "investment_strategy": "Passive Index Tracking",
+                        "benchmark": "S&P 500 Index",
+                        "expense_ratio": 0.0945,
+                        "minimum_investment": "Price of 1 share (~$450)",
+                        "historical_performance": {
+                            "1_year_return": 24.2,
+                            "3_year_return_annualized": 10.5,
+                            "5_year_return_annualized": 15.8,
+                            "10_year_return_annualized": 12.9,
+                            "since_inception_annualized": 10.2
+                        },
+                        "dividend_yield": 1.5,
+                        "top_holdings": [
+                            {
+                                "company": "Apple Inc.",
+                                "weight": 7.2
+                            },
+                            {
+                                "company": "Microsoft Corp.",
+                                "weight": 6.8
+                            },
+                            {
+                                "company": "Amazon.com Inc.",
+                                "weight": 3.5
+                            },
+                            {
+                                "company": "NVIDIA Corp.",
+                                "weight": 3.2
+                            },
+                            {
+                                "company": "Alphabet Inc. Class A",
+                                "weight": 2.1
+                            }
+                        ],
+                        "sector_allocation": {
+                            "Technology": 29.5,
+                            "Healthcare": 13.2,
+                            "Financials": 12.8,
+                            "Consumer Discretionary": 10.5,
+                            "Communication Services": 8.9,
+                            "Industrials": 8.3,
+                            "Consumer Staples": 6.2,
+                            "Energy": 4.1,
+                            "Utilities": 2.5,
+                            "Real Estate": 2.3,
+                            "Materials": 1.7
+                        },
+                        "risk_level": "Medium",
+                        "liquidity": "Very High",
+                        "tax_efficiency": "High",
+                        "best_for": [
+                            "Core portfolio holding",
+                            "Long-term growth",
+                            "Passive investors"
+                        ]
+                    },
+                    {
+                        "product_id": "INV_BOND_001",
+                        "product_type": "Bond Fund",
+                        "ticker": "AGG",
+                        "name": "iShares Core U.S. Aggregate Bond ETF",
+                        "provider": "BlackRock",
+                        "description": "Broad exposure to US investment-grade bonds",
+                        "asset_class": "Fixed Income",
+                        "investment_strategy": "Passive Index Tracking",
+                        "benchmark": "Bloomberg U.S. Aggregate Bond Index",
+                        "expense_ratio": 0.03,
+                        "minimum_investment": "Price of 1 share (~$100)",
+                        "historical_performance": {
+                            "1_year_return": 2.8,
+                            "3_year_return_annualized": -2.1,
+                            "5_year_return_annualized": 0.9,
+                            "10_year_return_annualized": 1.8
+                        },
+                        "yield_to_maturity": 4.2,
+                        "average_duration": 6.2,
+                        "credit_quality": {
+                            "AAA": 72.5,
+                            "AA": 4.2,
+                            "A": 12.8,
+                            "BBB": 10.5
+                        },
+                        "bond_type_allocation": {
+                            "US_Treasury": 42.5,
+                            "Government_Related": 3.2,
+                            "Corporate": 26.8,
+                            "Securitized": 27.5
+                        },
+                        "risk_level": "Low to Medium",
+                        "interest_rate_sensitivity": "Moderate",
+                        "best_for": [
+                            "Portfolio stability",
+                            "Income generation",
+                            "Risk reduction"
+                        ]
+                    },
+                    {
+                        "product_id": "INV_REIT_001",
+                        "product_type": "Real Estate Investment Trust",
+                        "ticker": "VNQ",
+                        "name": "Vanguard Real Estate ETF",
+                        "provider": "Vanguard",
+                        "description": "Invests in stocks issued by real estate investment trusts",
+                        "asset_class": "Real Estate",
+                        "expense_ratio": 0.12,
+                        "minimum_investment": "Price of 1 share (~$90)",
+                        "dividend_yield": 4.2,
+                        "historical_performance": {
+                            "1_year_return": 8.5,
+                            "3_year_return_annualized": 4.2,
+                            "5_year_return_annualized": 6.8,
+                            "10_year_return_annualized": 7.5
+                        },
+                        "property_type_allocation": {
+                            "Specialized": 28.5,
+                            "Residential": 16.2,
+                            "Retail": 10.8,
+                            "Industrial": 15.5,
+                            "Office": 8.2,
+                            "Healthcare": 12.3,
+                            "Diversified": 8.5
+                        },
+                        "risk_level": "Medium to High",
+                        "correlation_to_stocks": "Moderate",
+                        "best_for": [
+                            "Real estate exposure",
+                            "Dividend income",
+                            "Portfolio diversification"
+                        ]
+                    }
+                ]
+            },
+            {
+                "category_id": "RETIRE_001",
+                "category_name": "Retirement Accounts",
+                "accounts": [
+                    {
+                        "account_id": "RET_401K_001",
+                        "account_type": "401(k)",
+                        "account_variant": "Traditional",
+                        "description": "Employer-sponsored retirement plan with pre-tax contributions",
+                        "contribution_limits_2026": {
+                            "employee_contribution": 23500,
+                            "catch_up_contribution_age_50_plus": 7500,
+                            "total_employee_limit": 31000,
+                            "total_contribution_limit_with_employer": 69000
+                        },
+                        "tax_treatment": {
+                            "contributions": "Pre-tax (reduces current taxable income)",
+                            "growth": "Tax-deferred",
+                            "withdrawals": "Taxed as ordinary income"
+                        },
+                        "employer_match_examples": [
+                            {
+                                "match_formula": "100% match up to 3% of salary",
+                                "example_salary": 60000,
+                                "employee_contribution": 1800,
+                                "employer_contribution": 1800,
+                                "total": 3600
+                            },
+                            {
+                                "match_formula": "50% match up to 6% of salary",
+                                "example_salary": 80000,
+                                "employee_contribution": 4800,
+                                "employer_contribution": 2400,
+                                "total": 7200
+                            }
+                        ],
+                        "withdrawal_rules": {
+                            "penalty_free_age": 59.5,
+                            "early_withdrawal_penalty": 10,
+                            "early_withdrawal_exceptions": [
+                                "Disability",
+                                "Medical expenses exceeding 7.5% of AGI",
+                                "Substantially equal periodic payments",
+                                "Separation from service after age 55"
+                            ],
+                            "required_minimum_distributions": {
+                                "start_age": 73,
+                                "calculation": "Based on IRS life expectancy tables"
+                            }
+                        },
+                        "loan_provisions": {
+                            "maximum_loan": "Lesser of $50,000 or 50% of vested balance",
+                            "repayment_period": "5 years (longer for home purchase)",
+                            "interest_rate": "Typically prime + 1-2%",
+                            "consequences": "Interest paid to yourself, but opportunity cost of growth"
+                        },
+                        "best_for": [
+                            "Tax deduction now",
+                            "Employer match",
+                            "High current tax bracket"
+                        ]
+                    },
+                    {
+                        "account_id": "RET_ROTH_001",
+                        "account_type": "Roth IRA",
+                        "description": "Individual retirement account with after-tax contributions and tax-free growth",
+                        "contribution_limits_2026": {
+                            "under_50": 7000,
+                            "age_50_plus": 8000
+                        },
+                        "income_limits_2026": {
+                            "single": {
+                                "phase_out_start": 146000,
+                                "phase_out_end": 161000
+                            },
+                            "married_filing_jointly": {
+                                "phase_out_start": 230000,
+                                "phase_out_end": 240000
+                            }
+                        },
+                        "tax_treatment": {
+                            "contributions": "After-tax (no current deduction)",
+                            "growth": "Tax-free",
+                            "qualified_withdrawals": "Tax-free and penalty-free"
+                        },
+                        "withdrawal_rules": {
+                            "contributions": "Can withdraw anytime tax and penalty-free",
+                            "earnings_qualified": {
+                                "age_requirement": 59.5,
+                                "account_age_requirement": 5,
+                                "tax_and_penalty": "None if both requirements met"
+                            },
+                            "earnings_non_qualified": {
+                                "tax": "Yes, on earnings",
+                                "penalty": "10% on earnings (with exceptions)"
+                            },
+                            "no_rmds": "Can leave money indefinitely"
+                        },
+                        "backdoor_roth_strategy": {
+                            "description": "For high earners exceeding income limits",
+                            "steps": [
+                                "Contribute to Traditional IRA (non-deductible)",
+                                "Immediately convert to Roth IRA",
+                                "Pay taxes on any gains during conversion"
+                            ],
+                            "considerations": "Pro-rata rule if you have other Traditional IRA balances"
+                        },
+                        "best_for": [
+                            "Young investors",
+                            "Expect higher future tax bracket",
+                            "Tax-free retirement income"
+                        ]
+                    },
+                    {
+                        "account_id": "RET_HSA_001",
+                        "account_type": "Health Savings Account",
+                        "description": "Triple tax-advantaged account for medical expenses",
+                        "contribution_limits_2026": {
+                            "individual": 4150,
+                            "family": 8300,
+                            "catch_up_age_55_plus": 1000
+                        },
+                        "eligibility": {
+                            "requirement": "High-deductible health plan (HDHP)",
+                            "hdhp_definition_2026": {
+                                "individual": {
+                                    "minimum_deductible": 1600,
+                                    "maximum_out_of_pocket": 8050
+                                },
+                                "family": {
+                                    "minimum_deductible": 3200,
+                                    "maximum_out_of_pocket": 16100
+                                }
+                            }
+                        },
+                        "triple_tax_advantage": {
+                            "contributions": "Tax-deductible",
+                            "growth": "Tax-free",
+                            "withdrawals": "Tax-free for qualified medical expenses"
+                        },
+                        "qualified_medical_expenses": [
+                            "Doctor visits and hospital stays",
+                            "Prescription medications",
+                            "Dental and vision care",
+                            "Medical equipment",
+                            "Long-term care insurance premiums (age-based limits)"
+                        ],
+                        "after_age_65": {
+                            "medical_withdrawals": "Tax-free",
+                            "non_medical_withdrawals": "Taxed as ordinary income (like Traditional IRA), no penalty"
+                        },
+                        "investment_options": "Can invest like IRA once minimum balance reached",
+                        "portability": "Stays with you if you change jobs or insurance",
+                        "strategy": "Pay medical expenses out-of-pocket, save receipts, let HSA grow for retirement",
+                        "best_for": [
+                            "Healthy individuals",
+                            "Long-term investors",
+                            "Maximizing tax advantages"
+                        ]
+                    }
+                ]
+            }
+        ],
+        "financial_calculators": {
+            "compound_interest": {
+                "formula": "A = P(1 + r/n)^(nt)",
+                "variables": {
+                    "A": "Final amount",
+                    "P": "Principal (initial investment)",
+                    "r": "Annual interest rate (decimal)",
+                    "n": "Compounding frequency per year",
+                    "t": "Time in years"
+                },
+                "example": {
+                    "principal": 10000,
+                    "annual_rate": 0.07,
+                    "years": 30,
+                    "compounding_frequency": 12,
+                    "result": 81402.94,
+                    "total_contributions": 10000,
+                    "total_interest_earned": 71402.94
+                }
+            },
+            "retirement_savings": {
+                "rule_of_72": {
+                    "description": "Estimate years to double money",
+                    "formula": "Years to double = 72 / interest rate",
+                    "example": "At 8% return, money doubles in 72/8 = 9 years"
+                },
+                "4_percent_rule": {
+                    "description": "Safe withdrawal rate in retirement",
+                    "rule": "Withdraw 4% of portfolio in first year, adjust for inflation thereafter",
+                    "example": {
+                        "portfolio_value": 1000000,
+                        "first_year_withdrawal": 40000,
+                        "probability_lasting_30_years": "95%"
+                    }
+                }
+            }
+        }
+    }
+}
