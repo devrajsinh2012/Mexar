@@ -7,9 +7,11 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from modules.knowledge_compiler import create_knowledge_compiler
 from modules.reasoning_engine import create_reasoning_engine
+from evaluation.metrics import MetricsRunner
 
 def run_chunk_ablation(agent_name: str, parsed_data: list, system_prompt: str, prompt_analysis: dict, test_queries: list):
     sizes = [64, 128, 256, 512, 1024]
+    metrics = MetricsRunner()
     
     for size in sizes:
         print(f"\n=====================")
@@ -28,8 +30,12 @@ def run_chunk_ablation(agent_name: str, parsed_data: list, system_prompt: str, p
             engine = create_reasoning_engine()
             for q in test_queries:
                 res = engine.reason(agent_name, q)
+                faithfulness = metrics.extract_faithfulness(res)
                 print(f"Q: {q}")
-                print(f"Faithfulness: {res['explainability']['faithfulness']}")
+                if faithfulness is None:
+                    print("Faithfulness: N/A")
+                else:
+                    print(f"Faithfulness: {faithfulness:.3f}")
         except Exception as e:
             print(f"Failed ablation step for size {size}: {e}")
 

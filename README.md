@@ -140,6 +140,40 @@ npm start
 
 ---
 
+## 📈 Evaluation Workflows
+
+The scripts in `backend/evaluation` support baseline comparison, guardrail checks, benchmark runs, and ablation studies.
+
+Run from project root:
+
+```bash
+cd backend
+
+# Baseline comparison: MEXAR vs CRAG vs RAPTOR
+python evaluation/baseline_runner.py
+
+# Backbone comparison (restores original backbone after completion)
+python evaluation/backbone_comparison.py
+
+# Guardrail boundary query analysis
+python evaluation/guardrail_analysis.py
+
+# Benchmark dataset run (all rows by default) + save report
+python evaluation/benchmark_runner.py --dataset-path ../test_data/medqa_sample.json --agent-name medical_agent --output evaluation_outputs/medqa_report.json
+
+# Quick benchmark smoke test
+python evaluation/benchmark_runner.py --dataset-path ../test_data/medqa_sample.json --agent-name medical_agent --max-samples 25
+
+# McNemar significance helper
+python evaluation/statistical_tests.py
+```
+
+Notes:
+- Faithfulness values are read from `explainability.confidence_breakdown.faithfulness` when available.
+- Benchmark reports include per-query status and aggregate summary metrics.
+
+---
+
 ## 📁 Project Structure
 
 ```
