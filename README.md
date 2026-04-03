@@ -1,3 +1,13 @@
+---
+title: Mexar
+emoji: 🧠
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+pinned: false
+license: mit
+---
+
 # MEXAR Ultimate 🧠
 
 **Multimodal Explainable AI Reasoning Assistant**
