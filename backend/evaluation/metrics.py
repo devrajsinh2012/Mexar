@@ -24,7 +24,7 @@ class MetricsRunner:
         return {
             "faithfulness": faith_res.score,
             "bart_nli": bart_res.score,
-            "factscore": fact_res.score
+            "factscore": fact_res.score,
         }
 
     def extract_faithfulness(self, response: Dict[str, Any]) -> Optional[float]:

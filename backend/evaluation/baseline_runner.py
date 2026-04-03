@@ -4,12 +4,10 @@ Runs CRAG and RAPTOR baselines against a set of test queries.
 import sys
 import os
 from typing import Dict, List, Optional
-
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from modules.reasoning_engine import create_reasoning_engine
 from evaluation.metrics import MetricsRunner
-
 
 def _append_score(results: Dict[str, List[float]], baseline: str, score: Optional[float]) -> None:
     if score is None:
@@ -65,7 +63,6 @@ def run_baselines(agent_name: str, queries: List[str]):
             print(f"{b_name}: No results")
 
     return results
-
 
 if __name__ == "__main__":
     # Example usage
