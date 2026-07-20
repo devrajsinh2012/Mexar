@@ -213,65 +213,141 @@ def create_faithfulness_scorer() -> FaithfulnessScorer:
     return FaithfulnessScorer()
 
 
-class BartNLIScorer:
+class DebertaNLIScorer:
     """
-    Evaluates faithfulness using a local NLI model (BART-Large-MNLI) 
-    to break the circular evaluation where the generator evaluates itself.
-    """
-    def __init__(self):
-        self._pipe = None
-        
-    @property
-    def pipe(self):
-        if self._pipe is None:
-            import logging
-            logger = logging.getLogger(__name__)
-            try:
-                from transformers import pipeline
-                logger.info("Loading BART NLI model...")
-                # 'contradiction' (0), 'neutral' (1), 'entailment' (2)
-                self._pipe = pipeline("text-classification", model="facebook/bart-large-mnli")
-                logger.info("BART NLI loaded.")
-            except ImportError:
-                logger.error("transformers not installed. Cannot use BartNLIScorer.")
-                self._pipe = "UNAVAILABLE"
-        return self._pipe
+    Primary faithfulness verifier per Section III-C.
 
-    def score(self, answer: str, context: str) -> FaithfulnessResult:
-        if not answer or not context or self.pipe == "UNAVAILABLE":
-            return FaithfulnessResult(score=1.0, total_claims=0, supported_claims=0, unsupported_claims=[])
-            
+    Uses cross-encoder/nli-deberta-v3-large (DeBERTa-v3-large fine-tuned on MNLI)
+    to break the circular LLM-judges-LLM evaluation pattern.
+
+    Implements:
+    - Eq. 6: per-claim, per-document max entailment probability
+    - Eq. 7: faithfulness score = fraction of claims exceeding TAU_ENT
+
+    score() receives individual retrieved chunk texts (NOT concatenated), so the
+    per-document max in Eq. 6 is meaningful.
+    """
+
+    TAU_ENT = 0.7  # Entailment probability threshold (Eq. 7)
+
+    def __init__(self):
+        self._model = None
+        self._entailment_idx: int = 1  # Verified at load time from id2label
+
+    @property
+    def model(self):
+        """Lazy-load CrossEncoder to avoid slow startup when not needed."""
+        if self._model is None:
+            from sentence_transformers import CrossEncoder
+            logger.info("Loading cross-encoder/nli-deberta-v3-large for faithfulness scoring...")
+            self._model = CrossEncoder("cross-encoder/nli-deberta-v3-large")
+
+            # CRITICAL: verify the actual label order from the model's config,
+            # NLI checkpoints do NOT always use the same label ordering.
+            # Do not hardcode entailment_idx=1 without confirming here.
+            try:
+                id2label = self._model.model.config.id2label
+                logger.info(f"DeBERTa NLI id2label: {id2label}")
+                # Find the index whose label contains 'entail' (case-insensitive)
+                for idx, label in id2label.items():
+                    if "entail" in label.lower():
+                        self._entailment_idx = int(idx)
+                        break
+                logger.info(
+                    f"DeBERTa-v3 NLI loaded. "
+                    f"Confirmed entailment_idx={self._entailment_idx} "
+                    f"(label='{id2label.get(self._entailment_idx, 'unknown')}')"
+                )
+            except Exception as e:
+                logger.warning(
+                    f"Could not read id2label from DeBERTa config ({e}). "
+                    f"Defaulting entailment_idx=1. Verify this is correct for this checkpoint."
+                )
+        return self._model
+
+    def score(self, answer: str, context_documents: List[str]) -> FaithfulnessResult:
+        """
+        Score faithfulness of an answer against a list of individual retrieved chunks.
+
+        Args:
+            answer: LLM-generated answer text.
+            context_documents: List of individual chunk texts (NOT concatenated).
+                               Per-document max in Eq. 6 requires individual documents.
+
+        Returns:
+            FaithfulnessResult with per-sentence entailment-based score.
+        """
         import re
-        sentences = [s.strip() for s in re.split(r'(?<=[.!?])\s+', answer) if len(s.strip()) > 20][:10]
+        import numpy as np
+
+        if not answer or not context_documents:
+            return FaithfulnessResult(
+                score=1.0, total_claims=0, supported_claims=0, unsupported_claims=[]
+            )
+
+        # Split answer into sentences (Eq. 6 operates per-claim / per-sentence)
+        sentences = [
+            s.strip()
+            for s in re.split(r'(?<=[.!?])\s+', answer)
+            if len(s.strip()) > 15
+        ][:10]  # cap at 10 sentences for latency
+
         if not sentences:
-            return FaithfulnessResult(score=1.0, total_claims=0, supported_claims=0, unsupported_claims=[])
-            
+            return FaithfulnessResult(
+                score=1.0, total_claims=0, supported_claims=0, unsupported_claims=[]
+            )
+
         supported = 0
-        unsupported = []
-        
+        unsupported_sentences = []
+
         try:
             for sentence in sentences:
-                # Format for bart-large-mnli: premise </s></s> hypothesis
-                input_text = f"{context[:3000]} </s></s> {sentence}"
-                result = self.pipe(input_text, truncation=True, max_length=1024)[0]
-                label = result['label'].lower()
-                # Consider neutral or entailment as supported for broad QA, or strict entailment
-                if 'entail' in label:
+                # Build (premise=doc, hypothesis=sentence) pairs for all docs
+                pairs = [(doc[:2000], sentence) for doc in context_documents]
+
+                # predict() returns raw logits shape: (n_docs, n_labels)
+                raw_scores = self.model.predict(pairs)
+
+                # Apply softmax to get probabilities
+                probs = self._softmax(raw_scores)
+
+                # Eq. 6: max entailment probability across all retrieved documents
+                max_entailment = float(np.max(probs[:, self._entailment_idx]))
+
+                if max_entailment > self.TAU_ENT:
                     supported += 1
                 else:
-                    unsupported.append(sentence)
-        except Exception as e:
-            logger.error(f"BART NLI Error: {e}")
-            return FaithfulnessResult(score=0.5, total_claims=len(sentences), supported_claims=0, unsupported_claims=sentences[:5])
+                    unsupported_sentences.append(sentence)
 
+        except Exception as e:
+            logger.error(f"DebertaNLIScorer inference failed: {e}")
+            return FaithfulnessResult(
+                score=0.5,
+                total_claims=len(sentences),
+                supported_claims=0,
+                unsupported_claims=sentences[:5],
+            )
+
+        # Eq. 7: faithfulness = fraction of supported claims
         score = supported / len(sentences)
-        logger.info(f"BART NLI Faithfulness: {supported}/{len(sentences)} claims supported ({score*100:.0f}%)")
+        logger.info(
+            f"DeBERTa NLI Faithfulness: {supported}/{len(sentences)} sentences "
+            f"supported (score={score:.3f}, TAU_ENT={self.TAU_ENT})"
+        )
+
         return FaithfulnessResult(
             score=round(score, 3),
             total_claims=len(sentences),
             supported_claims=supported,
-            unsupported_claims=unsupported[:5]
+            unsupported_claims=unsupported_sentences[:5],
         )
+
+    @staticmethod
+    def _softmax(x):
+        """Numerically stable softmax over last axis."""
+        import numpy as np
+        e_x = np.exp(x - np.max(x, axis=-1, keepdims=True))
+        return e_x / e_x.sum(axis=-1, keepdims=True)
 
 
 class FActScoreCompat:
@@ -287,3 +363,4 @@ class FActScoreCompat:
         result = self._scorer.score(answer, context)
         logger.info(f"FActScore: {result.score * 100:.1f}% ({result.supported_claims}/{result.total_claims} facts)")
         return result
+

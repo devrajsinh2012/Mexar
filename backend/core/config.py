@@ -15,7 +15,8 @@ class Config:
     
     # AI Services
     GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-    LLM_BACKBONE = os.getenv("LLM_BACKBONE", "llama3")  # Options: llama3, mixtral, gemma
+    LLM_BACKBONE = os.getenv("LLM_BACKBONE", "openai/gpt-oss-120b")  # Options: openai/gpt-oss-120b, llama3, mixtral, gemma
+    GROQ_MODEL = os.getenv("GROQ_MODEL", os.getenv("LLM_MODEL", "openai/gpt-oss-120b"))
     
     # Storage
     STORAGE_PATH = os.getenv("STORAGE_PATH", "./data/storage")

@@ -34,13 +34,16 @@ Reciprocal Rank Fusion (RRF) algorithm.
    ```
    - Should return one row
 
-## Alternative: Run from Command Line (Optional)
+## Recommended: Automated Python Migration Runner
 
-If you have `psql` installed:
+Run all migrations automatically using your `DATABASE_URL` configured in `backend/.env`:
 
 ```bash
-psql "postgresql://postgres.xmfcidiwovxuihrkfzps:Yogiji@20122004@aws-1-ap-south-1.pooler.supabase.com:5432/postgres" -f migrations/hybrid_search_function.sql
+python scripts/run_migrations.py
 ```
+
+## Alternative: Run manually via Supabase Dashboard
+
 
 ## What Gets Created
 

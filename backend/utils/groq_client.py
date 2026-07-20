@@ -9,7 +9,7 @@ from typing import Optional, List, Dict, Any
 from groq import Groq
 from dotenv import load_dotenv
 
-# Load environment variables
+# Load environment variables (.env) from root/backend
 load_dotenv()
 
 
@@ -34,8 +34,9 @@ class GroqClient:
         
         from core.config import settings
         
-        # Model configurations based on LLM_BACKBONE
-        backbone = getattr(settings, "LLM_BACKBONE", "llama3").lower()
+        # Model configurations based on LLM_BACKBONE and environment settings
+        backbone = getattr(settings, "LLM_BACKBONE", "openai/gpt-oss-120b").lower()
+        active_model = getattr(settings, "GROQ_MODEL", os.getenv("GROQ_MODEL", "openai/gpt-oss-120b"))
         
         if backbone == "mixtral":
             self.models = {
@@ -53,13 +54,21 @@ class GroqClient:
                 "vision": "meta-llama/llama-4-scout-17b-16e-instruct",
                 "whisper": "whisper-large-v3"
             }
+        elif backbone == "llama3":
+            self.models = {
+                "chat": "llama-3.1-8b-instant",
+                "advanced": "llama-3.3-70b-versatile",
+                "fast": "llama-3.1-8b-instant",
+                "vision": "meta-llama/llama-4-scout-17b-16e-instruct",
+                "whisper": "whisper-large-v3"
+            }
         else:
             self.models = {
-                "chat": "llama-3.1-8b-instant",  # Primary LLM (fast & conversational)
-                "advanced": "llama-3.3-70b-versatile",  # Advanced reasoning
-                "fast": "llama-3.1-8b-instant",      # Fast responses
-                "vision": "meta-llama/llama-4-scout-17b-16e-instruct",  # Llama 4 Vision model (Jan 2025)
-                "whisper": "whisper-large-v3"        # Audio transcription
+                "chat": active_model,       # Primary LLM (openai/gpt-oss-120b)
+                "advanced": active_model,   # Advanced reasoning
+                "fast": active_model,       # Fast responses
+                "vision": "meta-llama/llama-4-scout-17b-16e-instruct",
+                "whisper": "whisper-large-v3"
             }
     
     def chat_completion(

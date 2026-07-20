@@ -18,6 +18,9 @@ class Agent(Base):
     # All metadata stored in Supabase (no filesystem)
     domain_keywords = Column(JSONB, nullable=True)
     domain_signature = Column(JSONB, nullable=True)
+    # Phase 1 fix 1.1: TF-IDF weights and NER entities stored separately for inspection
+    domain_signature_weights = Column(JSONB, nullable=True)  # {term: tfidf_weight} (Eq. 1)
+    domain_entities = Column(JSONB, nullable=True)            # NER entity list (Section III-A)
     prompt_analysis = Column(JSONB, nullable=True)
     knowledge_graph_json = Column(JSONB, nullable=True)
     compilation_stats = Column(JSONB, nullable=True)

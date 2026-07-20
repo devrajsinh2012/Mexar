@@ -1,5 +1,9 @@
 # MEXAR Phase 1 - Backend Dependencies
 
+# Domain Guardrail (Section III-A: TF-IDF + NER + Jaccard)
+scikit-learn>=1.4.0
+spacy>=3.7.0
+
 # Web Framework
 fastapi==0.109.0
 uvicorn[standard]==0.27.0

@@ -1,0 +1,250 @@
+[
+  {
+    "query": "What risk factors are typically disclosed in a technology company's 10-K filing under SEC Regulation S-K Item 1A?",
+    "domain": "financial",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Risk factors subdomain."
+  },
+  {
+    "query": "How do companies disclose cybersecurity risks in their annual SEC filings following the 2023 SEC cybersecurity disclosure rules?",
+    "domain": "financial",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Risk factors subdomain."
+  },
+  {
+    "query": "What types of macroeconomic risks are commonly reported as material risk factors in 10-K filings?",
+    "domain": "financial",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Risk factors subdomain — interest rate, FX, inflation."
+  },
+  {
+    "query": "How do pharmaceutical companies describe clinical trial failure as a risk factor in their annual reports?",
+    "domain": "financial",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Risk factors subdomain."
+  },
+  {
+    "query": "What supply chain risk disclosures are typically included in manufacturing company 10-Ks?",
+    "domain": "financial",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Risk factors subdomain."
+  },
+  {
+    "query": "How do companies disclose geopolitical and sanctions-related risk factors in their SEC filings?",
+    "domain": "financial",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Risk factors subdomain."
+  },
+  {
+    "query": "What liquidity and capital resources risks are companies required to disclose in their 10-K filings?",
+    "domain": "financial",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Risk factors subdomain."
+  },
+  {
+    "query": "How do companies in the energy sector describe commodity price risk in their annual reports?",
+    "domain": "financial",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Risk factors subdomain."
+  },
+  {
+    "query": "What regulatory and compliance risks are disclosed by financial services companies in their 10-K filings?",
+    "domain": "financial",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Risk factors subdomain."
+  },
+  {
+    "query": "How do companies disclose risks related to customer concentration in their annual SEC reports?",
+    "domain": "financial",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Risk factors subdomain."
+  },
+  {
+    "query": "What is included in the Management Discussion and Analysis (MD&A) section of a 10-K, and what SEC rules govern it?",
+    "domain": "financial",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "MD&A subdomain."
+  },
+  {
+    "query": "How do companies describe their revenue recognition policies in the MD&A section of annual reports?",
+    "domain": "financial",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "MD&A subdomain — ASC 606 disclosures."
+  },
+  {
+    "query": "How is operating cash flow discussed in the MD&A, and what non-GAAP measures are typically explained there?",
+    "domain": "financial",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "MD&A subdomain — EBITDA, adjusted earnings."
+  },
+  {
+    "query": "What forward-looking statements are typically made in the MD&A section and what safe harbor protections apply?",
+    "domain": "financial",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "MD&A subdomain."
+  },
+  {
+    "query": "How do companies discuss goodwill impairment testing in their MD&A and related disclosures?",
+    "domain": "financial",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "MD&A subdomain."
+  },
+  {
+    "query": "What segment reporting disclosures are included in the MD&A of diversified companies?",
+    "domain": "financial",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "MD&A subdomain."
+  },
+  {
+    "query": "How does the MD&A section address year-over-year changes in gross margin for product companies?",
+    "domain": "financial",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "MD&A subdomain."
+  },
+  {
+    "query": "What disclosure is required in the MD&A regarding off-balance-sheet arrangements and contingent liabilities?",
+    "domain": "financial",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "MD&A subdomain."
+  },
+  {
+    "query": "How do companies disclose critical accounting estimates in the MD&A under SEC Staff Accounting Bulletin guidance?",
+    "domain": "financial",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "MD&A subdomain."
+  },
+  {
+    "query": "What working capital and liquidity disclosures are expected in the MD&A of a growth-stage company?",
+    "domain": "financial",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "MD&A subdomain."
+  },
+  {
+    "query": "What are the key differences between GAAP and IFRS in the treatment of lease accounting under ASC 842 vs IFRS 16?",
+    "domain": "financial",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Accounting standards subdomain."
+  },
+  {
+    "query": "How does IFRS 9 differ from ASC 326 (CECL) in the recognition of expected credit losses?",
+    "domain": "financial",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Accounting standards subdomain."
+  },
+  {
+    "query": "What are the disclosure requirements under GAAP ASC 820 for fair value measurements at Level 3?",
+    "domain": "financial",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Accounting standards subdomain."
+  },
+  {
+    "query": "How does IFRS 15 govern revenue recognition for multi-element software licensing arrangements?",
+    "domain": "financial",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Accounting standards subdomain."
+  },
+  {
+    "query": "What are the required disclosures for pension and post-retirement benefit obligations under ASC 715?",
+    "domain": "financial",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Accounting standards subdomain."
+  },
+  {
+    "query": "How does GAAP treat research and development costs compared to IFRS, and what disclosures are required?",
+    "domain": "financial",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Accounting standards subdomain."
+  },
+  {
+    "query": "What are the first-line treatment guidelines for stage 3 non-small cell lung cancer?",
+    "domain": "financial",
+    "is_in_domain": false,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Out-of-domain: medical/oncology query posed to financial corpus — should trigger guardrail."
+  },
+  {
+    "query": "How is sepsis diagnosed and what is the initial antibiotic management protocol?",
+    "domain": "financial",
+    "is_in_domain": false,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Out-of-domain: medical query posed to financial corpus."
+  },
+  {
+    "query": "What are the elements of a valid breach of contract claim under common law?",
+    "domain": "financial",
+    "is_in_domain": false,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Out-of-domain: legal query posed to financial corpus."
+  },
+  {
+    "query": "How does the doctrine of fair use apply in copyright infringement cases involving parody works?",
+    "domain": "financial",
+    "is_in_domain": false,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Out-of-domain: intellectual property/legal query posed to financial corpus."
+  },
+  {
+    "query": "What are the ADA diagnostic thresholds for prediabetes and type 2 diabetes using fasting glucose and HbA1c?",
+    "domain": "financial",
+    "is_in_domain": false,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Out-of-domain: medical query posed to financial corpus."
+  }
+]

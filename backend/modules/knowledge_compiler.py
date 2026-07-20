@@ -10,6 +10,7 @@ from typing import Dict, List, Any, Optional
 from pathlib import Path
 
 from utils.groq_client import get_groq_client, GroqClient
+from utils.domain_signature import build_domain_signature
 from fastembed import TextEmbedding
 from core.database import SessionLocal
 from models.agent import Agent
@@ -102,7 +103,9 @@ class KnowledgeCompiler:
             self._save_agent(
                 agent_name=agent_name,
                 text_context=text_context,
-                domain_signature=domain_signature,
+                domain_signature=domain_signature["combined"],
+                domain_signature_weights=domain_signature["lexical_weights"],
+                domain_entities=domain_signature["entities"],
                 system_prompt=system_prompt,
                 prompt_analysis=prompt_analysis,
                 stats=stats
@@ -116,7 +119,7 @@ class KnowledgeCompiler:
             self._update_progress("complete", 100, "Compilation complete!")
             
             return {
-                "domain_signature": domain_signature,
+                "domain_signature": domain_signature["combined"],
                 "stats": stats,
                 "agent_path": str(self.data_dir / agent_name)
             }
@@ -200,33 +203,47 @@ class KnowledgeCompiler:
         self,
         parsed_data: List[Dict[str, Any]],
         prompt_analysis: Dict[str, Any]
-    ) -> List[str]:
+    ) -> Dict:
         """
-        Extract domain signature keywords for guardrail checking.
+        Build domain signature using TF-IDF (Eq. 1) + NER entities (Section III-A).
+
+        Extracts per-file raw text to preserve per-document granularity needed for
+        TF-IDF's document-frequency term to be meaningful. Returns the full signature
+        dict from build_domain_signature() including 'combined', 'lexical_weights',
+        and 'entities' keys.
         """
-        # Start with analyzed keywords (highest priority)
-        domain_keywords = prompt_analysis.get("domain_keywords", [])
-        signature = list(domain_keywords)
-        
-        # Add domain and sub-domains
-        domain = prompt_analysis.get("domain", "")
-        if domain and domain not in signature:
-            signature.insert(0, domain)
-        
-        for sub_domain in prompt_analysis.get("sub_domains", []):
-            if sub_domain and sub_domain.lower() not in [s.lower() for s in signature]:
-                signature.append(sub_domain)
-        
-        # Extract column headers from structured data
+        # Collect per-file text documents (NOT a single concatenated string)
+        documents: List[str] = []
         for file_data in parsed_data:
-            if file_data.get("data") and isinstance(file_data["data"], list):
-                if file_data["data"] and isinstance(file_data["data"][0], dict):
-                    for key in file_data["data"][0].keys():
-                        clean_key = key.lower().strip().replace("_", " ")
-                        if clean_key and clean_key not in [s.lower() for s in signature]:
-                            signature.append(clean_key)
-        
-        return signature[:80]  # Limit for efficiency
+            text = (
+                file_data.get("text") or
+                file_data.get("content") or
+                ""
+            )
+            # For structured data (CSV/JSON), build a text representation per file
+            if not text and file_data.get("data") and isinstance(file_data["data"], list):
+                rows = file_data["data"]
+                text = " ".join(
+                    " ".join(str(v) for v in row.values() if v is not None)
+                    for row in rows
+                    if isinstance(row, dict)
+                )
+            if text and text.strip():
+                documents.append(text)
+
+        # Build TF-IDF + NER domain signature
+        signature = build_domain_signature(
+            documents=documents,
+            tau_tf=0.0,
+            tau_ent=2,
+            top_n_lexical=100,
+        )
+
+        logger.info(
+            f"Domain signature: {len(signature['combined'])} combined terms "
+            f"({len(signature['lexical'])} lexical + {len(signature['entities'])} NER entities)"
+        )
+        return signature
     
     def _calculate_stats(
         self,
@@ -249,11 +266,13 @@ class KnowledgeCompiler:
         agent_name: str,
         text_context: str,
         domain_signature: List[str],
+        domain_signature_weights: Dict,
+        domain_entities: List[str],
         system_prompt: str,
         prompt_analysis: Dict[str, Any],
         stats: Dict[str, Any]
     ):
-        """Save agent artifacts to filesystem."""
+        """Save agent artifacts to filesystem and Supabase DB."""
         agent_dir = self.data_dir / agent_name
         agent_dir.mkdir(parents=True, exist_ok=True)
         
@@ -267,11 +286,29 @@ class KnowledgeCompiler:
             "system_prompt": system_prompt,
             "prompt_analysis": prompt_analysis,
             "domain_signature": domain_signature,
+            "domain_signature_weights": domain_signature_weights,
+            "domain_entities": domain_entities,
             "stats": stats,
             "created_at": self._get_timestamp()
         }
         with open(agent_dir / "metadata.json", "w", encoding="utf-8") as f:
             json.dump(metadata, f, indent=2, ensure_ascii=False)
+        
+        # Persist new domain_signature_weights and domain_entities to Supabase DB
+        try:
+            with SessionLocal() as db:
+                agent = db.query(Agent).filter(Agent.name == agent_name).first()
+                if agent:
+                    agent.domain_signature = domain_signature
+                    agent.domain_signature_weights = domain_signature_weights
+                    agent.domain_entities = domain_entities
+                    db.commit()
+                    logger.info(
+                        f"Persisted domain_signature ({len(domain_signature)} terms), "
+                        f"domain_signature_weights, and domain_entities for agent '{agent_name}'."
+                    )
+        except Exception as e:
+            logger.warning(f"Could not persist domain signature to DB: {e}")
         
         logger.info(f"Agent saved to: {agent_dir}")
     

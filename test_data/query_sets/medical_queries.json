@@ -1,0 +1,282 @@
+[
+  {
+    "query": "What is the first-line treatment for stage 2 hypertension according to current guidelines?",
+    "domain": "medical",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Cardiology subdomain. Expected answer: combination antihypertensive therapy (ACE inhibitor/ARB + CCB or thiazide)."
+  },
+  {
+    "query": "What are the recommended beta-blocker choices for patients with heart failure with reduced ejection fraction (HFrEF)?",
+    "domain": "medical",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Cardiology subdomain."
+  },
+  {
+    "query": "What diagnostic criteria are used to classify atrial fibrillation subtypes?",
+    "domain": "medical",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Cardiology subdomain — paroxysmal, persistent, long-standing persistent, permanent."
+  },
+  {
+    "query": "What are the ESC or ACC/AHA guideline recommendations for statin therapy in secondary prevention after myocardial infarction?",
+    "domain": "medical",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Cardiology subdomain."
+  },
+  {
+    "query": "Which anticoagulants are recommended for stroke prevention in non-valvular atrial fibrillation?",
+    "domain": "medical",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Cardiology subdomain — DOACs vs warfarin."
+  },
+  {
+    "query": "What is the CHADS2-VASc score and how is it used to guide anticoagulation decisions?",
+    "domain": "medical",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Cardiology subdomain."
+  },
+  {
+    "query": "What is the current guideline-directed medical therapy for stable ischemic heart disease?",
+    "domain": "medical",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Cardiology subdomain."
+  },
+  {
+    "query": "How is cardiac resynchronization therapy indicated in heart failure patients?",
+    "domain": "medical",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Cardiology subdomain."
+  },
+  {
+    "query": "What are the diagnostic criteria for heart failure with preserved ejection fraction (HFpEF)?",
+    "domain": "medical",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Cardiology subdomain."
+  },
+  {
+    "query": "What is the recommended approach to treating ST-elevation myocardial infarction (STEMI) within the first 12 hours?",
+    "domain": "medical",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Cardiology subdomain — primary PCI vs thrombolysis."
+  },
+  {
+    "query": "What is the standard chemotherapy regimen for first-line treatment of metastatic non-small cell lung cancer?",
+    "domain": "medical",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Oncology subdomain."
+  },
+  {
+    "query": "What are the NCCN guidelines for adjuvant chemotherapy in stage III colon cancer?",
+    "domain": "medical",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Oncology subdomain."
+  },
+  {
+    "query": "How are PD-L1 expression levels used to select patients for pembrolizumab therapy in lung cancer?",
+    "domain": "medical",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Oncology subdomain."
+  },
+  {
+    "query": "What treatment protocol is used for BRCA-mutated ovarian cancer in first-line maintenance?",
+    "domain": "medical",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Oncology subdomain — PARP inhibitors."
+  },
+  {
+    "query": "What are the standard treatment options for relapsed/refractory diffuse large B-cell lymphoma?",
+    "domain": "medical",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Oncology subdomain."
+  },
+  {
+    "query": "What are the first-line treatment options for hormone receptor-positive HER2-negative metastatic breast cancer?",
+    "domain": "medical",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Oncology subdomain."
+  },
+  {
+    "query": "How does tumor mutational burden (TMB) influence immunotherapy selection in solid tumors?",
+    "domain": "medical",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Oncology subdomain."
+  },
+  {
+    "query": "What is the role of neoadjuvant chemotherapy in locally advanced rectal cancer?",
+    "domain": "medical",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Oncology subdomain."
+  },
+  {
+    "query": "What are current guidelines for surveillance imaging after complete remission in Hodgkin lymphoma?",
+    "domain": "medical",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Oncology subdomain."
+  },
+  {
+    "query": "How are CDK4/6 inhibitors used in the treatment of advanced breast cancer?",
+    "domain": "medical",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Oncology subdomain."
+  },
+  {
+    "query": "What are the diagnostic criteria for type 2 diabetes mellitus according to ADA guidelines?",
+    "domain": "medical",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Internal medicine subdomain — fasting glucose, HbA1c, OGTT thresholds."
+  },
+  {
+    "query": "What are the Rome IV diagnostic criteria for irritable bowel syndrome?",
+    "domain": "medical",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Internal medicine subdomain."
+  },
+  {
+    "query": "How is community-acquired pneumonia severity classified using the CURB-65 or PSI scoring systems?",
+    "domain": "medical",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Internal medicine subdomain."
+  },
+  {
+    "query": "What are the diagnostic criteria for systemic lupus erythematosus (SLE) per the 2019 EULAR/ACR classification?",
+    "domain": "medical",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Internal medicine subdomain."
+  },
+  {
+    "query": "What is the initial workup for a patient presenting with unexplained iron deficiency anemia?",
+    "domain": "medical",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Internal medicine subdomain."
+  },
+  {
+    "query": "What are the diagnostic criteria for chronic kidney disease (CKD) and how are GFR stages defined?",
+    "domain": "medical",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Internal medicine subdomain."
+  },
+  {
+    "query": "How is the diagnosis of pulmonary embolism confirmed, and what anticoagulation is recommended?",
+    "domain": "medical",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Internal medicine subdomain."
+  },
+  {
+    "query": "What are the WHO diagnostic criteria for metabolic syndrome?",
+    "domain": "medical",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Internal medicine subdomain."
+  },
+  {
+    "query": "How is sepsis defined and what is the SOFA score used for?",
+    "domain": "medical",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Internal medicine subdomain — Sepsis-3 definition."
+  },
+  {
+    "query": "What are the diagnostic criteria for rheumatoid arthritis according to the 2010 ACR/EULAR classification?",
+    "domain": "medical",
+    "is_in_domain": true,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Internal medicine subdomain."
+  },
+  {
+    "query": "What is the best therapeutic approach for a breach of contract involving consequential damages under common law?",
+    "domain": "medical",
+    "is_in_domain": false,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Out-of-domain: legal query posed to medical corpus — should trigger domain guardrail."
+  },
+  {
+    "query": "How does SEC Regulation S-K require companies to disclose material risk factors in annual reports?",
+    "domain": "medical",
+    "is_in_domain": false,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Out-of-domain: financial/regulatory query posed to medical corpus."
+  },
+  {
+    "query": "What is the amortization schedule for a 30-year fixed-rate mortgage at 6.5% interest?",
+    "domain": "medical",
+    "is_in_domain": false,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Out-of-domain: financial query posed to medical corpus."
+  },
+  {
+    "query": "Under the UCC, when does title to goods transfer from seller to buyer in a sale of goods contract?",
+    "domain": "medical",
+    "is_in_domain": false,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Out-of-domain: legal/UCC query posed to medical corpus."
+  },
+  {
+    "query": "What are the fiduciary duties of a corporate board of directors to shareholders under Delaware law?",
+    "domain": "medical",
+    "is_in_domain": false,
+    "expected_source_docs": [],
+    "annotator": "devrajsinh",
+    "notes": "Out-of-domain: corporate law query posed to medical corpus."
+  }
+]

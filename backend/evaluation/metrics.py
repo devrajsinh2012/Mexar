@@ -8,22 +8,35 @@ from typing import Any, Dict, Optional
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from utils.faithfulness import FaithfulnessScorer, BartNLIScorer, FActScoreCompat
+from utils.faithfulness import FaithfulnessScorer, DebertaNLIScorer, FActScoreCompat
 
 
 class MetricsRunner:
     def __init__(self):
         self.faith_scorer = FaithfulnessScorer()
-        self.bart_nli = BartNLIScorer()
+        # Primary NLI scorer — DeBERTa-v3 (Section III-C, Eq. 6/7)
+        self.deberta_nli = DebertaNLIScorer()
         self.factscore = FActScoreCompat()
 
-    def evaluate_all(self, answer: str, context: str) -> Dict[str, float]:
-        faith_res = self.faith_scorer.score(answer, context)
-        bart_res = self.bart_nli.score(answer, context)
-        fact_res = self.factscore.score(answer, context)
+    def evaluate_all(self, answer: str, context_documents: List[str]) -> Dict[str, float]:
+        """
+        Evaluate faithfulness using all available scorers.
+
+        Args:
+            answer: LLM-generated answer.
+            context_documents: List of individual retrieved chunk texts.
+                               DeBERTa scorer requires individual docs (Eq. 6).
+                               FaithfulnessScorer receives them joined as a single string.
+        """
+        # FaithfulnessScorer (LLM-judge baseline) still takes a single concatenated string
+        context_str = "\n\n---\n\n".join(context_documents)
+        faith_res = self.faith_scorer.score(answer, context_str)
+        # DeBERTa NLI (primary) takes individual chunk texts
+        deberta_res = self.deberta_nli.score(answer, context_documents)
+        fact_res = self.factscore.score(answer, context_str)
         return {
-            "faithfulness": faith_res.score,
-            "bart_nli": bart_res.score,
+            "faithfulness_llm_judge": faith_res.score,
+            "deberta_nli": deberta_res.score,
             "factscore": fact_res.score,
         }
 

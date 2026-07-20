@@ -9,14 +9,13 @@ import logging
 from typing import Dict, List, Any, Optional, Tuple
 from pathlib import Path
 import networkx as nx
-from difflib import SequenceMatcher
 import numpy as np
 
 from utils.groq_client import get_groq_client, GroqClient
 from utils.hybrid_search import HybridSearcher
 from utils.reranker import Reranker
 from utils.source_attribution import SourceAttributor
-from utils.faithfulness import FaithfulnessScorer, BartNLIScorer
+from utils.faithfulness import FaithfulnessScorer, DebertaNLIScorer
 from fastembed import TextEmbedding
 from core.database import SessionLocal
 from models.agent import Agent
@@ -68,8 +67,10 @@ class ReasoningEngine:
         self.searcher = HybridSearcher(self.embedding_model) if self.embedding_model else None
         self.reranker = Reranker()
         self.attributor = SourceAttributor(self.embedding_model)
+        # Primary faithfulness: DeBERTa-v3 NLI (Section III-C, Eq. 6/7)
+        self.deberta_nli_scorer = DebertaNLIScorer()
+        # Baseline faithfulness: LLM-as-judge (kept for paper Table I/III comparison)
         self.faithfulness_scorer = FaithfulnessScorer()
-        self.bart_nli_scorer = BartNLIScorer()
         
         # Cache for loaded agents
         self._agent_cache: Dict[str, Dict] = {}
@@ -154,10 +155,15 @@ class ReasoningEngine:
         attribution = self.attributor.attribute(answer, top_chunks, chunk_embeddings)
         
         # Step 6: Faithfulness Scoring
-        faithfulness_result = self.faithfulness_scorer.score(answer, context)
+        # PRIMARY: DeBERTa-v3 NLI per-document max entailment (Eq. 6/7, Section III-C)
+        # Passes individual chunk texts (NOT concatenated) so per-doc max is meaningful.
+        faithfulness_result = self.deberta_nli_scorer.score(
+            answer, [c.content for c in top_chunks]
+        )
         
-        # Independent NLI Baseline Scoring (for reviewer feedback)
-        bart_nli_result = self.bart_nli_scorer.score(answer, context)
+        # BASELINE (LLM-as-judge): kept for paper Table I/III comparison
+        # Stored under a clearly-labelled key, NOT used as the headline faithfulness number.
+        llm_faithfulness_result = self.faithfulness_scorer.score(answer, context)
         
         # Step 7: Calculate Confidence
         top_similarity = rrf_scores[0] if rrf_scores else 0
@@ -166,7 +172,7 @@ class ReasoningEngine:
         confidence = self._calculate_confidence(
             top_similarity=top_similarity,
             rerank_score=top_rerank,
-            faithfulness=faithfulness_result.score
+            faithfulness=faithfulness_result.score  # DeBERTa is primary signal
         )
         
         # Step 8: Build Explainability
@@ -178,7 +184,7 @@ class ReasoningEngine:
             rerank_scores=rerank_scores,
             attribution=attribution,
             faithfulness=faithfulness_result,
-            bart_nli_result=bart_nli_result,
+            llm_faithfulness_result=llm_faithfulness_result,
             confidence=confidence,
             domain_score=domain_score
         )
@@ -228,64 +234,46 @@ class ReasoningEngine:
         domain_signature: List[str],
         prompt_analysis: Dict[str, Any]
     ) -> Tuple[bool, float]:
-        """Check if query matches the domain."""
-        query_lower = query.lower()
-        query_words = set(query_lower.split())
-        
-        matches = 0
-        bonus_matches = 0
-        
-        # Check domain match
-        domain = prompt_analysis.get("domain", "")
-        if domain.lower() in query_lower:
-            bonus_matches += 3
-        
-        # Check sub-domains
-        for sub_domain in prompt_analysis.get("sub_domains", []):
-            if sub_domain.lower() in query_lower:
-                bonus_matches += 2
-        
-        # Check domain keywords
-        for keyword in prompt_analysis.get("domain_keywords", []):
-            if keyword.lower() in query_lower:
-                bonus_matches += 1.5
-        
-        # Check signature keywords with fuzzy matching
-        signature_lower = [kw.lower() for kw in (domain_signature or [])]
-        
-        for word in query_words:
-            if len(word) < 3:
-                continue
-            for kw in signature_lower[:100]:
-                if self._fuzzy_match(word, kw) > 0.75:
-                    matches += 1
-                    break
-                if word in kw or kw in word:
-                    matches += 0.5
-                    break
-        
-        # Calculate score
-        max_possible = max(1, min(len(query_words), 10))
-        base_score = matches / max_possible
-        bonus_score = min(0.5, bonus_matches * 0.1)
-        score = min(1.0, base_score + bonus_score)
-        
-        if bonus_matches >= 1:
-            score = max(score, 0.2)
-        
+        """
+        Eq. 2: sim(q, Sigma) = |Phi(q) ∩ Sigma| / |Phi(q)|
+
+        Replaces the old fuzzy-string heuristic with real Jaccard similarity
+        over spaCy-lemmatized content tokens (Section III-A).
+
+        Phi(q): lemmatized content tokens from query, excluding stopwords/punctuation
+                and tokens shorter than 3 characters.
+        Sigma:  domain_signature (combined lexical + NER terms from build_domain_signature)
+        """
+        from utils.domain_signature import get_nlp
+        nlp = get_nlp()
+
+        query_doc = nlp(query.lower())
+
+        # Phi(q): lemmatized meaningful tokens
+        phi_q = {
+            tok.lemma_
+            for tok in query_doc
+            if not tok.is_stop and not tok.is_punct and len(tok.text) > 2
+        }
+
+        sigma = set(s.lower() for s in (domain_signature or []))
+
+        if not phi_q:
+            logger.info("Guardrail: phi_q is empty — query has no content tokens, rejecting.")
+            return False, 0.0
+
+        intersection = phi_q & sigma
+        score = len(intersection) / len(phi_q)
+
         is_in_domain = score >= self.DOMAIN_SIMILARITY_THRESHOLD
-        
-        # Analyze guardrail false-accept rate: Log boundary queries (close to threshold)
-        if 0.05 <= score < 0.15:
-            logger.info(f"GUARDRAIL_BOUNDARY_ACCEPT: score={score:.2f}, query='{query}' - Check for false positive")
-        
-        logger.info(f"Guardrail: score={score:.2f}, matches={matches}, bonus={bonus_matches}, in_domain={is_in_domain}")
-        
+
+        logger.info(
+            f"Guardrail (Eq. 2): sim={score:.3f}, |Phi(q)|={len(phi_q)}, "
+            f"|Sigma|={len(sigma)}, |intersection|={len(intersection)}, "
+            f"in_domain={is_in_domain}"
+        )
+
         return is_in_domain, score
-    
-    def _fuzzy_match(self, s1: str, s2: str) -> float:
-        """Calculate fuzzy match ratio."""
-        return SequenceMatcher(None, s1, s2).ratio()
     
     def _generate_answer(
         self,
@@ -378,7 +366,7 @@ IMPORTANT INSTRUCTIONS:
         rerank_scores: List[float],
         attribution,
         faithfulness,
-        bart_nli_result,
+        llm_faithfulness_result,
         confidence: float,
         domain_score: float
     ) -> Dict[str, Any]:
@@ -401,8 +389,10 @@ IMPORTANT INSTRUCTIONS:
                 "domain_relevance": f"{domain_score*100:.0f}%",
                 "retrieval_quality": f"{rrf_scores[0]*100:.1f}%" if rrf_scores else "N/A",
                 "rerank_score": f"{rerank_scores[0]:.2f}" if rerank_scores else "N/A",
+                # Primary faithfulness: DeBERTa-v3 NLI (Section III-C)
                 "faithfulness": f"{faithfulness.score*100:.0f}%",
-                "bart_nli_score": f"{bart_nli_result.score*100:.0f}%" if bart_nli_result else "N/A",
+                # Baseline: LLM-as-judge (for paper Table I/III comparison only)
+                "llm_judge_baseline_score": f"{llm_faithfulness_result.score*100:.0f}%" if llm_faithfulness_result else "N/A",
                 "claims_supported": f"{faithfulness.supported_claims}/{faithfulness.total_claims}"
             },
             "unsupported_claims": faithfulness.unsupported_claims[:3],

@@ -1,0 +1,11 @@
+{
+  "include": [
+    "backend"
+  ],
+  "extraPaths": [
+    "C:/Users/Vasu/AppData/Local/Programs/Python/Python312/Lib/site-packages",
+    "d:/DG Workspace/Mexar-main/backend"
+  ],
+  "pythonVersion": "3.12",
+  "pythonPlatform": "Windows"
+}
