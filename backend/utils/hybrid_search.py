@@ -145,6 +145,58 @@ class HybridSearcher:
             logger.error(f"Fallback search failed: {e}")
             return []
 
+    def lexical_only_search(
+        self,
+        query: str,
+        agent_id: int,
+        top_k: int = 20
+    ) -> List[Tuple[DocumentChunk, float]]:
+        """Pure lexical (ts_rank_cd) search, no semantic component."""
+        if not query.strip():
+            return []
+        db = SessionLocal()
+        try:
+            result = db.execute(text("""
+                SELECT id, ts_rank_cd(content_tsvector, plainto_tsquery('english', :query_text)) AS score
+                FROM document_chunks
+                WHERE agent_id = :agent_id
+                  AND content_tsvector @@ plainto_tsquery('english', :query_text)
+                ORDER BY score DESC
+                LIMIT :top_k
+            """), {"query_text": query, "agent_id": agent_id, "top_k": top_k})
+            rows = result.fetchall()
+            if not rows:
+                return []
+            chunk_ids = [row.id for row in rows]
+            chunks = db.query(DocumentChunk).filter(DocumentChunk.id.in_(chunk_ids)).all()
+            chunk_map = {c.id: c for c in chunks}
+            return [(chunk_map[row.id], float(row.score)) for row in rows if row.id in chunk_map]
+        except Exception as e:
+            logger.error(f"Lexical search failed: {e}")
+            return []
+        finally:
+            db.close()
+
+    def semantic_only_search(
+        self,
+        query: str,
+        agent_id: int,
+        top_k: int = 20
+    ) -> List[Tuple[DocumentChunk, float]]:
+        """Pure semantic search without RRF/hybrid components."""
+        if not query.strip() or not self.embedding_model:
+            return []
+        try:
+            query_embedding = list(self.embedding_model.embed([query]))[0].tolist()
+            db = SessionLocal()
+            try:
+                return self._semantic_only_search(db, query_embedding, agent_id, top_k)
+            finally:
+                db.close()
+        except Exception as e:
+            logger.error(f"Semantic-only search failed: {e}")
+            return []
+
 
 def create_hybrid_searcher(embedding_model) -> HybridSearcher:
     """Factory function to create HybridSearcher."""
