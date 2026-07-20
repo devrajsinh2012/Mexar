@@ -2,7 +2,8 @@
 
 # Domain Guardrail (Section III-A: TF-IDF + NER + Jaccard)
 scikit-learn>=1.4.0
-spacy>=3.7.0
+spacy>=3.7.0,<3.8.0
+thinc>=8.2.0,<8.3.0
 
 # Web Framework
 fastapi==0.109.0
