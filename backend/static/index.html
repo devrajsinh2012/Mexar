@@ -3,255 +3,955 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MEXAR Core Engine - API</title>
+    <title>MEXAR — Multimodal Explainable AI Reasoning Assistant</title>
+    <meta name="description" content="Build domain-specific AI agents from your documents. Grounded, cited, and faithfully scored answers with full explainability.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root {
+            --bg-primary: #080c14;
+            --bg-secondary: #0d1420;
+            --bg-card: #111827;
+            --bg-card-hover: #1a2236;
+            --border: rgba(99, 120, 255, 0.15);
+            --border-bright: rgba(99, 120, 255, 0.4);
+            --accent-blue: #6378ff;
+            --accent-cyan: #00d4ff;
+            --accent-purple: #a855f7;
+            --accent-green: #10b981;
+            --accent-orange: #f59e0b;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-muted: #475569;
+            --glow-blue: rgba(99, 120, 255, 0.3);
+            --glow-cyan: rgba(0, 212, 255, 0.2);
         }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
             min-height: 100vh;
-            padding: 2rem;
-            color: #333;
+            overflow-x: hidden;
         }
+
+        /* ── Animated gradient background ── */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: 
+                radial-gradient(ellipse 80% 50% at 20% 20%, rgba(99,120,255,0.08) 0%, transparent 60%),
+                radial-gradient(ellipse 60% 40% at 80% 80%, rgba(168,85,247,0.06) 0%, transparent 60%),
+                radial-gradient(ellipse 50% 30% at 50% 50%, rgba(0,212,255,0.04) 0%, transparent 60%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
         .container {
-            max-width: 900px;
+            position: relative;
+            z-index: 1;
+            max-width: 1100px;
             margin: 0 auto;
-            background: white;
-            border-radius: 16px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            overflow: hidden;
+            padding: 0 2rem;
         }
-        .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+        /* ── NAV ── */
+        nav {
+            padding: 1.5rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 1.35rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-logo .brain { font-size: 1.6rem; }
+
+        .nav-logo .text-gradient {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links { display: flex; gap: 0.75rem; align-items: center; }
+
+        .nav-link {
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            transition: all 0.2s;
+            border: 1px solid transparent;
+        }
+
+        .nav-link:hover {
+            color: var(--text-primary);
+            background: rgba(255,255,255,0.06);
+            border-color: var(--border);
+        }
+
+        .nav-link.primary {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
             color: white;
-            padding: 3rem 2rem;
+            border: none;
+        }
+
+        .nav-link.primary:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 20px var(--glow-blue);
+        }
+
+        /* ── HERO ── */
+        .hero {
+            padding: 5rem 0 4rem;
             text-align: center;
         }
-        .header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-        .header .subtitle {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-        .badge {
-            display: inline-block;
-            background: rgba(255,255,255,0.2);
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            margin: 0.5rem 0.3rem 0 0;
-        }
-        .content {
-            padding: 2rem;
-        }
-        .section {
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 1rem;
+            border-radius: 100px;
+            background: rgba(99,120,255,0.1);
+            border: 1px solid rgba(99,120,255,0.3);
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--accent-cyan);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
             margin-bottom: 2rem;
         }
-        .section h2 {
-            color: #667eea;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid #f0f0f0;
+
+        .hero-badge .dot {
+            width: 6px; height: 6px;
+            border-radius: 50%;
+            background: var(--accent-cyan);
+            animation: pulse 2s infinite;
         }
-        .endpoint {
-            background: #f8f9fa;
-            border-left: 4px solid #667eea;
-            padding: 1rem;
-            margin-bottom: 1rem;
-            border-radius: 4px;
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
         }
-        .endpoint code {
-            background: #e9ecef;
-            padding: 0.2rem 0.5rem;
-            border-radius: 3px;
-            font-family: 'Courier New', monospace;
-            color: #212529;
+
+        .hero h1 {
+            font-size: clamp(2.8rem, 6vw, 5rem);
+            font-weight: 900;
+            line-height: 1.05;
+            letter-spacing: -2px;
+            margin-bottom: 1.5rem;
         }
-        .method {
-            display: inline-block;
-            padding: 0.2rem 0.5rem;
-            border-radius: 3px;
-            font-weight: bold;
-            margin-right: 0.5rem;
-            font-size: 0.85rem;
+
+        .hero h1 .line1 { display: block; color: var(--text-primary); }
+        .hero h1 .line2 {
+            display: block;
+            background: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-cyan) 50%, var(--accent-purple) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
-        .method.get { background: #28a745; color: white; }
-        .method.post { background: #007bff; color: white; }
-        .method.delete { background: #dc3545; color: white; }
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-            margin-top: 1rem;
+
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.7;
+            font-weight: 400;
         }
-        .feature-card {
-            background: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 8px;
-            border: 1px solid #e9ecef;
-        }
-        .feature-card h3 {
-            color: #667eea;
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-        }
-        .links {
+
+        .hero-cta {
             display: flex;
             gap: 1rem;
-            margin-top: 1.5rem;
+            justify-content: center;
             flex-wrap: wrap;
+            margin-bottom: 3.5rem;
         }
+
         .btn {
-            display: inline-block;
-            padding: 0.75rem 1.5rem;
-            background: #667eea;
-            color: white;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.85rem 1.8rem;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-weight: 600;
             text-decoration: none;
-            border-radius: 6px;
-            font-weight: 500;
-            transition: all 0.3s;
+            transition: all 0.25s;
+            cursor: pointer;
+            border: none;
         }
-        .btn:hover {
-            background: #5568d3;
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+            color: white;
+            box-shadow: 0 4px 24px var(--glow-blue);
+        }
+
+        .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(102,126,234,0.4);
+            box-shadow: 0 8px 32px rgba(99,120,255,0.5);
         }
-        .btn.secondary {
-            background: #6c757d;
+
+        .btn-secondary {
+            background: rgba(255,255,255,0.05);
+            color: var(--text-primary);
+            border: 1px solid var(--border);
         }
-        .btn.secondary:hover {
-            background: #5a6268;
+
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: var(--border-bright);
+            transform: translateY(-1px);
         }
-        .footer {
-            background: #f8f9fa;
-            padding: 1.5rem 2rem;
+
+        .btn-outline {
+            background: transparent;
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+        }
+
+        .btn-outline:hover {
+            color: var(--text-primary);
+            border-color: var(--border-bright);
+        }
+
+        /* ── STATS ROW ── */
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1px;
+            background: var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            margin-bottom: 5rem;
+        }
+
+        .stat-item {
+            background: var(--bg-card);
+            padding: 1.5rem;
             text-align: center;
-            color: #6c757d;
+        }
+
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* ── PIPELINE SECTION ── */
+        .section { margin-bottom: 5rem; }
+
+        .section-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent-cyan);
+            margin-bottom: 0.75rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 0.75rem;
+        }
+
+        .section-subtitle {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.7;
+            max-width: 560px;
+            margin-bottom: 2.5rem;
+        }
+
+        /* Pipeline steps */
+        .pipeline {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .pipeline-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.25rem;
+            padding: 1.25rem 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            transition: all 0.25s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pipeline-step::before {
+            content: '';
+            position: absolute;
+            left: 0; top: 0; bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, var(--accent-blue), var(--accent-cyan));
+            opacity: 0;
+            transition: opacity 0.25s;
+        }
+
+        .pipeline-step:hover {
+            border-color: var(--border-bright);
+            background: var(--bg-card-hover);
+        }
+
+        .pipeline-step:hover::before { opacity: 1; }
+
+        .step-number {
+            min-width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: rgba(99,120,255,0.15);
+            border: 1px solid rgba(99,120,255,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .step-content { flex: 1; }
+
+        .step-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .step-desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .step-tag {
+            font-size: 0.72rem;
+            font-weight: 600;
+            padding: 0.2rem 0.55rem;
+            border-radius: 6px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .tag-blue { background: rgba(99,120,255,0.15); color: var(--accent-blue); }
+        .tag-cyan { background: rgba(0,212,255,0.12); color: var(--accent-cyan); }
+        .tag-green { background: rgba(16,185,129,0.12); color: var(--accent-green); }
+        .tag-purple { background: rgba(168,85,247,0.12); color: var(--accent-purple); }
+        .tag-orange { background: rgba(245,158,11,0.12); color: var(--accent-orange); }
+
+        /* ── FEATURES GRID ── */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.25rem;
+        }
+
+        .feature-card {
+            padding: 1.75rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--accent-blue), transparent);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .feature-card:hover {
+            border-color: var(--border-bright);
+            background: var(--bg-card-hover);
+            transform: translateY(-2px);
+        }
+
+        .feature-card:hover::after { opacity: 1; }
+
+        .feature-icon {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .feature-title {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-desc {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* ── ENDPOINTS ── */
+        .endpoints-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            overflow: hidden;
+        }
+
+        .endpoints-table th {
+            padding: 0.9rem 1.25rem;
+            background: rgba(99,120,255,0.08);
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.07em;
+            color: var(--text-muted);
+            text-align: left;
+        }
+
+        .endpoints-table td {
+            padding: 0.85rem 1.25rem;
+            font-size: 0.875rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-secondary);
+        }
+
+        .endpoints-table tr:hover td {
+            background: rgba(255,255,255,0.02);
+            color: var(--text-primary);
+        }
+
+        .method-badge {
+            display: inline-block;
+            padding: 0.2rem 0.55rem;
+            border-radius: 5px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .method-get { background: rgba(16,185,129,0.15); color: var(--accent-green); }
+        .method-post { background: rgba(99,120,255,0.15); color: var(--accent-blue); }
+        .method-ws { background: rgba(245,158,11,0.15); color: var(--accent-orange); }
+        .method-delete { background: rgba(239,68,68,0.15); color: #f87171; }
+
+        .endpoint-path {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--text-primary);
+        }
+
+        /* ── TECH STACK ── */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .tech-card {
+            padding: 1.25rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.25s;
+        }
+
+        .tech-card:hover {
+            border-color: var(--border-bright);
+            transform: translateY(-2px);
+        }
+
+        .tech-name {
             font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .tech-desc {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+        }
+
+        /* ── FALLBACK CHAIN ── */
+        .fallback-chain {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0;
+            padding: 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+        }
+
+        .fallback-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .model-chip {
+            padding: 0.4rem 0.9rem;
+            background: rgba(99,120,255,0.1);
+            border: 1px solid rgba(99,120,255,0.25);
+            border-radius: 8px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent-blue);
+            white-space: nowrap;
+        }
+
+        .model-chip.primary { 
+            background: rgba(168,85,247,0.1);
+            border-color: rgba(168,85,247,0.25);
+            color: var(--accent-purple);
+        }
+
+        .arrow-down {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            padding: 0 0.5rem;
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-brand {
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .footer-links { display: flex; gap: 1.5rem; }
+        .footer-link {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .footer-link:hover { color: var(--text-primary); }
+
+        /* ── CODE BLOCK ── */
+        .code-block {
+            background: #0a0e1a;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 1.25rem 1.5rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.82rem;
+            color: #a8c4e0;
+            line-height: 1.7;
+            overflow-x: auto;
+        }
+
+        .code-block .comment { color: #4a6378; }
+        .code-block .key { color: #6378ff; }
+        .code-block .val { color: #10b981; }
+        .code-block .cmd { color: #f59e0b; }
+
+        /* ── Divider ── */
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border-bright), transparent);
+            margin: 4rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .stats-row { grid-template-columns: repeat(2, 1fr); }
+            .nav-links .nav-link:not(.primary) { display: none; }
+            .hero h1 { letter-spacing: -1px; }
+            footer { flex-direction: column; text-align: center; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>🧠 MEXAR Core Engine</h1>
-            <p class="subtitle">Multimodal Explainable AI Reasoning Assistant</p>
-            <div>
-                <span class="badge">FastAPI 0.109</span>
-                <span class="badge">Python 3.9+</span>
-                <span class="badge">Status: Operational</span>
-            </div>
+
+<div class="container">
+    <!-- NAV -->
+    <nav>
+        <div class="nav-logo">
+            <span class="brain">🧠</span>
+            <span class="text-gradient">MEXAR</span>
+        </div>
+        <div class="nav-links">
+            <a href="/docs" class="nav-link">API Docs</a>
+            <a href="/redoc" class="nav-link">ReDoc</a>
+            <a href="https://github.com/devrajsinh2012/Mexar" class="nav-link" target="_blank">GitHub</a>
+            <a href="https://mexar.vercel.app" class="nav-link primary" target="_blank">Open App →</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-badge">
+            <span class="dot"></span>
+            API v2.0.0 · Operational
         </div>
 
-        <div class="content">
-            <div class="section">
-                <h2>✨ Key Features</h2>
-                <div class="feature-grid">
-                    <div class="feature-card">
-                        <h3>🔍 Hybrid Search</h3>
-                        <p>Semantic + keyword search with RRF fusion</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>📊 Source Attribution</h3>
-                        <p>Inline citations linking to source data</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>🗣️ Multimodal</h3>
-                        <p>Audio, Images, Video support</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>✅ Faithfulness</h3>
-                        <p>Grounding verification for answers</p>
-                    </div>
-                </div>
-            </div>
+        <h1>
+            <span class="line1">AI Agents That Know</span>
+            <span class="line2">What They Don't Know</span>
+        </h1>
 
-            <div class="section">
-                <h2>🔗 Quick Links</h2>
-                <div class="links">
-                    <a href="/docs" class="btn">📖 Interactive API Docs</a>
-                    <a href="/redoc" class="btn secondary">📑 ReDoc Documentation</a>
-                    <a href="https://mexar.vercel.app" class="btn secondary">🌐 Frontend App</a>
-                    <a href="https://github.com/devrajsinh2012/Mexar" class="btn secondary">💻 GitHub Repository</a>
-                </div>
-            </div>
+        <p class="hero-subtitle">
+            Build domain-specific AI agents from your documents.
+            Every answer is grounded in your data, cited with inline references,
+            and scored for hallucination risk using DeBERTa-v3 NLI.
+        </p>
 
-            <div class="section">
-                <h2>🔧 API Endpoints</h2>
-                
-                <div class="endpoint">
-                    <span class="method post">POST</span>
-                    <code>/api/auth/register</code>
-                    <p style="margin-top: 0.5rem;">Register a new user account</p>
-                </div>
-
-                <div class="endpoint">
-                    <span class="method post">POST</span>
-                    <code>/api/auth/login</code>
-                    <p style="margin-top: 0.5rem;">Login and receive JWT token</p>
-                </div>
-
-                <div class="endpoint">
-                    <span class="method get">GET</span>
-                    <code>/api/agents/</code>
-                    <p style="margin-top: 0.5rem;">List all compiled agents</p>
-                </div>
-
-                <div class="endpoint">
-                    <span class="method post">POST</span>
-                    <code>/api/compile/</code>
-                    <p style="margin-top: 0.5rem;">Start agent compilation from uploaded files</p>
-                </div>
-
-                <div class="endpoint">
-                    <span class="method post">POST</span>
-                    <code>/api/chat/</code>
-                    <p style="margin-top: 0.5rem;">Send a message to an agent</p>
-                </div>
-
-                <div class="endpoint">
-                    <span class="method get">GET</span>
-                    <code>/api/health</code>
-                    <p style="margin-top: 0.5rem;">Check API health status</p>
-                </div>
-            </div>
-
-            <div class="section">
-                <h2>🚀 Getting Started</h2>
-                <ol style="line-height: 2; padding-left: 1.5rem;">
-                    <li>Visit the <a href="/docs" style="color: #667eea;">interactive API documentation</a></li>
-                    <li>Register an account via <code>/api/auth/register</code></li>
-                    <li>Login to receive your JWT token</li>
-                    <li>Use the token in the <code>Authorization: Bearer {token}</code> header</li>
-                    <li>Start creating agents and chat!</li>
-                </ol>
-            </div>
-
-            <div class="section">
-                <h2>📊 Tech Stack</h2>
-                <p style="line-height: 1.8;">
-                    <strong>Framework:</strong> FastAPI<br>
-                    <strong>Database:</strong> PostgreSQL with pgvector<br>
-                    <strong>AI/LLM:</strong> Groq API (Llama 3.3, Whisper, Vision)<br>
-                    <strong>Embeddings:</strong> FastEmbed (BAAI/bge-small-en-v1.5)<br>
-                    <strong>Deployment:</strong> Hugging Face Spaces (Docker)
-                </p>
-            </div>
+        <div class="hero-cta">
+            <a href="/docs" class="btn btn-primary">📖 Explore API Docs</a>
+            <a href="https://mexar.vercel.app" class="btn btn-secondary" target="_blank">🚀 Launch App</a>
+            <a href="https://github.com/devrajsinh2012/Mexar" class="btn btn-outline" target="_blank">⭐ GitHub</a>
         </div>
 
-        <div class="footer">
-            <p>MEXAR Core Engine v2.0.0 | Built with ❤️ using FastAPI</p>
-            <p style="margin-top: 0.5rem;">
-                <a href="https://github.com/devrajsinh2012/Mexar" style="color: #667eea; text-decoration: none;">View on GitHub</a>
-            </p>
+        <!-- STATS -->
+        <div class="stats-row">
+            <div class="stat-item">
+                <span class="stat-value">~1.2s</span>
+                <span class="stat-label">Faithfulness Scoring</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">0.907</span>
+                <span class="stat-label">Guardrail F1 Score</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">781</span>
+                <span class="stat-label">Indexed Vector Chunks</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">5+</span>
+                <span class="stat-label">Groq Model Fallbacks</span>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <!-- PIPELINE -->
+    <section class="section">
+        <div class="section-label">How It Works</div>
+        <h2 class="section-title">The MEXAR RAG Pipeline</h2>
+        <p class="section-subtitle">
+            Every query goes through a 9-stage intelligent pipeline — from multimodal input
+            all the way to a cited, faithfulness-verified response.
+        </p>
+
+        <div class="pipeline">
+            <div class="pipeline-step">
+                <div class="step-number">01</div>
+                <div class="step-content">
+                    <div class="step-title">
+                        🎤 Multimodal Input Processing
+                        <span class="step-tag tag-orange">optional</span>
+                    </div>
+                    <div class="step-desc">Audio → Groq Whisper v3 STT · Images → Groq Vision · Video → OpenCV frame extraction → Vision</div>
+                </div>
+            </div>
+
+            <div class="pipeline-step">
+                <div class="step-number">02</div>
+                <div class="step-content">
+                    <div class="step-title">
+                        🔍 Intent &amp; Prompt Analysis
+                        <span class="step-tag tag-blue">LLM</span>
+                    </div>
+                    <div class="step-desc">Parse query intent (factual / analytical / comparative), detect domain topic, optionally rewrite query for retrieval clarity.</div>
+                </div>
+            </div>
+
+            <div class="pipeline-step">
+                <div class="step-number">03</div>
+                <div class="step-content">
+                    <div class="step-title">
+                        🛡️ Domain Guardrail Check
+                        <span class="step-tag tag-green">F1 = 0.9072</span>
+                    </div>
+                    <div class="step-desc">TF-IDF cosine similarity vs agent signature + spaCy NER Jaccard overlap. Threshold = 0.25. Out-of-domain queries rejected with explanation — no hallucination.</div>
+                </div>
+            </div>
+
+            <div class="pipeline-step">
+                <div class="step-number">04</div>
+                <div class="step-content">
+                    <div class="step-title">
+                        ⚡ Hybrid Vector + Keyword Retrieval
+                        <span class="step-tag tag-cyan">pgvector + BM25</span>
+                    </div>
+                    <div class="step-desc">Dense: FastEmbed bge-small-en-v1.5 (384-dim) cosine search via pgvector. Sparse: PostgreSQL tsvector BM25 full-text search. Fused via Reciprocal Rank Fusion (RRF): score = Σ 1/(rank + 60).</div>
+                </div>
+            </div>
+
+            <div class="pipeline-step">
+                <div class="step-number">05</div>
+                <div class="step-content">
+                    <div class="step-title">
+                        🎯 Cross-Encoder Reranking
+                        <span class="step-tag tag-purple">sentence-transformers</span>
+                    </div>
+                    <div class="step-desc">Re-scores top-20 retrieved candidates using a cross-encoder for precision. Selects final top-5 context chunks for answer generation.</div>
+                </div>
+            </div>
+
+            <div class="pipeline-step">
+                <div class="step-number">06</div>
+                <div class="step-content">
+                    <div class="step-title">
+                        🧠 LLM Answer Generation
+                        <span class="step-tag tag-blue">Groq</span>
+                    </div>
+                    <div class="step-desc">System prompt with retrieved context. Multi-model inference: llama-3.3-70b → llama-3.1-8b → mixtral-8x7b → gemma2-9b. Automatic quota fallback.</div>
+                </div>
+            </div>
+
+            <div class="pipeline-step">
+                <div class="step-number">07</div>
+                <div class="step-content">
+                    <div class="step-title">
+                        📎 Source Attribution
+                        <span class="step-tag tag-cyan">citations</span>
+                    </div>
+                    <div class="step-desc">Match answer sentences to source chunks. Assign [1], [2], [3] inline reference markers. Track provenance per claim.</div>
+                </div>
+            </div>
+
+            <div class="pipeline-step">
+                <div class="step-number">08</div>
+                <div class="step-content">
+                    <div class="step-title">
+                        ✅ DeBERTa-v3 Faithfulness Scoring
+                        <span class="step-tag tag-green">NLI</span>
+                    </div>
+                    <div class="step-desc">Extract claims from answer. For each claim-chunk pair: NLI inference (entailment → faithful, contradiction → hallucinated). Batched via torch.inference_mode() — ~1.2s/query (50× speedup vs baseline).</div>
+                </div>
+            </div>
+
+            <div class="pipeline-step">
+                <div class="step-number">09</div>
+                <div class="step-content">
+                    <div class="step-title">
+                        🔬 Explainability Packaging
+                        <span class="step-tag tag-purple">transparent</span>
+                    </div>
+                    <div class="step-desc">Reasoning trace · Confidence breakdown · Sources cited · Guardrail decision log — all surfaced to the frontend UI panel.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- FEATURES -->
+    <section class="section">
+        <div class="section-label">Capabilities</div>
+        <h2 class="section-title">Everything You Need</h2>
+        <p class="section-subtitle">A complete RAG platform — from document ingestion to explainable, grounded answers.</p>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <span class="feature-icon">🔍</span>
+                <div class="feature-title">Hybrid Search + RRF Fusion</div>
+                <div class="feature-desc">Vector cosine (pgvector) and BM25 keyword search fused via Reciprocal Rank Fusion for optimal retrieval across all document types.</div>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">✅</span>
+                <div class="feature-title">Faithfulness Verification</div>
+                <div class="feature-desc">DeBERTa-v3-base NLI model scores every answer claim against retrieved context. Quantified hallucination risk, not just vibes.</div>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🛡️</span>
+                <div class="feature-title">Domain Guardrails</div>
+                <div class="feature-desc">TF-IDF + spaCy NER Jaccard similarity prevents answering out-of-domain questions. Tuned to F1 = 0.9072 at threshold 0.25.</div>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">📎</span>
+                <div class="feature-title">Inline Source Citations</div>
+                <div class="feature-desc">Every sentence references its source chunk with [1], [2] markers. Click any citation to see the exact source text and file name.</div>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🗣️</span>
+                <div class="feature-title">Multimodal Input</div>
+                <div class="feature-desc">Ask questions via audio (Groq Whisper), upload images for visual Q&A (Groq Vision), or extract info from video frames (OpenCV).</div>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🧠</span>
+                <div class="feature-title">Explainability Panel</div>
+                <div class="feature-desc">Full reasoning trace exposed in the UI: retrieval scores, reranker scores, confidence breakdown, guardrail decision, and sources cited.</div>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🔊</span>
+                <div class="feature-title">Text-to-Speech</div>
+                <div class="feature-desc">ElevenLabs API integration with per-sentence TTS playback. Falls back to Web Speech API automatically.</div>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">⚡</span>
+                <div class="feature-title">Real-time WebSocket Chat</div>
+                <div class="feature-desc">Streaming responses via WebSocket with compilation progress tracking. No polling required.</div>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">📁</span>
+                <div class="feature-title">5 Document Formats</div>
+                <div class="feature-desc">Upload PDF, DOCX, CSV, JSON, or TXT files. Semantic chunking preserves context boundaries for better retrieval quality.</div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ENDPOINTS -->
+    <section class="section">
+        <div class="section-label">REST API</div>
+        <h2 class="section-title">API Endpoints</h2>
+        <p class="section-subtitle">Full interactive documentation available at <a href="/docs" style="color: var(--accent-blue); text-decoration: none;">/docs</a></p>
+
+        <table class="endpoints-table">
+            <thead>
+                <tr>
+                    <th>Method</th>
+                    <th>Endpoint</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><span class="method-badge method-post">POST</span></td><td class="endpoint-path">/api/auth/register</td><td>Create a new user account</td></tr>
+                <tr><td><span class="method-badge method-post">POST</span></td><td class="endpoint-path">/api/auth/login</td><td>Login and receive JWT bearer token</td></tr>
+                <tr><td><span class="method-badge method-get">GET</span></td><td class="endpoint-path">/api/agents/</td><td>List all compiled agents for current user</td></tr>
+                <tr><td><span class="method-badge method-post">POST</span></td><td class="endpoint-path">/api/agents/</td><td>Create a new agent</td></tr>
+                <tr><td><span class="method-badge method-post">POST</span></td><td class="endpoint-path">/api/compile/</td><td>Start knowledge compilation from uploaded files</td></tr>
+                <tr><td><span class="method-badge method-get">GET</span></td><td class="endpoint-path">/api/compile/{job_id}</td><td>Poll compilation job status + progress</td></tr>
+                <tr><td><span class="method-badge method-post">POST</span></td><td class="endpoint-path">/api/chat/</td><td>Send a query to an agent (REST)</td></tr>
+                <tr><td><span class="method-badge method-ws">WS</span></td><td class="endpoint-path">/ws/chat/{agent_id}</td><td>Real-time streaming chat via WebSocket</td></tr>
+                <tr><td><span class="method-badge method-get">GET</span></td><td class="endpoint-path">/api/health</td><td>Health check — returns API + Groq status</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- GROQ FALLBACK -->
+    <section class="section">
+        <div class="section-label">Reliability</div>
+        <h2 class="section-title">Multi-Model Fallback Chain</h2>
+        <p class="section-subtitle">Automatic failover across Groq models when rate limits are hit — zero downtime.</p>
+
+        <div class="fallback-chain">
+            <div class="fallback-item">
+                <span class="model-chip primary">openai/gpt-oss-120b</span>
+                <span class="arrow-down">→ quota →</span>
+            </div>
+            <div class="fallback-item">
+                <span class="model-chip">llama-3.3-70b-versatile</span>
+                <span class="arrow-down">→ quota →</span>
+            </div>
+            <div class="fallback-item">
+                <span class="model-chip">llama-3.1-8b-instant</span>
+                <span class="arrow-down">→ quota →</span>
+            </div>
+            <div class="fallback-item">
+                <span class="model-chip">mixtral-8x7b-32768</span>
+                <span class="arrow-down">→ quota →</span>
+            </div>
+            <div class="fallback-item">
+                <span class="model-chip">gemma2-9b-it</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- QUICK START -->
+    <section class="section">
+        <div class="section-label">Getting Started</div>
+        <h2 class="section-title">Quick Integration</h2>
+        <p class="section-subtitle">Start querying your agent in three steps.</p>
+
+        <div class="code-block">
+<span class="comment"># 1. Register and login</span>
+<span class="cmd">POST</span> /api/auth/register  { "email": "you@example.com", "password": "..." }
+<span class="cmd">POST</span> /api/auth/login     → <span class="val">{ "access_token": "eyJ..." }</span>
+
+<span class="comment"># 2. Compile an agent from your documents</span>
+<span class="cmd">POST</span> /api/compile/  <span class="key">Authorization:</span> Bearer {token}
+     <span class="key">Files:</span> report.pdf, research.docx
+     → <span class="val">{ "job_id": 42, "status": "compiling" }</span>
+
+<span class="comment"># 3. Chat with your agent</span>
+<span class="cmd">POST</span> /api/chat/  <span class="key">Authorization:</span> Bearer {token}
+     <span class="val">{ "agent_id": 36, "message": "What are the key findings?" }</span>
+     → <span class="val">{ "answer": "...[1][2]", "faithfulness": 0.87, "sources": [...] }</span>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div>
+            <span class="footer-brand">MEXAR Core Engine v2.0.0</span>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.3rem;">
+                Built with FastAPI · pgvector · Groq · DeBERTa-v3
+            </div>
+        </div>
+        <div class="footer-links">
+            <a href="/docs" class="footer-link">API Docs</a>
+            <a href="/redoc" class="footer-link">ReDoc</a>
+            <a href="https://mexar.vercel.app" class="footer-link" target="_blank">Frontend App</a>
+            <a href="https://github.com/devrajsinh2012/Mexar" class="footer-link" target="_blank">GitHub</a>
+        </div>
+    </footer>
+</div>
+
 </body>
 </html>

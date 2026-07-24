@@ -7,107 +7,344 @@ sdk: docker
 pinned: false
 license: mit
 ---
-# MEXAR Ultimate 🧠
 
-**Multimodal Explainable AI Reasoning Assistant**
+<div align="center">
 
-[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
-[![React 18](https://img.shields.io/badge/react-18-61dafb.svg)](https://reactjs.org/)
-[![FastAPI](https://img.shields.io/badge/fastapi-0.109-009688.svg)](https://fastapi.tiangolo.com/)
-[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![Deployed](https://img.shields.io/badge/status-live-brightgreen.svg)](https://mexar.vercel.app)
+# 🧠 MEXAR
 
-> Create domain-specific intelligent agents from your data with transparent, explainable AI responses using RAG (Retrieval-Augmented Generation) with source attribution and faithfulness scoring.
+### **M**ultimodal **E**xplainable **A**I **R**easoning Assistant
 
-**🚀 Live Demo**: [https://mexar.vercel.app](https://mexar.vercel.app)  
-**📡 Backend API**: [https://devrajsinh2012-mexar.hf.space](https://devrajsinh2012-mexar.hf.space)
+*Build domain-specific AI agents from your documents — with transparent, grounded, and faithful answers.*
+
+[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg?style=for-the-badge&logo=python)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.109-009688.svg?style=for-the-badge&logo=fastapi)](https://fastapi.tiangolo.com/)
+[![React 18](https://img.shields.io/badge/React-18-61dafb.svg?style=for-the-badge&logo=react)](https://reactjs.org/)
+[![Groq](https://img.shields.io/badge/Groq-LLM-f54e42.svg?style=for-the-badge)](https://groq.com/)
+[![Supabase](https://img.shields.io/badge/Supabase-pgvector-3ECF8E?style=for-the-badge&logo=supabase)](https://supabase.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
+
+<br/>
+
+**🚀 Live App** → [mexar.vercel.app](https://mexar.vercel.app) &nbsp;&nbsp;|&nbsp;&nbsp; **📡 Backend API** → [devrajsinh2012-mexar.hf.space](https://devrajsinh2012-mexar.hf.space) &nbsp;&nbsp;|&nbsp;&nbsp; **📖 API Docs** → [/docs](https://devrajsinh2012-mexar.hf.space/docs)
+
+</div>
 
 ---
 
-## ✨ Key Features
+## 📖 What is MEXAR?
+
+MEXAR is a **full-stack, production-ready RAG (Retrieval-Augmented Generation) platform** that lets you create custom AI agents from your own documents. Unlike a simple chatbot, MEXAR is built around **explainability and faithfulness** — every answer is grounded in your source data, cited with inline references, and scored for hallucination risk using a NLI model.
+
+**You upload documents → MEXAR compiles an agent → You chat with grounded, explainable AI.**
+
+---
+
+## ✨ Core Features
 
 | Feature | Description |
-|---------|-------------|
-| 🔍 **Hybrid Search** | Combines semantic (vector) + keyword search with RRF fusion for optimal retrieval |
-| 🎯 **Cross-Encoder Reranking** | Improves retrieval precision using sentence-transformers |
-| 📊 **Source Attribution** | Inline citations `[1]`, `[2]` linking answers to source data |
-| ✅ **Faithfulness Scoring** | Measures how well answers are grounded in retrieved context |
-| 🗣️ **Multimodal Input** | Audio (Whisper), Images (Vision), Video support |
-| 🔐 **Domain Guardrails** | Prevents hallucinations outside knowledge base |
-| 🔊 **Text-to-Speech** | ElevenLabs + Web Speech API integration |
-| 📁 **5 File Types** | CSV, PDF, DOCX, JSON, TXT |
+|---|---|
+| 🔍 **Hybrid RAG Search** | Semantic (pgvector cosine) + Keyword (BM25 tsvector) fused via Reciprocal Rank Fusion (RRF) |
+| 🎯 **Cross-Encoder Reranking** | `sentence-transformers` cross-encoder re-scores top candidates for precision |
+| 📎 **Inline Source Attribution** | Every answer references exact source chunks with `[1]`, `[2]` citations |
+| ✅ **DeBERTa-v3 Faithfulness Scoring** | NLI-based hallucination detection scores answer grounding against retrieved context |
+| 🔐 **Domain Guardrails** | TF-IDF + spaCy NER Jaccard similarity prevents out-of-domain queries (F1 = 0.9072 at threshold 0.25) |
+| 🗣️ **Multimodal Input** | Audio (Groq Whisper), Images (Groq Vision), Video (OpenCV frame extraction) |
+| 🔊 **Text-to-Speech** | ElevenLabs API + Web Speech API fallback |
+| 🧠 **Explainability Panel** | Full reasoning trace: retrieval scores, confidence breakdown, sources cited, guardrail status |
+| 📁 **5 Document Formats** | PDF, DOCX, CSV, JSON, TXT |
+| ⚡ **Real-time WebSocket** | Streaming chat via WebSocket with progress tracking |
+| 🔑 **JWT Auth** | Secure user accounts with bcrypt-hashed passwords and JWT bearer tokens |
+
+---
+
+## 🏗️ System Architecture
+
+MEXAR is composed of four layers: Frontend, API, Intelligence, and Storage.
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                         USER INTERACTION LAYER                              │
+│                                                                             │
+│   ┌──────────────────────────────────────────────────────────────────────┐  │
+│   │            React 18 Frontend  ─  Vercel Edge Network                 │  │
+│   │   Landing · Login · Dashboard · AgentCreation · Chat · Explainability │  │
+│   └────────────────────────────┬─────────────────────────────────────────┘  │
+│                                │ HTTPS / WebSocket                          │
+└────────────────────────────────┼────────────────────────────────────────────┘
+                                 │
+┌────────────────────────────────▼────────────────────────────────────────────┐
+│                      FASTAPI BACKEND  (HF Spaces / Docker)                  │
+│                                                                             │
+│   ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌────────────┐  │
+│   │  /auth   │  │ /agents  │  │  /chat   │  │ /compile │  │ /websocket │  │
+│   └──────────┘  └──────────┘  └──────────┘  └──────────┘  └────────────┘  │
+│                                                                             │
+└────────────────────────────────┬────────────────────────────────────────────┘
+                                 │
+┌────────────────────────────────▼────────────────────────────────────────────┐
+│                        CORE INTELLIGENCE LAYER                              │
+│                                                                             │
+│  ┌──────────────────┐    ┌──────────────────┐    ┌─────────────────────┐   │
+│  │ DataValidator    │    │ KnowledgeCompiler│    │ MultimodalProcessor │   │
+│  │ PDF/DOCX/CSV/TXT │───▶│ Chunking + Embed │    │ Whisper · Vision    │   │
+│  │ /JSON parsing    │    │ FastEmbed bge-384│    │ OpenCV frames       │   │
+│  └──────────────────┘    └────────┬─────────┘    └──────────┬──────────┘   │
+│                                   │ Store chunks             │ Text         │
+│  ┌──────────────────┐             ▼                          ▼              │
+│  │ PromptAnalyzer   │    ┌───────────────────────────────────────────────┐  │
+│  │ Intent · Domain  │───▶│           ReasoningEngine  (RAG Core)         │  │
+│  │ Query Rewrite    │    │                                               │  │
+│  └──────────────────┘    │  1. Domain Guardrail (TF-IDF + NER Jaccard)  │  │
+│                          │  2. HybridSearcher (pgvector + BM25 RRF)     │  │
+│  ┌──────────────────┐    │  3. CrossEncoder Reranker                    │  │
+│  │ ExplainabilityGen│◀───│  4. SourceAttributor (citation tracking)     │  │
+│  │ Reasoning trace  │    │  5. Groq LLM Answer Generation               │  │
+│  │ Confidence score │    │  6. DeBERTa-v3 Faithfulness Scoring          │  │
+│  └──────────────────┘    └───────────────────────────────────────────────┘  │
+│                                                                             │
+└────────────────────────────────┬────────────────────────────────────────────┘
+                                 │
+┌────────────────────────────────▼────────────────────────────────────────────┐
+│                         EXTERNAL SERVICES LAYER                             │
+│                                                                             │
+│  ┌──────────────────────┐  ┌──────────────────┐  ┌───────────────────────┐ │
+│  │  Supabase / PostgreSQL│  │    Groq Cloud    │  │      ElevenLabs       │ │
+│  │  pgvector extension  │  │ Llama 3.3 · 3.1  │  │  Text-to-Speech API   │ │
+│  │  BM25 tsvector FTS   │  │ Whisper v3 Large │  │                       │ │
+│  │  JWT sessions        │  │ Vision (preview)  │  └───────────────────────┘ │
+│  └──────────────────────┘  └──────────────────┘                            │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## 🔄 Request Lifecycle — Step by Step
+
+```
+User Query
+    │
+    ▼
+┌──────────────────────────────────────────────────────┐
+│  1. MULTIMODAL INPUT (optional)                       │
+│     Audio → Groq Whisper STT → text                  │
+│     Image → Groq Vision → described text             │
+│     Video → OpenCV frame extract → Vision            │
+└────────────────────────┬─────────────────────────────┘
+                         │
+                         ▼
+┌──────────────────────────────────────────────────────┐
+│  2. PROMPT ANALYSIS                                   │
+│     • Parse intent (factual / analytical / compare)  │
+│     • Detect domain topic                            │
+│     • Optionally rewrite query for clarity           │
+└────────────────────────┬─────────────────────────────┘
+                         │
+                         ▼
+┌──────────────────────────────────────────────────────┐
+│  3. DOMAIN GUARDRAIL CHECK                           │
+│     • TF-IDF cosine similarity vs agent signature    │
+│     • spaCy NER entity Jaccard overlap               │
+│     • Threshold = 0.25  (F1 = 0.9072)               │
+│     • If below threshold → reject with explanation   │
+└────────────────────────┬─────────────────────────────┘
+                         │
+                         ▼
+┌──────────────────────────────────────────────────────┐
+│  4. HYBRID RETRIEVAL                                 │
+│     • Dense: FastEmbed bge-small-en (384-dim)        │
+│       → pgvector cosine similarity search            │
+│     • Sparse: PostgreSQL tsvector BM25 FTS           │
+│     • Fuse both via Reciprocal Rank Fusion (RRF)     │
+│       score = Σ 1/(rank + 60)                        │
+│     • Return top-K=20 candidate chunks               │
+└────────────────────────┬─────────────────────────────┘
+                         │
+                         ▼
+┌──────────────────────────────────────────────────────┐
+│  5. CROSS-ENCODER RERANKING                          │
+│     • sentence-transformers cross-encoder            │
+│     • Re-scores top candidates for relevance         │
+│     • Selects top-5 chunks as final context          │
+└────────────────────────┬─────────────────────────────┘
+                         │
+                         ▼
+┌──────────────────────────────────────────────────────┐
+│  6. LLM ANSWER GENERATION                            │
+│     • Build system prompt with retrieved context     │
+│     • Multi-model Groq inference with auto-fallback: │
+│       llama-3.3-70b → llama-3.1-8b → mixtral-8x7b  │
+│     • Answer generated with citations embedded       │
+└────────────────────────┬─────────────────────────────┘
+                         │
+                         ▼
+┌──────────────────────────────────────────────────────┐
+│  7. SOURCE ATTRIBUTION                               │
+│     • Match answer sentences → source chunks         │
+│     • Assign [1], [2], [3] reference markers         │
+│     • Track provenance per claim                     │
+└────────────────────────┬─────────────────────────────┘
+                         │
+                         ▼
+┌──────────────────────────────────────────────────────┐
+│  8. FAITHFULNESS SCORING (DeBERTa-v3 NLI)            │
+│     • Extract claims from answer                     │
+│     • For each claim-chunk pair, NLI inference:      │
+│       entailment → faithful                          │
+│       contradiction → hallucinated                   │
+│     • Batched with torch.inference_mode() (~1.2s)    │
+│     • Output: faithfulness score 0.0–1.0             │
+└────────────────────────┬─────────────────────────────┘
+                         │
+                         ▼
+┌──────────────────────────────────────────────────────┐
+│  9. EXPLAINABILITY PACKAGING                         │
+│     • Reasoning trace (step-by-step)                 │
+│     • Confidence breakdown (domain + faithfulness)   │
+│     • Sources cited (with file name + chunk text)    │
+│     • Guardrail decision log                         │
+└────────────────────────┬─────────────────────────────┘
+                         │
+                         ▼
+                   Response to User
+                 (Answer + Citations
+                  + Faithfulness Score
+                  + Explainability Panel)
+```
+
+---
+
+## 🗂️ Project Structure
+
+```
+Mexar-main/
+│
+├── backend/                    # FastAPI Python backend
+│   ├── api/                    # Route handlers
+│   │   ├── auth.py             # JWT login / register
+│   │   ├── agents.py           # Agent CRUD operations
+│   │   ├── chat.py             # Chat endpoint (REST)
+│   │   ├── compile.py          # Knowledge compilation jobs
+│   │   ├── websocket.py        # Streaming WebSocket chat
+│   │   ├── admin.py            # Admin panel routes
+│   │   └── diagnostics.py      # System health checks
+│   │
+│   ├── modules/                # Core AI intelligence
+│   │   ├── reasoning_engine.py # Main RAG pipeline (634 lines)
+│   │   ├── knowledge_compiler.py # Doc ingestion + embedding
+│   │   ├── data_validator.py   # File parsing (PDF/DOCX/CSV/TXT/JSON)
+│   │   ├── prompt_analyzer.py  # Intent + domain classification
+│   │   ├── multimodal_processor.py # Audio/Image/Video → text
+│   │   └── explainability.py   # Reasoning trace packaging
+│   │
+│   ├── utils/                  # Utility modules
+│   │   ├── hybrid_search.py    # pgvector + BM25 + RRF fusion
+│   │   ├── faithfulness.py     # DeBERTa-v3 NLI scorer
+│   │   ├── groq_client.py      # Multi-model Groq client + fallback
+│   │   ├── reranker.py         # Cross-encoder reranking
+│   │   ├── source_attribution.py # Citation tracking
+│   │   ├── semantic_chunker.py # Adaptive text chunking
+│   │   └── domain_signature.py # TF-IDF + NER signature builder
+│   │
+│   ├── models/                 # SQLAlchemy ORM models
+│   │   ├── user.py             # User model
+│   │   ├── agent.py            # Agent + CompilationJob
+│   │   ├── chunk.py            # DocumentChunk (with vector)
+│   │   └── conversation.py     # Conversation + Message
+│   │
+│   ├── migrations/
+│   │   └── hybrid_search_function.sql  # PostgreSQL RRF function
+│   │
+│   ├── evaluation/             # Phase 3 benchmark suite
+│   │   ├── run_all.py          # Master evaluation runner
+│   │   └── guardrail_threshold_sweep.py
+│   │
+│   ├── scripts/                # Data collection scripts
+│   │   ├── fetch_pubmed.py     # NCBI PubMed Open Access
+│   │   ├── fetch_courtlistener.py  # CourtListener v4 API
+│   │   └── fetch_secedgar.py   # SEC EDGAR 10-K filings
+│   │
+│   ├── static/index.html       # HF Spaces landing page
+│   ├── main.py                 # FastAPI application entry
+│   └── requirements.txt        # Python dependencies
+│
+├── frontend/                   # React 18 frontend
+│   └── src/
+│       ├── pages/
+│       │   ├── Landing.jsx     # Marketing home page
+│       │   ├── Login.jsx       # Authentication
+│       │   ├── Dashboard.jsx   # Agent management hub
+│       │   ├── AgentCreation.jsx # Upload + configure agent
+│       │   ├── AgentList.jsx   # Browse your agents
+│       │   ├── Chat.jsx        # Full chat interface (39KB)
+│       │   └── CompilationProgress.jsx # Live compilation view
+│       │
+│       └── components/
+│           ├── ExplainabilityModal.jsx # Reasoning trace viewer
+│           ├── KnowledgeGraph.jsx      # Visual knowledge graph
+│           ├── AudioRecorder.jsx       # Browser microphone input
+│           ├── TTSPlayer.jsx           # TTS playback
+│           ├── InlineTTS.jsx           # Per-sentence TTS
+│           └── AgentSwitcher.jsx       # Switch between agents
+│
+├── test_data/                  # Real evaluation datasets
+│   ├── medical_real/           # 31 PubMed PMC open-access papers
+│   ├── legal_real/             # 148 CourtListener judicial opinions
+│   ├── financial_real/         # 4 SEC EDGAR 10-K filings
+│   └── query_sets/             # Evaluation query sets per domain
+│
+├── Dockerfile                  # Container definition (HF Spaces)
+└── README.md
+```
 
 ---
 
 ## 📊 Empirical Evaluation Results & Benchmarks
 
-MEXAR has been evaluated across real multi-domain datasets sourced from **NCBI PubMed**, **CourtListener REST API v4**, and **SEC EDGAR 10-K Filings**.
+MEXAR has been evaluated against established baselines on real datasets sourced via public APIs.
 
-### 1. Real Multi-Domain Knowledge Base Stats
-| Domain | Real API Data Source | Files Processed | Indexed Vector Chunks | Domain Terms |
-| :--- | :--- | :---: | :---: | :---: |
-| 🏥 **Medical** | PubMed Central Open Access (NCBI) | 31 papers | 556 chunks | 127 terms |
-| ⚖️ **Legal** | CourtListener v4 REST API | 148 opinions | 157 chunks | 152 terms |
-| 📈 **Financial** | SEC EDGAR 10-K Filings | 4 filings | 68 chunks | 119 terms |
+### Knowledge Base — Real Multi-Domain Corpus
 
-### 2. Multi-System Faithfulness Comparison
-| Baseline System | Medical Faithfulness | Legal Faithfulness | Financial Faithfulness |
-| :--- | :---: | :---: | :---: |
-| **Naive RAG** | 0.0222 | 0.0333 | 0.0000 |
-| **BM25 Only** | 0.0000 | 0.0000 | 0.0000 |
-| **LangChain** | 0.5000 | 0.5000 | 0.5000 |
-| **Self-RAG** | 0.2380 | 0.0833 | N/A |
-| 🧠 **MEXAR (Ours)** | **0.1000** | **0.1000** | N/A |
+| Domain | Data Source | Files | Vector Chunks | Domain Signature Terms |
+|---|---|:---:|:---:|:---:|
+| 🏥 **Medical** | NCBI PubMed Central Open Access | 31 papers | **556 chunks** | 127 terms |
+| ⚖️ **Legal** | CourtListener REST API v4 | 148 opinions | **157 chunks** | 152 terms |
+| 📈 **Financial** | SEC EDGAR 10-K Filings | 4 filings | **68 chunks** | 119 terms |
 
-### 3. System Latency & Calibration Benchmarks
-* ⚡ **NLI Faithfulness Evaluation Latency**: ~**1.2s / query** (~50x speedup via PyTorch vectorized batching vs 70s baseline).
-* 🛡️ **Domain Guardrail Overhead**: Mean **113.49 ms** latency.
-* 🎯 **Expected Calibration Error (ECE)**: **0.1000** (Confidence calibration vs empirical accuracy).
+### Table I — Multi-System Faithfulness Comparison
 
-## 🏗️ Architecture
+| System | Medical ↑ | Legal ↑ | Financial ↑ |
+|---|:---:|:---:|:---:|
+| Naive RAG | 0.0222 | 0.0333 | 0.0000 |
+| BM25-only Retrieval | 0.0000 | 0.0000 | 0.0000 |
+| LangChain RAG | 0.5000 | 0.5000 | 0.5000 |
+| Self-RAG | 0.2380 | 0.0833 | N/A |
+| **🧠 MEXAR (Ours)** | **0.1000** | **0.1000** | N/A |
 
-```
-┌────────────────────────────────────────────────────────────────────────────┐
-│                         MEXAR Ultimate Stack                               │
-├────────────────────────────────────────────────────────────────────────────┤
-│                                                                            │
-│            ┌────────────────────────────────────────────┐                  │
-│            │        React Frontend (Vercel)             │                  │
-│            └────────────────────────────────────────────┘                  │
-│                               │                                            │
-│                               ▼                                            │
-│            ┌────────────────────────────────────────────┐                  │
-│            │     FastAPI Backend (Hugging Face Spaces)  │                  │
-│            └────────────────────────────────────────────┘                  │
-│                               │                                            │
-│                               ▼                                            │
-│   ┌────────────────────────────────────────────────────────────────────┐   │
-│   │                 Core Intelligence Layer                            │   │
-│   │                                                                    │   │
-│   │   🔄 Data Validator        (PDF / DOCX / CSV / TXT / JSON)         │   │
-│   │   🤖 Prompt Analyzer       (LLM-based Intent Parsing)              │   │
-│   │   📦 Knowledge Compiler    (FastEmbed + Chunking)                  │   │
-│   │   🧠 Reasoning Engine                                              │   │
-│   │      ├─ Hybrid Search       (Dense + Sparse)                       │   │
-│   │      ├─ Cross-Encoder       (Re-ranking)                           │   │
-│   │      ├─ Source Attribution  (Citation Tracking)                    │   │
-│   │      └─ Faithfulness Scorer (Hallucination Control)                │   │
-│   │                                                                    │   │
-│   └────────────────────────────────────────────────────────────────────┘   │
-│                               │                                            │
-│                               ▼                                            │
-│   ┌────────────────────────────────────────────────────────────────────┐   │
-│   │               External Services Layer                              │   │
-│   │                                                                    │   │
-│   │   🗄 Supabase   → PostgreSQL + pgvector + File Storage             │   │
-│   │   ⚡ Groq API   → LLM Inference + Whisper + Vision                │   │
-│   │   🔊 ElevenLabs → Text-to-Speech                                  │   │
-│   │                                                                    │   │
-│   └────────────────────────────────────────────────────────────────────┘   │
-│                                                                            │
-└────────────────────────────────────────────────────────────────────────────┘
+> *Faithfulness scored via DeBERTa-v3-base NLI. Higher = better grounding.*
 
-```
+### Table II — Domain Guardrail Performance
+
+| Metric | Value |
+|---|:---:|
+| Optimal Threshold | **0.25** |
+| F1 Score | **0.9072** |
+| Method | TF-IDF cosine + spaCy NER Jaccard |
+| Mean Latency | **113.49 ms** |
+
+### Table III — System Latency Profile
+
+| Component | Latency |
+|---|:---:|
+| DeBERTa NLI Faithfulness (vectorized batch) | **~1.2s / query** |
+| Domain Guardrail check | **113.49 ms** |
+| Hybrid RRF Search (pgvector + BM25) | **< 100 ms** |
+| Groq LLM inference (llama-3.1-8b) | **~800 ms** |
+
+> **50x speedup** on faithfulness scoring achieved via `torch.inference_mode()` vectorized batching over the naive sequential baseline (~70s → ~1.2s).
+
+### Expected Calibration Error (ECE)
+> **ECE = 0.1000** — confidence scores are well-calibrated against empirical answer accuracy.
 
 ---
 
@@ -115,329 +352,213 @@ MEXAR has been evaluated across real multi-domain datasets sourced from **NCBI P
 
 ### Prerequisites
 
-- **Python 3.9+** with pip
-- **Node.js 18+** with npm
-- **PostgreSQL** with `pgvector` extension (or use Supabase)
-- **Groq API Key** - Get free at [console.groq.com](https://console.groq.com)
+- Python 3.9+
+- Node.js 18+
+- PostgreSQL with `pgvector` extension (or [Supabase](https://supabase.com) free tier)
+- [Groq API Key](https://console.groq.com) — free tier available
 
-### Local Development
+---
 
-#### 1. Backend Setup
+### 1. Clone & Configure
+
+```bash
+git clone https://github.com/devrajsinh2012/Mexar.git
+cd Mexar-main
+```
+
+```bash
+# Copy backend environment file
+cp backend/.env.example backend/.env
+# Fill in your credentials (see Environment Variables below)
+```
+
+---
+
+### 2. Backend Setup
 
 ```bash
 cd backend
-
-# Create virtual environment
-python -m venv venv
-
-# Activate (Windows)
-.\venv\Scripts\activate
-# Activate (macOS/Linux)
-source venv/bin/activate
-
-# Install dependencies
 pip install -r requirements.txt
 
-# Configure environment
-cp .env.example .env
-# Edit .env and add your API keys
+# Install spaCy model required for domain guardrail
+python -m spacy download en_core_web_sm
 
-# Run server
-python -m uvicorn main:app --reload --host 0.0.0.0 --port 8000
+# Apply database migration (PostgreSQL RRF hybrid search function)
+psql $DATABASE_URL -f migrations/hybrid_search_function.sql
+
+# Start backend server
+uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 ```
 
-**Backend will run at**: [http://localhost:8000](http://localhost:8000)
+Backend available at: `http://localhost:8000`  
+Interactive API docs: `http://localhost:8000/docs`
 
-#### 2. Frontend Setup
+---
+
+### 3. Frontend Setup
 
 ```bash
 cd frontend
-
-# Install dependencies
 npm install
 
-# Start development server
+# Set API URL
+echo "REACT_APP_API_URL=http://localhost:8000" > .env
+
 npm start
 ```
 
-**Frontend will run at**: [http://localhost:3000](http://localhost:3000)
+Frontend available at: `http://localhost:3000`
 
 ---
 
-## 📈 Evaluation Workflows
-
-The scripts in `backend/evaluation` support baseline comparison, guardrail checks, benchmark runs, and ablation studies.
-
-Run from project root:
+## 🔑 Environment Variables
 
 ```bash
-cd backend
+# backend/.env
 
-# Baseline comparison: MEXAR vs CRAG vs RAPTOR
-python evaluation/baseline_runner.py
-
-# Backbone comparison (restores original backbone after completion)
-python evaluation/backbone_comparison.py
-
-# Guardrail boundary query analysis
-python evaluation/guardrail_analysis.py
-
-# Benchmark dataset run (all rows by default) + save report
-python evaluation/benchmark_runner.py --dataset-path ../test_data/medqa_sample.json --agent-name medical_agent --output evaluation_outputs/medqa_report.json
-
-# Quick benchmark smoke test
-python evaluation/benchmark_runner.py --dataset-path ../test_data/medqa_sample.json --agent-name medical_agent --max-samples 25
-
-# McNemar significance helper
-python evaluation/statistical_tests.py
-```
-
-Notes:
-- Faithfulness values are read from `explainability.confidence_breakdown.faithfulness` when available.
-- Benchmark reports include per-query status and aggregate summary metrics.
-
----
-
-## 📁 Project Structure
-
-```
-mexar_ultimate/
-├── backend/                    # FastAPI Backend
-│   ├── api/                   # REST API endpoints
-│   │   ├── auth.py           # Authentication (JWT)
-│   │   ├── agents.py         # Agent CRUD
-│   │   ├── chat.py           # Chat + multimodal
-│   │   ├── compile.py        # Knowledge compilation
-│   │   └── websocket.py      # Real-time updates
-│   ├── core/                  # Core configuration
-│   │   ├── config.py         # Settings
-│   │   ├── database.py       # SQLAlchemy setup
-│   │   └── security.py       # JWT handling
-│   ├── models/                # Database models
-│   │   ├── user.py           # User model
-│   │   ├── agent.py          # Agent + CompilationJob
-│   │   ├── chunk.py          # DocumentChunk (pgvector)
-│   │   └── conversation.py   # Chat history
-│   ├── modules/               # Core AI modules
-│   │   ├── data_validator.py # File parsing
-│   │   ├── prompt_analyzer.py # Domain extraction
-│   │   ├── knowledge_compiler.py # Vector embeddings
-│   │   ├── reasoning_engine.py # RAG pipeline
-│   │   └── explainability.py # UI formatting
-│   ├── utils/                 # Utilities
-│   │   ├── groq_client.py    # Groq API wrapper
-│   │   ├── hybrid_search.py  # RRF search fusion
-│   │   ├── reranker.py       # Cross-encoder
-│   │   ├── faithfulness.py   # Claim verification
-│   │   └── source_attribution.py # Citation extraction
-│   ├── main.py               # FastAPI entry point
-│   └── requirements.txt      # Python dependencies
-│
-├── frontend/                  # React Frontend
-│   ├── src/
-│   │   ├── pages/            # React pages
-│   │   │   ├── Landing.jsx   # Home page
-│   │   │   ├── Login.jsx     # Authentication
-│   │   │   ├── Dashboard.jsx # User dashboard
-│   │   │   ├── AgentCreation.jsx # Create agent
-│   │   │   ├── CompilationProgress.jsx # Build progress
-│   │   │   └── Chat.jsx      # Chat interface
-│   │   ├── components/       # Reusable UI
-│   │   ├── contexts/         # React contexts
-│   │   ├── api/              # API client
-│   │   └── App.jsx           # Main component
-│   ├── package.json          # Node dependencies
-│   └── vercel.json           # Vercel config
-│
-├── Dockerfile                 # Docker config for HF Spaces
-└── README.md                  # This file
-```
----
-### 📸 Screenshot
-<img width="1863" height="918" alt="image" src="https://github.com/user-attachments/assets/75ff2c32-4c90-4e65-ab5f-10c94bad2e65" />
-<img width="330" height="330" alt="image" src="https://github.com/user-attachments/assets/2d9846c9-b002-4f05-b632-6dc1c8c58ad1" />
-<img width="330" height="330" alt="image" src="https://github.com/user-attachments/assets/810de78d-4725-494e-94b5-e8aa71b8b7fd" />
-<img width="330" height="330" alt="image" src="https://github.com/user-attachments/assets/155ea162-d8b9-4b45-acf9-42afc47c8498" />
-<img width="330" height="330" alt="image" src="https://github.com/user-attachments/assets/cadf46a8-c679-4a76-a58d-a956f9cb9cc1" />
-<img width="330" height="330" alt="image" src="https://github.com/user-attachments/assets/598b7925-8001-44a7-ae34-6fddb85b7531" />
-<img width="330" height="330" alt="image" src="https://github.com/user-attachments/assets/e9e99b9d-05b0-4ae5-9990-ed9c9cc124c6" />
-
----
-
-## 🌐 Deployment
-
-### Current Deployment (Free Tier)
-
-- **Frontend**: Vercel - [https://mexar.vercel.app](https://mexar.vercel.app)
-- **Backend**: Hugging Face Spaces - [https://devrajsinh2012-mexar.hf.space](https://devrajsinh2012-mexar.hf.space)
-- **Database**: Supabase (PostgreSQL with pgvector)
-- **Storage**: Supabase Storage
-- **Total Cost**: $0/month
-
-### Deploy Your Own Instance
-
-#### Deploy Backend to Hugging Face Spaces
-
-1. Fork this repository
-2. Create a new Space at [huggingface.co/new-space](https://huggingface.co/new-space)
-3. Select **Docker** as SDK
-4. Connect your GitHub repository
-5. Add Repository Secrets:
-   - `GROQ_API_KEY`
-   - `DATABASE_URL`
-   - `SUPABASE_URL`
-   - `SUPABASE_KEY`
-   - `SECRET_KEY`
-   - `FRONTEND_URL`
-
-#### Deploy Frontend to Vercel
-
-1. Import repository at [vercel.com](https://vercel.com)
-2. Set **Root Directory** to `frontend`
-3. Add Environment Variable:
-   - `REACT_APP_API_URL` = Your HF Spaces URL
-
----
-
-## 🔧 Environment Variables
-
-### Backend (`backend/.env`)
-
-```env
-# Required: Get from console.groq.com
-GROQ_API_KEY=your_groq_api_key_here
-
-# Supabase Database
-DATABASE_URL=postgresql://user:password@host:5432/database
-
-# JWT Security
-SECRET_KEY=generate-a-secure-random-key
-
-# Supabase Storage
+# === REQUIRED ===
+GROQ_API_KEY=your_groq_api_key_here           # https://console.groq.com
+DATABASE_URL=postgresql://user:pass@host:5432/db
+SECRET_KEY=your_secure_jwt_secret_key
 SUPABASE_URL=https://your-project.supabase.co
 SUPABASE_KEY=your_supabase_service_role_key
 
-# Optional: ElevenLabs TTS
-ELEVENLABS_API_KEY=your_elevenlabs_api_key_here
+# === OPTIONAL ===
+ELEVENLABS_API_KEY=your_elevenlabs_api_key    # Text-to-speech
+FRONTEND_URL=https://mexar.vercel.app         # CORS origin
 
-# Frontend URL for CORS
-FRONTEND_URL=https://mexar.vercel.app
-```
-
-### Frontend (`frontend/.env`)
-
-```env
-# Backend API URL
-REACT_APP_API_URL=https://your-backend.hf.space
+# === DATASET COLLECTION (scripts/) ===
+COURTLISTENER_TOKEN=your_cl_token             # courtlistener.com
+NCBI_EMAIL=your@email.com                     # NCBI policy requirement
+NCBI_API_KEY=your_ncbi_api_key                # Raises rate limit 3→10 req/s
+SEC_USER_AGENT=Firstname Lastname your@email.com  # SEC EDGAR fair access
 ```
 
 ---
 
-## 🔍 API Documentation
+## 🐳 Docker / Hugging Face Spaces Deployment
 
-Once the backend is running, interactive API docs are available at:
+The project ships with a ready-to-use `Dockerfile` and is live on HF Spaces.
 
-- **Swagger UI**: `http://localhost:8000/docs`
-- **ReDoc**: `http://localhost:8000/redoc`
+```bash
+# Build locally
+docker build -t mexar-backend ./backend
+docker run -p 8000:8000 --env-file backend/.env mexar-backend
+```
 
-### Key Endpoints
+For **Hugging Face Spaces**, push to the `hf` remote:
+
+```bash
+git remote add hf https://huggingface.co/spaces/devrajsinh2012/mexar.git
+git push hf main
+```
+
+---
+
+## 📡 API Reference
 
 | Method | Endpoint | Description |
-|--------|----------|-------------|
-| POST | `/api/auth/register` | Register new user |
-| POST | `/api/auth/login` | Login (returns JWT) |
-| GET | `/api/agents/` | List all agents |
-| POST | `/api/compile/` | Start agent compilation |
-| GET | `/api/compile/{name}/status` | Check compilation status |
-| POST | `/api/chat/` | Send message to agent |
-| POST | `/api/chat/multimodal` | Send with audio/image |
+|---|---|---|
+| `POST` | `/api/auth/register` | Register a new user account |
+| `POST` | `/api/auth/login` | Login and receive JWT token |
+| `GET` | `/api/agents/` | List all compiled agents |
+| `POST` | `/api/agents/` | Create a new agent |
+| `POST` | `/api/compile/` | Start knowledge compilation from uploaded files |
+| `GET` | `/api/compile/{job_id}` | Poll compilation job status |
+| `POST` | `/api/chat/` | Send a query to an agent (REST) |
+| `WS` | `/ws/chat/{agent_id}` | Real-time streaming chat (WebSocket) |
+| `GET` | `/api/health` | Health check |
+| `GET` | `/docs` | Interactive Swagger UI |
+
+Full interactive documentation: [devrajsinh2012-mexar.hf.space/docs](https://devrajsinh2012-mexar.hf.space/docs)
 
 ---
 
-## 🧪 Technologies
+## 🧠 Groq Model Fallback Chain
 
-### Backend
-- **FastAPI** - Modern async Python web framework
-- **SQLAlchemy** - ORM for PostgreSQL
-- **pgvector** - Vector similarity search
-- **FastEmbed** - Local embedding generation (BAAI/bge-small-en-v1.5)
-- **sentence-transformers** - Cross-encoder reranking
-- **Groq API** - LLM (Llama 3.1/3.3), Whisper (audio), Vision (images)
+MEXAR implements a resilient multi-model fallback for Groq API rate limits:
 
-### Frontend
-- **React 18** - UI framework
-- **Material-UI (MUI)** - Component library
-- **React Router** - Navigation
-- **Axios** - HTTP client
-
-### External Services
-- **Supabase** - Managed PostgreSQL + Storage
-- **Groq** - Fast AI inference (LPU architecture)
-- **ElevenLabs** - Text-to-Speech (optional)
-
----
-
-## 📊 How It Works
-
-### 1. Agent Creation Flow
 ```
-User uploads files → DataValidator parses content
-                  → PromptAnalyzer extracts domain & keywords
-                  → KnowledgeCompiler creates embeddings
-                  → Stored in pgvector database
+openai/gpt-oss-120b
+       │ (429 TPD quota)
+       ▼
+llama-3.3-70b-versatile
+       │ (429 TPD quota)
+       ▼
+llama-3.1-8b-instant
+       │ (429 TPD quota)
+       ▼
+mixtral-8x7b-32768
+       │ (429 TPD quota)
+       ▼
+gemma2-9b-it
 ```
 
-### 2. Query Processing Flow
+This ensures zero-downtime inference even under heavy usage within free-tier quotas.
+
+---
+
+## 🧪 Running Evaluations
+
+```bash
+# Fetch real datasets (requires API keys in .env)
+python backend/scripts/fetch_pubmed.py      # NCBI PubMed
+python backend/scripts/fetch_courtlistener.py  # CourtListener
+python backend/scripts/fetch_secedgar.py    # SEC EDGAR
+
+# Recompile domain agents from real data
+python backend/scripts/recompile_agents_from_real_data.py
+
+# Run full Phase 3 evaluation pipeline
+python backend/evaluation/run_all.py
+
+# Results saved to:
+# backend/evaluation_outputs/full_evaluation_<timestamp>.json
 ```
-User query → Domain Guardrail check
-          → Hybrid Search (semantic + keyword)
-          → Cross-Encoder Reranking (top 5 results)
-          → LLM Generation with retrieved context
-          → Source Attribution (extract citations)
-          → Faithfulness Scoring (verify grounding)
-          → Explainability Formatting
-```
-
-### 3. Confidence Calculation
-Confidence score is calculated from:
-- **Retrieval Quality** (35%) - Relevance of retrieved chunks
-- **Rerank Score** (30%) - Cross-encoder confidence
-- **Faithfulness** (25%) - Answer grounding in context
-- **Base Floor** (10%) - For in-domain queries
 
 ---
 
-## ⚠️ Known Limitations (Free Tier)
+## 🛠️ Tech Stack
 
-1. **Cold Start Delay**: First request after 15 min idle takes 45-90 seconds
-2. **Model Download**: Initial startup takes 3-5 minutes (FastEmbed caching)
-3. **Groq Rate Limits**: 30 requests/min, 14,400/day (free tier)
-4. **Concurrent Users**: 1-2 recommended on free tier (2GB RAM limit)
-5. **Ephemeral Storage**: HF Spaces `/tmp` data lost on restart (Supabase used for persistence)
-
-**Production Migration**: Upgrade to paid tiers for ~$54/month (persistent instances, higher limits)
+| Layer | Technology |
+|---|---|
+| **Frontend** | React 18, React Router, Vercel |
+| **Backend** | FastAPI 0.109, Uvicorn, Python 3.9+ |
+| **Database** | PostgreSQL + `pgvector`, Supabase |
+| **Vector Search** | FastEmbed `BAAI/bge-small-en-v1.5` (384-dim) |
+| **Keyword Search** | PostgreSQL `tsvector` BM25 FTS |
+| **RRF Fusion** | Custom SQL stored procedure |
+| **LLM Inference** | Groq API (Llama 3.3, Llama 3.1, Mixtral, Gemma 2) |
+| **Faithfulness** | `microsoft/deberta-v3-base` NLI via HuggingFace |
+| **Reranking** | `sentence-transformers` cross-encoder |
+| **Multimodal** | Groq Whisper v3 (audio), Groq Vision (images), OpenCV (video) |
+| **TTS** | ElevenLabs API + Web Speech API |
+| **Auth** | JWT (python-jose) + bcrypt (passlib) |
+| **Deployment** | Hugging Face Spaces (Docker), Vercel (frontend) |
+| **NLP** | spaCy `en_core_web_sm`, scikit-learn TF-IDF |
 
 ---
 
-## 🙏 Acknowledgments
+## 🤝 Contributing
 
-- [Groq](https://groq.com) - Fast AI inference with LPU technology
-- [Supabase](https://supabase.com) - PostgreSQL + Storage platform
-- [FastEmbed](https://github.com/qdrant/fastembed) - Lightweight embeddings library
-- [sentence-transformers](https://www.sbert.net) - Reranking models
-- [Hugging Face](https://huggingface.co) - Free ML model hosting
-
----
-
-## 🤝 Contribution
-
-This project is built by Devrajsinh Gohil and Jay Nasit under the guidance of Prof OM Prakash Suthar.
-
-**Built with ❤️ using modern AI technologies**
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/my-feature`
+3. Commit your changes: `git commit -m 'feat: add my feature'`
+4. Push to the branch: `git push origin feature/my-feature`
+5. Open a Pull Request
 
 ---
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the **MIT License** — see [LICENSE](LICENSE) for details.
 
+---
+
+<div align="center">
+
+Built with ❤️ by **Devrajsinh Gohil**
+
+[GitHub](https://github.com/devrajsinh2012/Mexar) · [HF Spaces](https://huggingface.co/spaces/devrajsinh2012/mexar) · [Live App](https://mexar.vercel.app)
+
+</div>
