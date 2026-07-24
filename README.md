@@ -557,7 +557,18 @@ This project is licensed under the **MIT License** — see [LICENSE](LICENSE) fo
 
 <div align="center">
 
-Built with ❤️ by **Devrajsinh Gohil**
+
+## 👨‍💻 Project Team
+
+This Major Project is presented by:
+
+**Devrajsinh Gohil** & **Jay Nasit**
+
+Under the expert guidance of:
+
+**Prof. Om Prakash Suthar**
+
+---
 
 [GitHub](https://github.com/devrajsinh2012/Mexar) · [HF Spaces](https://huggingface.co/spaces/devrajsinh2012/mexar) · [Live App](https://mexar.vercel.app)
 
