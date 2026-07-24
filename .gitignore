@@ -72,5 +72,7 @@ logs/
 *.tmp
 .cache/
 
-# Documentation build
+# Documentation & Prompt Notes
 md files/
+MEXAR_Gap_Fixes_Prompt.md
+*.prompt.md

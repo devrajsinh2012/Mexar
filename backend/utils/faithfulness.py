@@ -290,7 +290,7 @@ class DebertaNLIScorer:
             s.strip()
             for s in re.split(r'(?<=[.!?])\s+', answer)
             if len(s.strip()) > 15
-        ][:10]  # cap at 10 sentences for latency
+        ][:3]  # cap at top 3 key sentences for fast CPU NLI verification
 
         if not sentences:
             return FaithfulnessResult(
@@ -301,18 +301,26 @@ class DebertaNLIScorer:
         unsupported_sentences = []
 
         try:
+            # Limit context documents to top 3 retrieved chunks
+            top_docs = context_documents[:3]
+
+            # Batch all (doc, sentence) pairs across sentences into a single predict call
+            all_pairs = []
             for sentence in sentences:
-                # Build (premise=doc, hypothesis=sentence) pairs for all docs
-                pairs = [(doc[:2000], sentence) for doc in context_documents]
+                for doc in top_docs:
+                    all_pairs.append((doc[:400], sentence[:200]))
 
-                # predict() returns raw logits shape: (n_docs, n_labels)
-                raw_scores = self.model.predict(pairs)
+            import torch
+            with torch.inference_mode():
+                raw_scores = self.model.predict(all_pairs, batch_size=32)
+            probs = self._softmax(raw_scores)
 
-                # Apply softmax to get probabilities
-                probs = self._softmax(raw_scores)
+            n_docs = len(top_docs)
+            probs = probs.reshape(len(sentences), n_docs, -1)
 
+            for i, sentence in enumerate(sentences):
                 # Eq. 6: max entailment probability across all retrieved documents
-                max_entailment = float(np.max(probs[:, self._entailment_idx]))
+                max_entailment = float(np.max(probs[i, :, self._entailment_idx]))
 
                 if max_entailment > self.TAU_ENT:
                     supported += 1

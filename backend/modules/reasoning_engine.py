@@ -45,8 +45,8 @@ class ReasoningEngine:
     4. Faithfulness scoring
     """
     
-    # Domain guardrail threshold (lowered for better general question handling)
-    DOMAIN_SIMILARITY_THRESHOLD = 0.05
+    # Tuned via guardrail_threshold_sweep.py: F1=0.9072 at threshold=0.25 (holds on both toy and real corpora; see evaluation_outputs/guardrail_threshold_sweep.json)
+    DOMAIN_SIMILARITY_THRESHOLD = 0.25
     MCNEMAR_BINARIZATION_THRESHOLD = 0.6  # Threshold at which a response is labeled "correct" for McNemar's test binarisation
     
     

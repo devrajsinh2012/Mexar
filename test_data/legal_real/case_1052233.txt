@@ -1,0 +1,260 @@
+                 IN THE COURT OF APPEALS OF TENNESSEE
+                              AT JACKSON
+                                   August 16, 2007 Session
+
+          GARY WEAVER, ET AL. v. THOMAS R. McCARTER, ET AL.
+
+                A Direct Appeal from the Chancery Court for Shelby County
+               No. 98-0425-3  The Honorable D. J. Alissandratos, Chancellor
+
+
+
+                    No. W2006-02058-COA-R3-CV - Filed October 8, 2007
+
+
+        This is the second appeal of this breach of contract case. In Gary Weaver, et al v. Thomas
+R. McCarter, et al, No. W2004-02803-COA-R3-CV, 2006 WL 1529506 (Tenn. Ct. App. June 6,
+2006), this Court affirmed the trial court’s grant of summary judgment in favor of plaintiffs and
+remanded the case “for further clarification concerning the amount of damages awarded with respect
+to plaintiff’s claims of negligence per se, negligent misrepresentation, and breach of contract.” Upon
+remand, the trial court entered judgment against the defendants jointly and severally and in favor of
+plaintiffs for compensatory damages and pre-judgment interest. Finding that the trial court abused
+its discretion in awarding pre-judgment interest, we reverse that portion of the Judgment. We
+reverse in part and affirm in part.
+
+
+Tenn. R. App. P. 3; Appeal as of Right; Judgment of the Reversed in Part, Affirmed in Part
+
+W. FRANK CRAWFORD , P.J., W.S., delivered the opinion of the court, in which DAVID R. FARMER ,
+J. and HOLLY M. KIRBY , J., joined.
+
+Charles F. Morrow and Elizabeth E. Chance of Memphis, Tennessee for Appellant, Coldwell Banker
+Hoffman-Burke, Inc., Realtors
+
+Robert L. Moore and Dawn Davis Carson of Memphis, Tennessee for Appellant, Jim Perdue
+
+Henry C. Shelton, III and Tricia T. Olson of Memphis, Tennessee for Gary and Gail Weaver
+
+                                             OPINION
+
+      The relevant facts and procedures are set out in this Court’s Opinion in the previous appeal,
+Gary Weaver, et al v. Thomas R. McCarter, et al, No. W2004-02803-COA-R3-CV, 2006 WL
+1529506 (Tenn. Ct. App. June 6, 2006). The Opinion, filed June 6, 2006, states in pertinent part:
+        This suit arises from a contract to sell Gary and Gail Weaver’s
+(“the Plaintiffs”) house (“the Hacks Cross House”) located on Hacks
+Cross Road in Memphis, Tennessee. On November 1, 1994, Thomas
+McCarter (“Defendant McCarter”) approached the Plaintiffs with an
+offer to purchase the Hacks Cross House for $680,000 in cash. The
+Plaintiffs agreed and subsequently entered into a verbal contract with
+Defendant McCarter for a cash sale. However, Defendant McCarter
+never consummated the sale and, thus, the transaction never closed.
+
+
+         In February 1997, the Plaintiffs purchased a second home
+located on Langston Cove (“the Langston Cove House”) and soon
+after listed the Hacks Cross House with Jim Perdue (“Defendant
+Perdue”) at Coldwell Banker Hoffman-Burke, Inc. Realtors
+(“Defendant CBHB”). On August 27, 1997, Defendant Perdue
+brought the Plaintiffs a written offer from Janet Hunter to purchase
+the Hacks Cross House for $575,000. The Plaintiffs eventually
+accepted a counter-offer of $595,000, with $10,000 in escrow, and
+signed a contract of sale (hereinafter referred to as “the sale contract”)
+with Janet Hunter. Closing was set for September 30, 1997.
+However, the $10,000 escrow check bounced on September 17, 1997,
+and Defendants CBHB received notice of this on September 30, 1997.
+Furthermore, the sale contract was not signed by Janet Hunter, but
+rather Janet Hunter’s name was forged by Chip Hunter (“Defendant
+Hunter”), Janet Hunter’s husband, without Janet Hunter’s knowledge
+or permission. Defendant Hunter signed Janet Hunter’s name to the
+sale contract at the request of Defendant McCarter and while in the
+presence of Defendant Perdue. The Plaintiffs did not learn of the
+bounced escrow check or the forged sale contract until the closing
+date, when the Plaintiffs’ attorney checked on the escrow funds and
+Defendant Perdue informed the Plaintiffs’ closing attorney of the
+forgery. As a result, the closing did not occur on September 30, 1997.
+
+        Subsequently, on October 2, 1997, Defendant McCarter, in a
+memorandum to Defendant Perdue, affirmed that he was the true
+party who had made the offer on August 29, 1997, to purchase the
+Hacks Cross House for his daughter, Janet Hunter. While Defendant
+McCarter indicated a desire to honor the sale contract, he informed
+Defendant Perdue that his funding for the purchase would not be
+available until October 8, 1997. Although reserving their rights under
+the original sale contract, the Plaintiffs informed Defendant McCarter
+that they were willing to close the transaction if his funding came
+through by October 8, 1997. Despite this, the closing did not take
+
+
+                                   -2-
+place on October 8, due to a continued lack of funding. At that time,
+Defendant McCarter promised to fund the transaction on October 15,
+1997. However, on that date, he delivered a $10,000 check to
+Defendant CBHB and stated that he no longer wanted to purchase the
+Hacks Cross House. The Plaintiffs subsequently demanded that
+Defendant Perdue pay them Defendant McCarter’s $10,000 in earnest
+money, cancelled their listing agreement with Defendant CBHB, and
+placed the Hacks Cross House back on the market. However, the
+Hacks Cross House did not sell and the Plaintiffs eventually sold the
+Langston Cove House and moved back to the Hacks Cross House.
+
+        On May 11, 1998, the Plaintiffs filed suit against Defendants
+McCarter, CBHB, Perdue, and Hunter, seeking damages for
+negligence per se, negligent misrepresentation, breach of contract,
+and fraud. Specifically, the Plaintiffs asserted that Defendants Perdue
+and CBHB were negligent per se for violating section 62-13-403 of
+the Tennessee Real Estate Broker License Act of 1973. The Plaintiffs
+further asserted that Defendant Perdue was also negligent per se
+because he violated section 62-13-404 of the Brokers Act, which
+provides for duties of reasonable care and loyalty between real estate
+brokers and their clients; and that Defendant Perdue was further
+guilty of negligent misrepresentation for failing to exercise reasonable
+care in communicating information to the Plaintiffs. The Plaintiffs
+next asserted a breach of contract claim against Defendant McCarter
+arguing that, although Defendant McCarter did not actually sign the
+contract, he had previously entered into an oral agreement, through
+Defendant Perdue, with the Plaintiffs to purchase their house, but
+failed to follow through with the purchase. Finally, the Plaintiffs
+asserted a fraud complaint against Defendants McCarter, Hunter, and
+Perdue, arguing that all three parties engaged in dishonest practices
+with a deceptive intent in order to induce the Plaintiffs to enter into
+an illusory contract to sell their house, which the Plaintiffs
+subsequently relied upon to their detriment. As remedies, the
+Plaintiffs sought either specific performance by Defendant McCarter
+or a judgment for $200,000 in compensatory damages against all
+defendants jointly and severally, along with punitive damages.
+
+        In response to the Plaintiffs’ claims, Defendants CBHB and
+Perdue filed an answer arguing that Plaintiffs failed to assert a claim
+upon which relief could be granted. Defendant CBHB also asserted
+a counter-claim against the Plaintiffs alleging that they were entitled
+to split the $10,000 in earnest money with the Plaintiffs. In turn,
+Defendant Hunter denied forging Janet Hunter’s signature and
+
+
+                                  -3-
+asserted the statute of frauds as an affirmative defense. Defendant
+McCarter denied being the contractual purchaser of the house and
+further asserted the statute of frauds as an affirmative defense.
+Defendant McCarter also asserted a counter-claim against Defendant
+Perdue, Defendant CBHB, and the Plaintiffs seeking the return of the
+$10,000 placed in escrow arguing that Defendant McCarter entered
+into no enforceable contract of sale and, thus, no legal basis existed
+for the continued retention of such funds. Defendants CBHB and
+Perdue and the Plaintiffs responded to Defendant McCarter’s counter-
+complaint and asserted that an enforceable contract of sale did exist.
+
+        On July 13, 2000, the Plaintiffs filed a Motion for Summary
+Judgment against all Defendants. Defendant McCarter subsequently
+filed a motion seeking a directed verdict in relation to the return of
+the $10,000 escrow money. (FN1) On January 22, 2001, the trial
+court entered an order granting summary judgment in favor of the
+Plaintiffs against Defendants McCarter, Hunter, Perdue, and CBHB.
+The court also denied Defendant McCarter’s directed verdict motion
+and further ordered that Defendant CBHB tender the $10,000 in
+earnest money to the Plaintiff, with said amount being credited
+against the damage award against Defendant McCarter. The amounts
+of compensatory and punitive damages were reserved for further
+hearing; however, the trial court did state that while all judgments
+rendered herein and subsequently by the Court shall be joint and
+several as against all Defendants, that among the Defendants the fault
+shall be apportioned [forty-five] percent (45%) to [Defendant]
+McCarter, ten percent (10%) to [Defendant] Hunter, and [forty-five]
+percent (45%) to Defendants [Perdue and CBHB].
+
+       (FN1)    Pursuant to Rule 50.01 of the Rules of Civil Procedure,
+       a party may only move for directed verdict “at the close of the
+       evidence offered by an opposing party or at the close of the
+       case.” Tenn. R. Civ. P. 50.01 (2005).
+
+
+Nearly two years after the trial court’s grant of summary judgment,
+Defendant CBHB filed a motion to reconsider, which the trial court
+denied.
+
+        Prior to the trial on damages, several events occurred which
+ultimately affected the trial court’s ability to assess damages. First,
+on May 5, 2004, Defendant Perdue filed a Plea of Bankruptcy stating
+that he had filed bankruptcy and that, pursuant to an Order Modifying
+Discharge Injunction issued by the United States Bankruptcy Court
+for the Western District of Tennessee, the trial court would only be
+
+                                     -4-
+allowed to proceed to a judgment against Defendant Perdue for any
+causes of action except acts of fraud, fraudulent misrepresentation, or
+other cause of action which would permit the denial of discharge
+pursuant to 11 U.S.C. § 727 or render the judgment nondischargeable
+pursuant to 11 U.S.C. § 523. The trial court granted this plea. In
+addition to Defendant Perdue’s filing of bankruptcy, Defendant
+McCarter died (FN2) and Defendant Hunter also filed bankruptcy.
+As a result, at trial, the Plaintiffs sought to collect damages arising
+from Defendants CBHB and Perdue’s negligence per se and negligent
+misrepresentation, as well as Defendant McCarter’s breach of
+contract. (FN3)
+
+       (FN2)    W e find no indication in the record of a substitution of
+       parties for Defendant McCarter pursuant to Rule 25.01 of the
+       Tennessee Rules of Civil Procedure.
+
+
+       (FN3)     In their brief, the Plaintiffs assert that at the trial on
+       damages, they proceeded only against Defendants CBHB and
+       Perdue “and sought damages only under the Tennessee Real
+       Estate Broker[] Act of 1973 and for negligence.” However, a
+       review of the trial transcript reveals that the Plaintiffs also sought
+       damages for their breach of contract claim against Defendant
+       McCarter, although the Plaintiffs admitted that Defendant
+       McCarter died apparently leaving no estate to satisfy a judgment
+       and that “no formal Notice [or] substitution” was made pursuant
+       to Rule 25.01.
+
+       In relation to damages suffered due to fraud, neither the
+       Plaintiffs’ brief nor the record in this case supports the
+       conclusion that damages were awarded based upon fraud in this
+       case. At trial, the Plaintiffs’ counsel admitted that no judgment
+       for fraud was awarded against Defendants CBHB and Perdue.
+       Furthermore, the Plaintiffs indicated that they were unable to
+       pursue damages against Defendant Hunter due to his filing
+       Chapter 7 bankruptcy. Finally, a review of the record and
+       transcript in this case fails to show that damages were awarded
+       for any fraud alleged against Defendant McCarter.
+
+
+        At the trial on damages, the parties presented testimony of
+Plaintiff Gary Weaver and John Jordan, a real estate appraiser who
+had appraised the Plaintiffs’ property in 1997, near the time the sale
+contract was signed. The Plaintiffs asserted that the proof showed
+that they had suffered $300,000 in damages as a result of the
+Defendants conduct. After hearing the proof, the trial court first held
+the Plaintiffs would receive no damages in relation to their purchase
+and subsequent sale of the Langston Cove House because the
+purchase of this property occurred prior to the Plaintiffs’ contract to
+
+                                        -5-
+               sell the Hacks Cross House and, thus, damages resulting from the
+               purchase and sale of the Langston Cove home were not reasonable
+               consequential damages flowing from the Defendants’ actions in
+               regard to the Hacks Cross House. As a result of this finding, the trial
+               court focused its award of damages on the following issues: 1) the
+               contract price for the Hacks Cross House minus the sales
+               commission, 2) the duty of the Plaintiffs to mitigate damages, and 3)
+               additional expenses incurred as a result of the Defendants’ actions.
+               After hearing the evidence submitted at trial, the trial court entered an
+               Order of Judgment providing as follows:
+
+                       Plaintiffs should have a judgment, against Defendants,
+                       pursuant to their apportioned fault, in the amount of
+                       $55,600.00 for lost value of real estate; $3,000.00 for
+                       1998 and $3,000.00 for 1999 for necessary
+                       maintenance costs, and $20,000.00 for attorneys fees,
+                       with prejudgment interest computed at 10% per year
+                       on each amount from the date incurred, or, in the case
+                       of attorneys fees, from the date paid, and statutory
+                       cost of this case. [Defendants] Perdue and [CBHB]
+                       have been apportioned fault in the amount of forty-
+                       five percent (45%), and judgment is awarded against
+                       these Defendants specifically in the amount of
+                       $60,118.53, and forty-five percent (45%) of statutory
+                       costs.
+
+                The Plaintiffs subsequently filed a Motion to Alter or Amend
+                Judgment arguing that the trial court should app

@@ -1,7 +1,11 @@
 
 import os
+from pathlib import Path
 from dotenv import load_dotenv
 
+env_path = Path(__file__).resolve().parent.parent / ".env"
+if env_path.exists():
+    load_dotenv(dotenv_path=env_path)
 load_dotenv()
 
 class Config:
@@ -15,8 +19,8 @@ class Config:
     
     # AI Services
     GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-    LLM_BACKBONE = os.getenv("LLM_BACKBONE", "openai/gpt-oss-120b")  # Options: openai/gpt-oss-120b, llama3, mixtral, gemma
-    GROQ_MODEL = os.getenv("GROQ_MODEL", os.getenv("LLM_MODEL", "openai/gpt-oss-120b"))
+    LLM_BACKBONE = os.getenv("LLM_BACKBONE", "llama3")  # Options: llama3, gpt-oss-120b
+    GROQ_MODEL = os.getenv("GROQ_MODEL", os.getenv("LLM_MODEL", "llama-3.1-8b-instant"))
     
     # Storage
     STORAGE_PATH = os.getenv("STORAGE_PATH", "./data/storage")

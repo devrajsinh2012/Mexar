@@ -33,6 +33,8 @@ from typing import Dict, List, Optional, Tuple
 from urllib.parse import urljoin
 
 import requests
+from dotenv import load_dotenv
+load_dotenv()
 
 try:
     from bs4 import BeautifulSoup
@@ -64,7 +66,8 @@ EDGAR_HEADERS: Dict[str, str] = {
     "Accept-Encoding": "gzip, deflate",
 }
 
-OUTPUT_DIR = Path("test_data/financial_real")
+REPO_ROOT = Path(__file__).resolve().parent.parent.parent
+OUTPUT_DIR = REPO_ROOT / "test_data" / "financial_real"
 
 # Search terms and per-term document targets (~130 total).
 SEARCH_CONFIG: List[Tuple[str, str, int]] = [

@@ -1,0 +1,413 @@
+Optimizing the rice wine process of P olygonatum sibiricum Red. using response surface methodology (RSM) and back-propagation (BP) neural network to enhance biological activity and reduce 5-hydroxymethylfurfural (5-HMF)
+
+Effect of ohmic heating on the quality and stability of carrot and orange juice blend
+
+A survey of the occurrence of α-dicarbonyl compounds and 5-hydroxymethylfurfural in dried fruits, fruit juices, puree and concentrates
+
+Experimental design of magnetic ionic liquid ultrasound-assisted dispersive liquid-liquid microextraction for the determination of 5-HMF in honey samples
+
+Quantitative predictive model for screening optimal processing methods of Polygonati rhizoma
+
+Structural characterization and antioxidant activities of polysaccharides extracted from Polygonati rhizoma pomace
+
+Socioeconomic and environmental prospects of the food industry
+
+Molecular network strategies combined with MCnebula2 identify potential active compounds from steamed Polygonatum cyrtonema Hua
+
+Optimization of ultrasound-assisted extraction of polysaccharides from Akebia fruit using an artificial neural network model: Characteristics and antioxidant activity
+
+Pitfalls in the 3, 5-dinitrosalicylic acid (DNS) assay for the reducing sugars: Interference of furfural and 5-hydroxymethylfurfural
+
+Authentication of Robusta coffee origins by shortwave NIR spectroscopy coupled with dimensionality reduction and neural networks
+
+Identification and characterisation of taste-enhancing peptides from oysters (Crassostrea gigas) via the Maillard reaction
+
+Chemical composition and antioxidant activity of Polygonatum kingianum processed by the traditional method of “nine cycles of steaming and Sun-drying”
+
+Rapid determination of total flavonoid content, xanthine oxidase inhibitory activities, and antioxidant activity in Prunus mume by near-infrared spectroscopy
+
+Analysis of changes in flavor characteristics of Lipu taro pork at different stages of cooking based on GC-IMS, electronic nose, and electronic tongue
+
+AHP-optimized processing technology and quality evaluation system for Rehmanniae Radix
+
+Recent advances in polysaccharides from the genus Polygonatum: Isolation, structures, bioactivities, and application
+
+Acylated saponins and flavonoid glycosides from the fruits of Stewartia koreana
+
+Impact of pretreatments on quality of dehydrated jujube fruits
+
+Physicochemical, nutritional and sensory analysis of sea buckthorn drink
+
+Phytochemical extracts and essential oils of rosemary: Exploring its antioxidant, anti-inflammatory and nutritional potentials
+
+Exploring epigallocatechin gallate impregnation to inhibit 5-hydroxymethylfurfural formation and the effect on antioxidant ability of black garlic
+
+Prediction of spherical sheet springback based on a sparrow-search-algorithm-optimized BP neural network
+
+A comprehensive review on the potential applications of medicine Polygonatum species in the food sector
+
+Investigation of water variation and surface crust of Polygonati Rhizoma extract during vacuum drying
+
+Formation of 5-hydroxymethylfurfural in industrial-scale apple juice concentrate processing
+
+Variations in the morphological and chemical composition of the rhizomes of Polygonatum species based on a common garden experiment
+
+Prediction of milk protein content based on improved sparrow search algorithm and optimized back propagation neural network
+
+Exploring acrylamide and 5-hydroxymethylfurfural formation in glucose-asparagine-linoleic acid system with a kinetic model approach
+
+Quality and safety of extracted humic substances as fundamental factor of natural regulation for the sustainable development
+
+An updated view of acrylamide in cereal products
+
+Modeling and optimization of microwave-assisted extraction of total phenolics content from mango (Mangifera indica) peel using response surface methodology (RSM) and artificial neural networks (ANN)
+
+Exploring the nutraceutical potential of grape seed extract
+
+An application of analytic hierarchy process and entropy weight method in food cold chain risk evaluation model
+
+Evaluation on bioactive compounds, antioxidant, anti-α-glucosidase and anti-acetylcholinesterase in different parts of B. Flabellifer L
+
+Structure and flavor characteristics of Maillard reaction products derived from soybean meal hydrolysates-reducing sugars
+
+Evaluation of the quality grade of congou black tea by the fusion of GC-E-nose, E-tongue, and E-eye
+
+Quality evaluation of Polygonatum cyrtonema Hua based on UPLC-Q-Exactive Orbitrap MS and electronic sensory techniques with different numbers of steaming cycles
+
+Multidimensional bionic technology, LC-MS, GC-IMS combined with AHP-TOPSIS model to evaluate the impact of different processing methods on the quality of Gastrodia elata
+
+Structural characterization and antioxidant activity of Polygonatum sibiricum polysaccharides
+
+Deformation intelligent prediction of titanium alloy plate forming based on BP neural network and sparrow search algorithm
+
+Accelerometer-based human fall detection using sparrow search algorithm and back propagation neural network
+
+Predicting green tea moisture content during roasting by shape feature
+
+Non-starch polysaccharides from nutmeg: Preparation process and bioactivity
+
+Evaluation of heterogeneity in tectonically deformed coal reservoirs based on the analytic hierarchy process-entropy weight method coupling model: A case study
+
+Potential yeast from Lau as an ethanol fermentation starter from the arrack industry in Bali, Indonesia
+
+Artificial neural network model-based optimization of Polygonum perfoliatum L. polysaccharide ultrasonic-assisted extraction, structural characterization, and anti-inflammatory activity
+
+Effects of the steaming process on the structural properties and immunological activities of polysaccharides from Polygonatum Cyrtonema
+
+Deformation characterization of oil and gas pipeline by ACM technique based on SSA-BP neural network model
+
+A novel swarm intelligence optimization approach: Sparrow search algorithm
+
+Pathway of 5-hydroxymethyl-2-furaldehyde formation in honey
+
+Effect of processing cycles on the composition of Polygonatum cyrtonema Hua during nine-steam-nine-bask processing
+
+Hydrothermal stability of phenolic extracts of brown rice
+
+Study of an SSA-BP neural network-based strength prediction model for slag–cement-stabilized soil
+
+Kinetics of 5-hydroxymethylfurfural formation in the sugar–amino acid model of Maillard reaction
+
+Research on relationship between processing degree and internal and external quality of Polygonatum cyrtonema processed by “nine-steaming and nine-suncuring” based on color change
+
+Anti-aging mechanism and effect of treatment with raw and wine-steamed Polygonatum sibiricum on D-galactose-induced aging in mice by inhibiting oxidative stress and modulating gut microbiota
+
+Traditional processing of Polygonatum sibiricum Red. (PSR), which is rich in polysaccharides, involves prolonged heating at high temperatures and is prone to produce the harmful substance 5-hydroxymethylfurfural (5-HMF). To reduce its generation and improve the taste, the process of wine-processed (PSW) was studied through Response Surface Method and back-propagation neural network model optimized by the sparrow search algorithm as an assessment indicator of the effects of steaming time, drying temperature, drying time and steaming cycles on the contents of polysaccharides, reducing sugars, flavonoids, saponins, 5-HMF and antioxidant activity. The results show that the optimal process is steaming time of 3.6 h, drying temperature of 75 °C, drying time of 11.4 h, and steaming cycles of 8 times, which improved taste and active, and reduced 5-HMF's to 0.18 mg/g. This study provides a reference of PSW processing technology, other heat-processed food and herbs rich in polysaccharides on quality control with safety warning.
+
+Highlights 
+
+ • 
+
+AHP and entropy weight method are used to establish a multi-index evaluation system. • 
+
+The prediction of SSA-BP neural network on the processing is superior to old's. • 
+
+The new process reduces the 5-HMF content and lowers the safety risks. • 
+
+The electronic tongue technology is introduced to evaluate flavor and activity. • 
+
+It provides a warning for the heat processing of plants rich in polysaccharides.
+
+1 
+
+Introduction 
+
+ Polygonatum sibiricum Red. (PSR) is a traditional Chinese medicine which belong to the family Liliaceae. PSR is rich in bioactive compounds such as polysaccharides, saponins, flavonoids, alkaloids, and lectins ( Yao et al., 2022 ). Among them, the high content of polysaccharides is the main component that exerts its efficacy. PSR is widely used in food and medicine and has antioxidant, anti-fatigue, anti-inflammatory effects and the prevention and treatment of cardiovascular diseases(Y. Hu et al., 2023 ). However, PSR has a numbing tongue sensation when taken orally ( Zhong et al., 2024 ) and must be processed to enhance its taste and efficacy before consumption. 
+
+The process methods of PSR mainly include steaming or steaming with auxiliary material (rice wine and black bean juice), whose is particularly widely used with the nine steaming and nine drying method ( Bi et al., 2025 ). Wine-processed PSR (PSW) has also been listed as one of the 2025 edition of the Chinese Pharmacopoeia ( Pharmacopoeia, 2025 ). The PSR process of nine steaming and nine sun-drying may cause the loss of active compounds content or structural changes and generate 5-hydroxymethylfurfural (5-HMF), which affects the health of human, including carcinogenicity, neoplastic transformation, and nephrotoxicity ( Yao et al., 2022 ). 
+
+The appearance changes with the internal components can determine the optimal number of steaming cycles ( Guan et al., 2024 ). However, sensory evaluation is difficult to achieve satisfactory reproducibility due to individual differences. In recent years, the electronic tongue is based on artificial lipid membrane sensor to simulate human taste, combined with multivariate statistics to rapidly evaluate the taste of the sample ( He et al., 2025 ). It has been used to study the taste of Congou black tea to avoid the subjectivity of sensory evaluation ( Wang, Xie, et al., 2024 ). Processing conditions affect physicochemical properties and biological activity ( Ishaq et al., 2025 ; Khawaja et al., 2025 ). The content of active compounds such as phenols and flavonoids can help to improve the activity of products and retain functional properties ( Sukhonthara & Thipnate, 2026 ). 
+
+Orthogonal experiment method is used for optimization which difficult to fully reveal the complex factor interactions and nonlinear relationships in the PSR process ( Bi et al., 2025 ). The Response Surface Method (RSM) can analyze the mutual influence among multiple variables and provide more intuitive and accurate results ( Ramírez-Brewer et al., 2024 ). These conventional methods are limited in capturing complex non-linear interactions and achieving global optimization of multiple parameters. Therefore, some recent studies have adopted the back-propagation (BP) neural network, as a widely used multi-layer feedforward model, is trained through the error backpropagation algorithm and features high efficiency and good accuracy (L. Li et al., 2022 ). RSM combined with the genetic algorithm - backpropagation artificial neural network model (GA-BP) was used to optimize the process of extracting polysaccharides from Akbia fruits ( Chen, Wu, et al., 2025 ). But GA-BP has gradually exposed inherent defects such as slow convergence speed and easy to fall into local optimum (B. Zhang et al., 2025 ). To improve the above problems, the sparrow search algorithm (SSA) is a new type of swarm intelligence optimization algorithm ( Xue & Shen, 2020 ). Such as by improving the BP neural network and sparrow search algorithm (SSA-BP) was used to detecte the protein content of milk and find that it has better fitting ability and higher prediction accuracy ( Liu et al., 2022 ). SSA-BP compared with GA-BP model and ANN, can achieve more efficient global optimization and control of a more stable error, show a better prediction performance and adaptability of small sample ( Wang, Wang, et al., 2024 ). Therefore, the RSM combination with SSA-BP provides reliable technical support for improving the intelligent level of food process and the stability of product quality. 
+
+This study established a comprehensive evaluation system based on the combination of analytic hierarchy process (AHP) and entropy weight method (EWM). It was used for the simultaneous assessment of the polysaccharides content (PC), reducing sugar content (RSC), flavonoid content (FC), saponin content (SC) and 5-HMF content in PSW and their 2,2′-azino-bis (3-ethyl-benzothiazoline-6-sulphonate) radical scavenging capacity (ABTS + ). Steaming time, drying temperature and drying time, steaming cycles, were predicted through single-factor experiments. On this basis, RSM and SSA-BP were adopted to model and optimize the process technology, respectively. The electronic tongue technology was used to analyze and the sensory quality characteristics of PSW. This study aims to optimize the conditions of PSW using RSM and BP neural network modeling to enhance biological activity while minimizing 5-HMF formation. This provides a scientific basis and methodological reference for the thermal processing technology of foods and herbs rich in polysaccharides. 
+
+ 2 
+
+Materials and methods 
+
+ 2.1 
+
+Materials 
+
+ Polygonatum sibiricum Red. (PSR) purchased from ChangChun City, Jilin Province (124°31′E, 43°55′N) was characterized by Associate Professor Xiudong Yang (Jilin University of Chemical Technology, Jilin, China). It was steamed for 40 min, cut 0.4–0.6 cm thick slices, and dried at 60 °C for 12 h to obtain a raw product (P 0 ). The rice wine was purchased from Shaoxing Songshengyuan Winery Co., (Zhejiang, China). 5-HMF (> 99%), rutin and diosgenin standard substances were purchased from Chengdu Push Bio-Technology Co., Ltd. (Sichuan, China). A SA-402B taste analysis system was purchased from Intelligent Sensor Technology Company, (Japan). 
+
+ 2.2 
+
+The determination of the examination indicators 
+
+This study conducted a comprehensive evaluation of the samples based on six key indicators, which specifically included the PC, RSC, FC, SC, 5-HMF content, and ABTS + . Detailed preparation methods of the above-mentioned samples were presented in Section S1 of the supplementary materials. All determinations were performed in triplicate ( n = 3) and results were expressed as mean ± standard error. Significant effects were shown by p < 0.05 (n = 3). The determination methods for each indicator were as follows: 
+
+The PC was determined by the phenol‑sulfuric acid method at 490 nm (X. Hu et al., 2025 ). The standard curve established with anhydrous glucose concentration as the x (y = 6.291× + 0.1376, r = 0.9993, linear range was 0.02–0.10 mg/mL). 
+
+The RSC was determined by the 3, 5-dinitrosalicylic acid (DNS) method at 540 nm ( Deshavath et al., 2020 ). The standard curve was established with the anhydrous glucose concentration as the x (y = 10.075× - 0.1842, r = 0.9991, linear range was 0.04–0.12 mg/mL). 
+
+The FC was determined by the sodium nitrite - aluminum nitrate method at 510 nm ( Hao et al., 2024 ). A standard curve plotted with rutin concentration as the x (y = 9.1786× + 0.0465, r = 0.9991, linear range was 0.024–0.056 mg/mL). 
+
+The SC was determined by the vanillic acid method at 550 nm ( Liao et al., 2023 ). The total saponin content was estimated by a standard curve with saponin concentration as the x (y = 2.81× + 0.0886, r = 0.9996, linear range was 0.04–0.20 mg/mL). 
+
+The 5-HMF content was determined by the HPLC method ( Yao et al., 2022 ).The chromatographic column was Phenomenex Luna C18 (250 mm × 4.6 mm, 5 μm), the mobile phase was methanol-0.1% formic acid in water (20,80, v /v), the detection wavelength was 284 nm, the column temperature was 30 °C, the injection volume was 20 μL. The standard curve was established with the 5-HMF concentration as the x (y = 6704.6× - 0.6049, r = 0.9991, linear range was 0.000625–0.01 mg/mL). 
+
+The antioxidant activity was determined by the ABTS + 0.4 mL of polysaccharide extraction solution and 3.6 mL of ABTS + working solution were added to the test tube ( Yao et al., 2022 ). After the reaction in the dark for 6 min, the absorbance value was measured at a wavelength of 734 nm. Vitamin C was used as the positive control, with the concentration range was 0.01–0.10 mg/mL. 
+
+ 2.3 
+
+The addition rule of the ratio of PSR to water 
+
+Different processing methods can affect the quality of food ( Iqbal et al., 2025 ). Therefore, the polysaccharide-rich characteristic of PSR were selected as a raw material for generating 5-HMF in heat process. According to the Pharmacopoeia provisions, the ratio of P 0 to wine was 5:1 ( Pharmacopoeia, 2025 ). Wine was added on average according to the number of steaming cycles. To prevent excessive gelatinization of PSR during the steaming and drying process, water was added in stages. During the first steaming, the ratio of PSR to water was selected at five levels: 5:3, 5:4, 5:5, 5:6 and 5:7. The evaluation indicators in sequence were water absorption rate, uniformity of the middle core, softening degree, permeation effect and surface residual moisture content. Based on these indicators, the optimal ratio for the first steaming was determined. For the second to ninth steaming processes, the water ratios of 5:0, 5:1, 5:2, 5:3 and 5:4 were selected again. The steaming time was 2 h, the drying temperature was 60 °C, and the drying time was 12 h. The process was repeated 1–9 times to obtain samples P 1 -P 9 (See Fig. 1 ). Fig. 1 
+
+The graph of the nine steaming and nine drying process of PSW. Fig. 1 
+
+ 2.4 
+
+Analytic hierarchy process (AHP) 
+
+PSW processing aims to enhance activity and reduce toxicity ( Li, Xie, et al., 2024 ). ABTS + assay is given the highest priority, as it is a water-soluble system and has a relatively high compatibility with the physicochemical properties of the chemical components ( Bu et al., 2024 ). Flavonoids and saponins are assigned secondary priority because of they have high activity and are sensitive to heat treatment, while polysaccharides have a high content and ease of hydrolysis ( Wang, Li, et al., 2022 ; Yao et al., 2022 ). During the heat treatment process, reducing sugars are prone to form 5-HMF. These two factors interact with each other and affect the quality and safety of the food. Therefore, they are set as the negative indicators. Positive indicators evaluate the enhancement of quality, and negative indicators evaluate the safety risks. The AHP was used to calculate the subjective weights of six indicators for improving activity and reducing harmful components content. The priority order of the six indicators were initially determined as ABTS + > FC > SC > PC > RSC > 5-HMF. In Table 1 , a priority judgment matrix for pairwise comparison of targets was constructed, and relative scores for each indicator were assigned. The weight values of each indicator were calculated through the AHC analysis software. Table 1 
+
+Objective pairwise comparison judgment priority matrix. Indicator PC RSC FC SC 5-HMF ABTS + PC 1 3 1/2 1/2 3 1/3 RSC 1/3 1 1/3 1/3 3 1/3 FC 2 3 1 2 3 1/3 SC 2 3 1/2 1 3 1/3 5-HMF 1/3 1/3 1/3 1/3 1 1/3 ABTS + 3 3 3 3 3 1 
+
+ 2.5 
+
+Single-factor design 
+
+With the optimal P 0 and water ratio determined, all other process parameters were kept constant as described in Section 2.3 . Only one variable was changed each time and the remaining conditions remain the same. The four key parameters of steaming time (1, 2, 3, 4, 5 h), drying temperature (40, 50, 60, 70, 80 °C), drying time (10, 11, 12, 13, 14 h), and steaming cycles (1, 2, 3, 4, 5, 6, 7, 8, 9 times) were changed, respectively in sequence. A evaluation criteria was conducted on the six indicators for a comprehensive score. 
+
+ 2.6 
+
+Comprehensive weighting 
+
+ 2.6.1 
+
+Entropy weight method (EWM) 
+
+In order to objectively evaluate the process technology, this study used the EWM and included the weights of six indicators. An original data matrix was constructed. The formation of 5-HMF was related to RSC which brought potential safety issues. Therefore, the RSC and 5-HMF content were taken as negative indicators. Remaining four indicators were calculated as positive indicators, the specific steps are as follows: 
+
+First, calculate the proportion P ij of the sample value of the j under the i index. The calculation formula is as follows: (1) P ij = Y ij ∑ j = 1 n Y ij 
+
+Among them, P ij represents the proportion of the standardized value of the j-th sample for the i-th assessment indicator, and ∑ Y ij represents the standardized value of the i-th indicator among all n samples. 
+
+Subsequently, based on the calculated P ij , calculate the information entropy Ei of the i-th indicator, with the formula being: (2) E i = − 1 ln n ∑ j = 1 n P ij ln P ij 
+
+n represents the sample size. When P ij = 0, it is stipulated that P ij ln P ij = 0 to ensure the validity of the calculation. 
+
+Finally, calculate the weight ω j of the i-th index based on the information entropy E i , and the formula is: (3) ω j = 1 − E i ∑ i = 1 n 1 − E i 
+
+n represents the total number of indicators. The magnitude of the weight ω j reflects the relative importance of this indicator in the evaluation system. 
+
+ 2.6.2 
+
+AHP-EWM 
+
+This study aimed to integrate subjective and objective information and reduce the possible deviations caused by a single method. The combined weight was determined by combining AHP-EWM ( Shen & Liao, 2022 ). The calculation formula of the combined weight w j is as follows: (4) wj = αwjEWM + βwjAHP 
+
+α and β are combined coefficients, corresponding respectively to the contribution degrees of EWM and AHP. 
+
+ 2.7 
+
+Response surface method (RSM) 
+
+Based on single-factor experiments, steaming time (A), drying temperature (B), drying time (C) and steaming cycles (D) were used as four factors. The comprehensive scores of six indicators were set as the response values. By selecting the optimal range of each factor, a four-factor and three-level response surface experiment was designed. Table S1 lists the ranges and levels of each variable. Quadratic polynomial regression fitting was performed using Design-Expert 13 software to optimize the process parameters of PSW. 
+
+Three successive experiments were carried out and compared with the theoretical calculations based on the above-mentioned ideal process conditions. 
+
+ 2.8 
+
+SSA-BP neural network model 
+
+In Table 2 the 29 experimental samples were divided into 80% training sets and 20% test sets. A three-layer BP neural network model was constructed, and the relationship between input and output was explored using MATLAB R2024 a software. The input layer contains four neurons: steaming time, drying temperature, drying time, and steaming cycles. The output layer was the comprehensive score (Y) of the process. Subsequently, the network structure optimization was carried out. By testing the number of hidden layer nodes ranging from 3 to 15, the structure with the smallest mean square error was selected as the optimal configuration. The Levenberg-Marquardt algorithm was adopted to train the final network. The maximum number of iterations was set to 1000, the learning rate to 0.01, and the target error to 0.00001. The activation functions of the hidden layer and the output layer were selected as tansig and purelin, respectively. After the training was completed, predictions were made for the test set and the results were reverse-normalized. Then, the model performance was systematically evaluated through error analysis ( Xin et al., 2022 ; Xue & Shen, 2020 ). Table 2 
+
+Response surface design and experimental data. No. Steaming time (h) Drying temperature (°C) Drying time (h) Steaming cycles (times) Comprehensive score 1 2 70 12 8 44.85 2 4 60 11 8 52.29 3 2 70 10 8 43.37 4 2 80 11 8 54.78 5 3 70 12 9 57.56 6 3 60 12 8 48.5 7 4 80 11 8 64 8 3 70 10 9 59.57 9 3 70 11 8 65 10 3 70 11 8 67.77 11 3 70 11 8 67.5 12 3 70 12 7 47.14 13 3 80 11 7 57.57 14 2 60 11 8 41.65 15 2 70 11 9 53.9 16 4 70 10 8 56.1 17 3 80 11 9 58.79 18 3 60 11 7 43.31 19 3 70 11 8 63.89 20 4 70 11 9 58.76 21 4 70 11 7 54.16 22 3 80 12 8 61.14 23 3 70 10 7 42.5 24 3 60 11 9 60.17 25 4 70 12 8 57.87 26 3 70 11 8 63.79 27 3 80 10 8 60.5 28 3 60 10 8 47.4 29 2 70 11 7 37.67 
+
+Based on 29 sets of data from RSM and 3 sets of data from the optimal process of SSA-BP, a prediction model from four parameters to comprehensive scores was established. The Support Vector Machine (SVR) was combined with the RBF kernel function to map the high-dimensional space. The fitting surface was determined by minimizing the error and the regularization term, and cross-validation was conducted using GroupKFold and LeaveOne method. Monte Carlo simulation was used to assume that the steaming time, drying temperature, and drying time fluctuated within ±5% of the optimal values of SSA-BP (with the steaming cycles controlled and fixed at 8 times), and 50,000 sets of process conditions were collected to evaluate the robustness. 
+
+ 2.9 
+
+Comparative experiment 
+
+To verify the reliability of the analytical model, RSM and SSA-BP were compared with similar methods reported in the literature ( Dharmawan & Masithoh, 2025 ). The specific reported method was as follows: 50 g of P 0 and 10 g of wine were mixed, and simmer until the wine was completely absorbed. Steam for 3 h and dry at a constant temperature of 60 °C until it was no longer sticky to the hands. Repeat this steaming 5 times ( Zheng et al., 2022 ). 
+
+ 2.10 
+
+Electronic tongue analysis 
+
+The SA-402B taste analysis system was used to evaluate the taste characteristics with six indicators, which was composed of five sensors, including AEE, CT0, CA0, C00 and AE1 to detect the umami, saltiness, sourness, bitterness, astringency and richness of the sample at room temperature. After the sensors were activated and calibrated, measurements were taken on three samples of P 0, RSM and SSA-BP. Use the polysaccharide extract solution as described in 2.2 section of the PC determination method with a concentration of approximately 5 mg/mL was placed in an electronic tongue testing cup. Each sample was measured for 4 consecutive cycles, and the average value of the last three cycles was used for statistical analysis ( Wang, Hu, et al., 2024 ). 
+
+ 2.11 
+
+Scanning electron microscopy analysis (SEM) 
+
+The surface characteristics of the P 0 , RSM and SSA-BP were investigated using a SEM (model JSM 6490 LV, Japan JEOL). The samples were fixed on the stage with conductive tape, vacuum-sprayed with platinum to provide conductive properties, and then observed ( Wang, Cheng, et al., 2025 ). All samples passed through an 80-mesh sieve. 
+
+ 2.12 
+
+Statistical analysis 
+
+IBM SPSS statistical software was used to analysis of variance on the experimental data. The mean ± standard error expressed the results. Significant effects were shown by p < 0.05 ( n = 3). SIMCA analyzed principal component analysis (PCA) and orthogonal partial least squares discriminant analysis (OPL-DA), and performed statistical evaluation of the results within a 95% confidence interval. 
+
+ 3 
+
+Results and discussion 
+
+ 3.1 
+
+The ratio of PSR to water 
+
+In the first steaming, when the ratio of PSR to water were 5:3 and 5:4, the water absorption of PSR was insufficient, and there was also poor uniformity of the hard core in the middle. When the ratio of PSR to water was 5:5, the softening was moderate and the penetration was good. The ratio of PSR to water being 5:6 and 5:7 was thoroughly moistened, with some remaining water that had not been absorbed. Therefore, the optimal ratio of PSR to water for the first time was 5:5. 
+
+In the second steaming processes, the addition ratio of PSR to water was 5:0 or 5:1, which P 4 was relatively dry and fragile, and there was a phenomenon of gelatinization. When the ratio of PSR to water was 5:2, the humidity gradient between the inside and outside of P 1 -P 9 , the color was uniform, the texture was flexible, the gelatinization was best controlled.The ratio of PSR to water being 5:3 and 5:4 was prone to being too humid, which results in residual moisture in P 6 . It was determined that the optimal process parameters for the first water addition should be a ratio of PSR to water was 5:5 and 5:2 for the second, which could not only inhibit excessive gelatinization but also ensured the quality. P 0 of 50 g was fixed and the results of the wine and water addition amounts for P 1 -P 9 were shown in Table S2. 
+
+Based on the Table S2 data, it could be calculated through arithmetic operations that the total mass ratio of PSR and the mixed solution of wine and water was 5: (2n + 4), among which the amount of wine in the mixed solution of wine was added at a ratio of 5:1 (g/g) for PSR and wine (n was the total number of steaming cycles). The total amount of wine was evenly divided according to the number of steaming processes. 
+
+ 3.2 
+
+Combined weights of AHP 
+
+The weight values of PC, RSC, FC, SC, 5-HMF, and ABTS + were calculated through AHC analysis software as follows: 13.51%, 8.85%, 20.4%, 16.6%, 5.94%, and 34.70%. The maximum eigenvalue obtained from the standard matrix was 6.485. The results of the experimental consistency test were as follows: when RI = 1.25 and CR = 0.077 < 0.1, it indicated that the matrix consistency result was passed and the weight calculation was correct and reasonable. Since the generation of 5-HMF is related to RSC and 5-HMF has potential safety hazards ( Mesias et al., 2022 ). Therefore, the RSC and 5-HMF were used as negative indicators, while another four indicators were used as positive indicators for calculation. Determine the comprehensive score: (5) Y = PC max PC × 13.51 − RSC max RSC × 8.85 + FC max FC × 20.4 + SC max SC × 16.6 − 5 − HMF max 5 − HMF × 5.94 + ABTS + max ABTS + × 34.7 # 
+
+ 3.3 
+
+Single-factor experiment 
+
+The comprehensive evaluation of four single-factor factors based on six indicators is particularly important for the design of subsequent RSM and SSA-BP. The specific experimental results were as follows: 
+
+ Fig. 2 A showed that at a steaming time of 3 h, ABTS + and FC reached their peak values, while SC remained at a high level. The steaming time was extended to 4 h, ABTS + and FC began to decrease. Flavonoids themselves are thermally unstable and prolonged heating can cause oxidation, thereby losing its integrity and resulting in a decrease content ( Zeng et al., 2019 ). Polysaccharides undergo hydrolysis under the effect of moist heat, resulting in a continuous accumulation of RSC, which promotes the formation of 5-HMF (L. L. Zhang et al., 2019 ). According to the comprehensive score calculated by the AHP, 3 h was the optimal option. Fig. 2 
+
+Results of single factor experiment (A. Steaming Time; B. Drying temperature; C. Drying Time; D. Steaming cycles.) Fig. 2 
+
+ Fig. 2 B showed at a drying temperature of 70 °C, ABTS + , FC, and PC reached their maximum values, while SC began to decline. Long time can cause the glycosidic bonds to break or damage the structure of its saponins, resulting in a decrease in content and activity ( Chen, Wang, et al., 2025 ). 5-HMF was not formed throughout the drying process. The comprehensive score reached its peak at 70 °C and decreased at 80 °C, indicating that 70 °C could maintain a high antioxidant activity while effectively controlling the formation of 5-HMF, thereby achieved the optimal overall quality. 
+
+ Fig. 2 C showed that at the drying time was 12 h, ABTS + , SC and PC reached their peak values and FC began to decline. As water was gradually removed in the early drying stage, the structure of plant cell walls was compromised, resulting in an increase in the total number of surface pores, which in turn promoted the release and dissolution of internal components ( Li, Gao, et al., 2024 ). RSC did not show significant changes, and no 5-HMF was detected, indicating that the drying treatment did not trigger excessive hydrolysis of polysaccharides. Based on the comprehensive score, 12 h was the optimal option. 
+
+ Fig. 2 D showed that at the steaming cycles was 8 times, ABTS + , SC, FC, and RSC reached their peak values. This was because the polysaccharides repeated steaming may had promoted their hydrolysis, converting them into reducing sugars (W. Wu et al., 2021 ). Meanwhile, the long-time steaming destroyed cellular structure, thereby increasing in the dissolution efficiency of saponins and flavonoids as the number of steaming cycles increased ( Yao et al., 2022 ). The maximum ABTS + at P 8 was mainly attributed to the synergistic effect of antioxidant components such as FC, SC, PC and so on. 
+
+From P 1 to P 7 , the steaming process gradually damages the cell structure, releasing more sugars and accelerating dehydration ( Zeng et al., 2019 ). This results in a significantly higher generation rate than the degradation rate, so the concentration of 5-HMF continues to rise. At P 8 , the precursor sugars are consumed in large quantities, while the accumulated 5-HMF decomposes rapidly at high temperatures, with the degradation rate exceeding the generation rate, causing the content to decrease ( Ma et al., 2022 ). When the steaming cycles exceeded 8 times, the 5-HMF content was increased significantly ( Sun et al., 2023 ). Further steaming causes the sugars or intermediate products that were previously bound to the ends of complex sugar chains to be fully released, allowing the re-acquisition of the raw materials for generating 5-HMF, resulting in a further increase at P 9 ( Yang et al., 2019 ). Therefore, the 5-HMF content ultimately showed an upward trend. Based on the comprehensive score, 8 times was the optimal option. 
+
+ 3.4 
+
+Combined weights of AHP-EWM 
+
+To objectively evaluate the significance of each index, the EWM was adopted to calculate the weights of PC, RSC, FC, SC, 5-HMF and ABTS + , which were as follows: 11.09%, 9.23%, 38.14%, 7.84%, 4.73%, and 28.97%, respectively. 
+
+Based on the results of the AHP in Section 3.2 , to make the evaluation results more objective, after weighing the pros and cons, the combination coefficients of this study were set as α = 0.7 and β = 0.3. This setting aims to moderately suppress the subjectivity of AHP while highlighting the objective information contribution of EWM ( Wen, 2023 ). The weight values of each index of PC, RSC, FC, SC, 5-HMF and ABTS + , which were as follows: 11.81%, 9.12%, 32.82%, 10.47%, 5.09% and 30.69%, respectively. Determine the comprehensive score: (6) Y = PC max PC × 11.81 − RSC max RSC × 9.12 + FC max FC × 32.82 + SC max SC × 10.47 − 5 − HMF max 5 − HMF × 5.09 + ABTS + max ABTS + × 30.69 
+
+Because of the negative factors, there was no percentage system for the comprehensive score Y. The AHP - EWM was employed to re-calculate the results of the single-factor experiment in 3.3 section, the optimal process conditions were finally determined as follows: steaming time of 3 h, drying temperature of 70 °C, drying time of 11 h, and steaming cycles of 8 times. 
+
+ 3.5 
+
+Response surface method 
+
+ 3.5.1 
+
+Model fitting and statistical analysis 
+
+Optimization of parameters steaming time (A), drying temperature (B), and drying time (C), steaming cycles (D) was performed by the RSM. The Table 2 lists the designed experimental conditions and the comprehensive score of PSW. Through multiple regression analysis of 29 experimental data, the following second-order polynomial equation relationship existed between the response variable (comprehensive score of process technology, Y) and the test variable: 
+
+Y = 65.59 + 5.58 × A + 5.29 × B + 0.6350 × C + 5.53 × D-0.3550 × AB+0.0725 × AC-2.91 × AD-0.1150 × BC-3.91 × BD-1.66 × CD-8.02 × A 2 –4.18 × B 2 –7.13 × C 2 –6.56 × D 2 (7) 
+
+There existed a complex interaction relationship between various factors and the response value. In this model, steaming time, steaming cycles and drying temperature were all extremely significant influencing factors ( p < 0.0001), while the influence of drying time did not reach a significant level ( p = 0.2976). According to the determination coefficient R 2 = 0.9511, the model had a relatively high reliability. A substantial correlation between the experimental findings and the theoretical values deduced by fitting the relevant polynomials was suggested by the mismatch item p = 0.4829 > 0.05, which shown that the mismatch test of the model was not significant. 
+
+Further analysis of the interaction coefficients in Table S3 reveals that the p -values of the interaction terms AD and BD are both less than 0.05, reaching a significant level. Their regression coefficients were − 2.91 and − 3.91 respectively, with absolute values much larger than those of other insignificant interaction terms. This indicated that the number of steaming cycles was the dominant factor for the interaction effect, and there was a significant negative interaction effect between steaming time and drying temperature. Repeated steaming has damaged the cell walls of PSW, causing a large amount of reducing sugars produced by the hydrolysis of polysaccharides to be released ( Zeng et al., 2019 ). Furthermore, prolonged heating or excessively high drying temperatures can lead to the degradation of heat-sensitive components such as flavonoids and saponins ( Yao et al., 2022 ). The process optimization is crucial for achieving a balance between maintaining biological activity and inhibiting harmful substances. 
+
+ 3.5.2 
+
+Analysis of the response surface graph 
+
+To further explore the interaction among key parameters and their influence on the response value, the response surface graph was analyzed. Fig. 3 (A-C) showed that the steaming time, steaming cycles, drying temperature and drying time had significant impacts on the comprehensive scores. Fig. 3 A showed that both too short and too long drying times reduced the positive effect brought of steaming. Fig. 3 B showed that the steaming cycles approached 9 times, the comprehensive scores did not increase but decreased instead, indicating that target active ingredient might undergo degradation during excessive steaming ( Yao et al., 2022 ). Therefore, controlling the appropriate number of steaming cycles could better retain the active compounds in PSW. Fig. 3 C showed that the temperature exceeded 70 °C, even if the drying time was very short, the comprehensive scores dropped sharply, fully demonstrating that low-temperature drying was crucial for maintaining the activity or content of the PSW. The elliptical contour lines further confirmed that there was a significant interaction between the drying temperature and time. Fig. 3 
+
+Response surface graphs and contour plots of the interaction of factors (A. steaming time and drying time; B. steaming cycles and drying time; C. drying temperature and drying time. The red dots and pink dots are the actual experimental design points used in the study. In the response surface graphs, the red dots represent the above surface, and the pink dots represent the below surface.). (For interpretation of the references to color in this figure legend, the reader is referred to the web version of this article.) Fig. 3 
+
+ 3.5.3 
+
+Verification of the prediction model 
+
+The best predicted conditions and the corrected actual conditions were as follows: the steaming times were 3.16 h and 3.2 h, the drying temperatures were 74.18 °C and 74 °C, the drying times were 11.02 h and 11 h, the steaming cycles were 8.27 times and 8 times, and the comprehensive score was 67.22 ± 0.14 points (It's not a percentage system.). The PC, RSC, FC, SC, 5-HMF and ABTS + (5 mg/mL) were 22.74% ± 0.16%, 33.45% ± 1.51%, 0.65% ± 0.03%, 2.73% ± 0.02%, 0.16 ± 0.01 mg/g and 75.66% ± 2.08%, respectively. PSW was black in color, of high quality and fragrant in taste, meeting the requirements of the Chinese Pharmacopoeia. 
+
+ 3.6 
+
+Optimization of SSA-BP 
+
+ 3.6.1 
+
+BP neural network 
+
+In the network structure, based on the RSM experimental dataset, the hyperbolic tangent S-shaped function (tansig) was adopted as the activation function between the input layer and the hidden layer. A linear transfer function (purelin) was adopted between the hidden layer and the output layer. And the Levenberg-Marquardt backpropagation algorithm (trainlm) was used as the training function ( Wang et al., 2024 ). The number of hidden layer nodes was dynamically optimized with a search range of 3 to 15. Taking the mean square error (MSE) as the evaluation index, the optimal number of hidden layer nodes was determined to be 8, thereby establishing a 4–8-1 network topology structure. The model training results showed that the best validation performance occured in the 35th iteration, with an MSE of 0.32438 which was lower than the 0.7286 value of Yusang Chen's GA-BP model, indicated that its prediction accuracy was superior ( Chen, Wu, et al., 2025 ). The regression analysis graph shown in Fig. S1A further verified the high consistency between the model's predicted values and the actual values. The regression correlation coefficients (R) of the training set, validation set, test set and the entire dataset were 0.99631, 0.98719, 0.98616 and 0.99518, respectively. All R values were higher than 0.98, indicating that the model had excellent fitting ability and generalization performance (M. Wu et al., 2025 ). Fig. S1B further showed that the prediction error was small and the fluctuation range was narrow, the results indicated that the established BP model was stable and reliable, and could be used for precise prediction and optimization of the PSW process ( Wang, Wang, et al., 2022 ). 
+
+ 3.6.2 
+
+SSA-BP neural network 
+
+To enhance the generalization ability of the model, SSA was added for optimization. The BP neural network model established above was initialized. Through continuous attempts and comparisons, the maximum number of iterations of the SSA was 50, the population size was 30, the safety value was 0.8, the proportion of discoverers was 0.2, and the proportion of sparrows aware of danger was 0.2. The curve of fitness varying with the number of iterations was obtained. The fitness curve indicated that as the number of iterations increased, the curve gradually tended to be a straight line, at which point the population had reached the optimal state ( Chen, Wu, et al., 2025 ). When the iteration reached 23 times, comprehensive score reached the maximum value 72.75, and the optimal result was that the steaming time was 3.58 h, the drying temperature was 75 °C, the drying time was 11.42 h, the steaming cycles was 8.24 times, and the comprehensive score was 72.75 points. Based on operational feasibility, the optimal process selection was 3.6 h for steaming, 75 °C for drying, 11.4 h for drying, and 8 times for steaming. 
+
+The average test score of the SSA-BP was 69.31 ± 0.70 points, and the RSD value was 1.01%, verifying that the process was stable and feasible. The PC, RSC, FC, SC, ABTS + (5 mg/mL) and 5-HMF were 21.41% ± 0.12%, 37.24% ± 0.58%, 0.70% ± 0.02%, 2.89% ± 0.07%, 78.04% ± 1.93% and 0.18 ± 0.01 mg/g, respectively . 
+
+ 3.6.3 
+
+Monte Carlo simulation 
+
+The p -value of the permutation test for SVR (with 500 randomizations) is 0.0, indicating that the model has learned the true correlation. The Bootstrap sampling (1000 times) provides the optimal process point prediction value of 69.45 and its 95% confidence interval [66.81, 69.45]. The measured mean value of 69.32 falls within the interval. The R 2 of GroupKFold is 0.830 and the RMSE was 3.69; the R 2 of LOGO was 0.781 and the RMSE was 4.18; the Spearman rank correlation was 0.867, proving the robustness of the model. The results of Monte Carlo simulation show that the pass rate of 50,000 simulations above 65 points was 92.4%, and there was 17.4% in the range of 65–67 points. Therefore, the optimal SSA-BP process demonstrates excellent robustness and operability within ±5% of parameters, and meets the requirements for industrial applications. 
+
+ 3.7 
+
+Comparison of different methods 
+
+The comprehensive scores of the RSM (67.22 ± 0.14) and SSA-BP (69.31 ± 0.70) were significantly higher than those of the methods reported (62.3 ± 1.25) ( p < 0.05). The SSA-BP comprehensive score was 2.68% higher than that of the response surface method ( p < 0.05), indicating that it had a greater advantage in efficiently retaining active components and reducing the generation of harmful substances. 
+
+The comparison results of six indicators among the three process methods were shown in Fig. 4 . Three methods effectively retained the main active components, which RSC, SC and ABTS + in RSM and the methods reported were lower than those in SSA-BP. Regarding 5-HMF, the daily dosage of PSW in the Pharmacopoeia provisions is 9-15 g. The 5-HMF was not found in P 0 and generated during steaming. In the RSM (0.16 mg/g), the oral dosage of 5-HMF was 1.44–2.40 mg; in the SSA-BP (0.18 mg/g), it was 1.62–2.70 mg; and in the method reported (0.75 mg/g), it was 6.75–11.25 mg. The oral dosage of the three methods have approached or/and exceed the daily per capita safety limit of 1.6 mg stipulated by the EU Food Safety Committee indicating an extremely high exposure risk (Z. Li et al., 2019 ). The limit set by the EU for 5-HMF in honey is less than or equal to 40 mg/kg ( Altunay, 2022 ), all RSM, SSA-BP and the the method reported exceed EU standard for honey by 4 times, 5.25 times and 18.75 times respectively. Although the optimized 5-HMF content was still higher than the honey limit, was the lowest in the overall process research. In addition, it is much lower than those of the brewed instant black garlic (2.37 mg/g) and dried fruits (2.13 mg/g) ( Aktağ & Gökmen, 2020 ; Lee et al., 2020 ). Therefore, as a typical by-product of the heat processing, low 5-HMF content indicates that the process has reduced the risks and improved quality. In the future, not only should the process optimization be further explored, but also the 5-HMF limit of PSW should be established as soon as possible to ensure the safety of the process. Fig. 4 
+
+The results of the six indicators of the comparative experiment. (The units of PC, RSC, FC, and SC are mg/mg. The unit of 5-HMF is mg/g. a, b, c represent their significance. Identical letters indicate no significance, while different letters indicate significance.) Fig. 4 
+
+This multi-dimensional evaluation further strengthen the integrated sustainability of food processing systems ( Bushueva et al., 2024 ). It is essential to precisely control chemical changes to ensure safety and stability ( Afzal et al., 2025 ). The studies on nutraceutical-rich food components emphasize the industrial relevance of optimizing bioactive compounds in food system ( Sajid et al., 2025 ). At the same time, the standardization of bioactive compounds and risk management are of vital importance for ensuring quality control of heat-treated food products ( Melnychuk et al., 2024 ). Future research can explore the roles of biotechnology in enhancing the functionality and production efficiency of food ( Wijaya et al., 2025 ). 
+
+ 3.8 
+
+Electronic tongue 
+
+ E -tongue was further employed to analyze the sensory profiles of P 0 , RSM and SSA-BP. The radar graph display ( Fig. 5 A) showed that the SSA-BP samples had formed a unique balance in key indicators. Compared with P 0 , the SSA-BP's had enhanced umami and richness, while bitterness and astringency had decreased. The SSA-BP's and RSM's had similar intensities in terms of bitterness, astringency and saltiness. PCA showed ( Fig. 5 B) that the three samples were significantly separated in two-dimensional space, indicating that the optimized process had fundamentally changed the overall taste characteristics ( Wang, Xie, et al., 2024 ). PCA loading plot analysis ( Fig. 5 C) showed that RSC, FC, SC, 5-HMF, and ABTS + were negatively correlated with bitterness, astringency, and aftertaste-B. It has been confirmed that bitterness and astringency are negatively correlated with the 5-HMF content ( Wang, Hu, et al., 2024 ). PC were positively correlated with astringency and aftertaste -A. Saltiness was negatively correlated with the RSC and other compounds, indicating that the taste was regulated by the balance of multiple compounds. Fig. 5 
+
+ E -tongue graph for PSW. (A. radar graph; B, C. E-tongue PCA analysis; D. OPLS-DA scatter plot after removing outliers; E. permutation plot of OPLS-DA; F. VIP value diagram). Fig. 5 
+
+The results of OPLS-DA calculation ( Fig. 5 D) indicated that the key parameters R 2 X = 0.961, R 2 Y = 0.992, and Q 2 = 0.988 all exceeded 0.5, and the model had a good predictive ability for the sensory information index. A substitution test ( n = 200) was adopted to verify the model, which as shown in Fig. 6 E, the regression line at point Q 2 intersects the vertical axis, indicating the validity of the original model. According to the criterion of variable importance prediction (VIP) >1 for sourness, richness, and umami were a sensory indicator for differentiating various steaming methods ( Wang, Kang, et al., 2025 ). The umami response value of the SSA-BP was 13.5, which had significantly improved compared with 5 of RSM ( p < 0.05). This was mainly attributed to the controlled hydrolysis of polysaccharides during the process, which led to an increase of the RSC, which were not only the key substrate of the Maillard reaction but also could directly enhance the perception of umami ( Sun et al., 2023 ). The SSA-BP's showed outstanding richness, reflecting the complex layers of flavor. This process could more effectively preserve the FC and SC, which had a slight bitter taste or astringent property ( Huh et al., 2022 ). The reduction of the bitterness value of SSA-BP indicated that it not only retains the unique flavor layers of the food but also improved the overall taste through the Maillard reaction ( Fu et al., 2023 ). It avoided the prominent single flavor and forms a fuller and more harmonious overall flavor. Fig. 6 
+
+SEM graph of PSW (A: P 0 magnified 500 times, B: RSM magnified 500 times, C: SSA-BP magnified 500 times; D: P 0 magnified 1000 times, E: RSM magnified 1000 times, F: SSA-BP magnified 1000 times.) Fig. 6 
+
+In conclusion, the E -tongue had confirmed from the sensory level that the SSA-BP process, through intelligent global optimization, had achieved a multi-objective balance of prominent umami taste, retained activity, and suppressed inferior taste, ultimately obtaining high-quality PSW that was richness in sensory perception, harmonious, and highly safe. 
+
+ 3.9 
+
+SEM analysis 
+
+The microstructure of PSW underwent significant changes after steaming and three processes exhibited obvious differences on the SEM images at 500 and 1000 times magnification in Fig. 6 . As shown in Fig. 6 A and D, untreated original P 0 showed a continuous dense blocky structure, with the particles completely fused to form an overall agglomeration. The surface was rough and the texture was complex, with almost no visible voids. As shown in Fig. 6 B and E that compared with P 0 , the structure in the RSM became more dispersed, the particles decreased, and obvious holes and fragmented patterns appeared on the surface. As shown in Fig. 6 C and F that the SSA-BP mainly presents dispersed irregular particles and a blocky structure compared to the RSM, with many voids between the particles and a relatively loose overall packing, which was conducive to the release and dissolution of active compounds ( Wang, Cheng, et al., 2025 ).These structural differences further confirm the effect of the optimized process in improving the material texture and release characteristics. 
+
+ 4 
+
+Conclusion 
+
+In this study, a multi-index subjective (AHP) and objective (EWM) comprehensive scoring system was established with the RSC and 5-HMF as negative evaluation indicators. A method of the total mass ratio of PSR and the mixed solution of wine and water was 5: (2n + 4). The prediction of SSA-BP neural network on the processing was superior to the RSM. The SSA-BP effectively improved the active compounds content, antioxidant activity and reduced the generation of the 5-HMF from 0.75 mg/g to 0.18 mg/g. E-tongue analysis further confirmed that the optimized process is more richness. The combined application of these methods not only provides reliable methods and theoretical support for the steaming process of PSR, but also for the thermal process, safety evaluation of polysaccharides-containing foods and herbs and has a good prospect for demonstration and application. The optimized process conditions established in this study are generally suitable for commercial production of PSW due to the enhanced bioactivity and reduced toxic compound content. In the future, safety range of 5-HMF should be further studied, and the migration properties in other foods should be verified. 
+
+CRediT authorship contribution statement 
+
+ Shuo Li: Writing – original draft, Visualization. Jiatai Yang: Methodology, Formal analysis. Xinru Wei: Formal analysis, Data curation. Rongzi Wang: Investigation, Data curation. Jinge Li: Formal analysis, Conceptualization. Hui Liu: Supervision, Funding acquisition. Hongli Zhou: Writing – review & editing, Investigation. 
+
+Declaration of competing interest 
+
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.

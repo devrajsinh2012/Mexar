@@ -1,0 +1,453 @@
+COLORADO COURT OF APPEALS                                      2016COA155
+
+
+Court of Appeals No. 15CA1435
+City and County of Denver District Court No. 14CV34053
+Honorable Morris B. Hoffman, Judge
+
+
+Layton Construction Co., Inc., a Utah corporation,
+
+Plaintiff-Appellant,
+
+v.
+
+Shaw Contract Flooring Services, Inc., d/b/a Spectra Contract Flooring, a
+Georgia corporation,
+
+Defendant-Appellee.
+
+
+                       JUDGMENT AFFIRMED AND CASE
+                        REMANDED WITH DIRECTIONS
+
+                                  Division IV
+                         Opinion by JUDGE J. JONES
+                        Graham and Miller, JJ., concur
+
+                         Announced October 20, 2016
+
+
+The Holt Group LLC, L. Tyrone Holt, Kevin P. Walsh, Kevin D. Poyner, Denver,
+Colorado, for Plaintiff-Appellant
+
+Hall & Evans, LLC, Darin J. Lang, Brian Molzahn, Elizabeth K. Olson, Denver,
+Colorado, for Defendant-Appellee
+¶1    Plaintiff, Layton Construction Co., Inc. (Layton), appeals the
+
+ district court’s summary judgment for defendant, Shaw Contract
+
+ Flooring Services, Inc. (Shaw), based on the doctrine of claim
+
+ preclusion. Because we conclude that all of Layton’s contentions
+
+ challenging the district court’s application of that doctrine are
+
+ without merit, we affirm.
+
+                             I. Background
+
+¶2    Layton was the general contractor responsible for construction
+
+ of a hotel in Vail, Colorado. It hired Shaw, and many other
+
+ subcontractors, to perform work on the project.
+
+¶3    In June 2009, the property owner (referred to by the parties as
+
+ BCRE) terminated its contract with Layton and, not too long
+
+ thereafter, gave Layton notice of numerous construction defects in
+
+ the project, a few of which related to Shaw’s work. Layton sued
+
+ BCRE alleging that BCRE had failed to pay for work, seeking over
+
+ $27 million in damages. After BCRE asserted counterclaims
+
+ against Layton for defective workmanship (seeking more than $25
+
+ million in damages), Layton added claims against various
+
+ subcontractors, including Shaw.
+
+
+
+
+                                    1
+¶4    Pursuant to an indemnification clause in the subcontract,
+
+ Layton’s sixth claim for relief sought indemnification from Shaw for
+
+ “all damages and costs” arising from any liability it might have to
+
+ BCRE.1 In response to Shaw’s interrogatory (Interrogatory 8) asking
+
+ Layton to “identify all material facts upon which [Layton] based [the
+
+ indemnification] claim,” Layton stated, under oath, that those facts
+
+ included “Shaw’s failure to provide a defense or pay Layton’s costs
+
+ to defend against [BCRE’s] claims that relate to or arise out of
+
+ Shaw’s allegedly deficient or defective work.” In responding to
+
+ another interrogatory (Interrogatory 4) asking Layton to describe
+
+ every breach of the indemnification clause, Layton specifically noted
+
+ “Shaw’s failure to provide a defense or pay Layton’s costs.” Layton’s
+
+ response to Interrogatory 8 expressly incorporated its response to
+
+ Interrogatory 4.2
+
+
+
+ 1 The indemnification clause provided for indemnification from “all
+ damages, costs and expenses incurred in connection” with “all
+ claims, demands, suits, proceedings, attachments, levies, penalties,
+ damages and losses, liabilities, liens, claims for indemnification or
+ contribution, and any other matter whatsoever” “arising out of or
+ resulting from,” among other things, Shaw’s work on the project.
+ 2 In its answer brief on appeal, Shaw pointed out that Layton had
+ said in response to Interrogatory 8 that its indemnification claim
+ included attorney fees and costs incurred in defending against
+
+                                   2
+¶5    Layton also asserted a claim for contribution against Shaw
+
+ (the seventh claim for relief), alleging that if Layton was found to be
+
+ liable to BCRE for “the tortuous [sic] acts of” Shaw, Shaw should be
+
+ required to contribute payment for such liability. At Layton’s
+
+ request, the district court dismissed that claim without prejudice in
+
+ March 2011.
+
+¶6    Later, after BCRE specifically identified Shaw’s allegedly
+
+ defective work (totaling about $9,000 in value), Layton moved to
+
+ voluntarily dismiss its indemnification claim against Shaw “with
+
+ prejudice.” Layton’s motion said that the dismissal would include
+
+ “those claims that have been or could have been asserted in this
+
+ lawsuit.” (Emphasis added.) The motion purported not to seek
+
+ dismissal of “any new or future claims,” which it defined as those
+
+ BCRE’s claims. In its reply brief, however, Layton ignored its
+ response to Interrogatory 8 and instead argued that its response to
+ Interrogatory 4 was irrelevant, for a number of unconvincing
+ reasons. At oral argument, Layton’s counsel argued that Layton’s
+ response to Interrogatory 8 was irrelevant because Layton objected
+ to that interrogatory, but he did not explain why the interrogatory
+ was objectionable or why any objection would render the answer
+ irrelevant to this issue. (The record shows that Layton’s only
+ specific objection to the interrogatory was an attorney work-product
+ objection.) We perceive no relevant, nonfrivolous objection to that
+ standard interrogatory and, in any event, Layton went on to answer
+ the interrogatory despite the objections. Its sworn answer to the
+ interrogatory is enlightening, and we therefore consider it.
+
+                                    3
+ “that may arise or be asserted in the future in any other lawsuits or
+
+ circumstances, which may be subject to the indemnification
+
+ provision.” The proposed order Layton submitted with its motion
+
+ repeated these parameters and said that each party would bear its
+
+ own attorney fees and costs. The district court did not sign
+
+ Layton’s proposed order, but instead entered a written order on
+
+ June 6, 2011, saying only, as now relevant, that Layton’s claims
+
+ were dismissed with prejudice.
+
+¶7    The case between Layton and BCRE (in which several
+
+ subcontractors remained parties) continued. In July 2014,
+
+ following a bench trial, the court awarded Layton just over $5
+
+ million on its claims against BCRE, which was far less than Layton
+
+ had sought. The court also ruled that Layton was not liable to
+
+ BCRE for defective work because BCRE had materially breached the
+
+ contract by failing to give Layton contractually required notices of
+
+ defective work and an opportunity to correct the work. With respect
+
+ to the subcontractors remaining in the case, the court found that
+
+ they were liable to Layton under the indemnification provisions in
+
+ their subcontracts (which were identical to the provision in Shaw’s
+
+ subcontract) for the expenses (including attorney fees and costs)
+
+
+                                   4
+ that Layton had incurred in defending against BCRE’s claims, to
+
+ the extent those expenses were attributable to work performed by
+
+ each subcontractor.
+
+¶8    Shortly thereafter, Layton filed this case against Shaw and
+
+ several other subcontractors. It asserted claims against Shaw for
+
+ contractual and common law indemnity and declaratory judgment
+
+ seeking an award of “attorney fees, costs and expenses” it had
+
+ incurred in defending against BCRE’s claims in the prior case.3
+
+ Layton asserted that it could seek indemnification from Shaw
+
+ pursuant to a provision in the Construction Defect Action Reform
+
+ Act (CDARA), section 13-80-104, C.R.S. 2016, which allows claims
+
+ for indemnification against subcontractors to be filed within ninety
+
+ days of a final judgment against a contractor. § 13-80-104(1)(b)(II),
+
+ (1)(c) (indemnification claim “[s]hall be brought within ninety days
+
+
+
+
+ 3 Layton claims to have incurred over $16 million in attorney fees
+ and costs in defending against BCRE’s claims. Layton’s complaint
+ also alleged losses resulting from Layton’s payments for work that
+ the subcontractors had not performed. But it is not clear if Layton
+ alleged that Shaw was one of those subcontractors, and in any
+ event Layton does not assert on appeal any argument relating to
+ those alleged losses.
+
+                                   5
+ after [settlement of or final judgment against the contractor in]” the
+
+ construction defect claim).4
+
+¶9       Shaw moved for summary judgment. It argued that Layton’s
+
+ indemnification claims are barred by the doctrine of claim
+
+ preclusion because the court in the prior case had dismissed those
+
+ claims with prejudice. The district court agreed, rejecting Layton’s
+
+ contrary arguments in a thorough written order.
+
+                         II. Standard of Review
+
+¶ 10     Summary judgment is appropriate when “the pleadings,
+
+ depositions, answers to interrogatories, and admissions on file,
+
+ together with the affidavits, if any, show that there is no genuine
+
+ issue as to any material fact and that the moving party is entitled to
+
+ a judgment as a matter of law.” C.R.C.P. 56(c). We review de novo
+
+ an order granting summary judgment based on claim preclusion.
+
+ Loveland Essential Grp., LLC v. Grommon Farms, Inc., 2012 COA 22,
+
+ ¶ 13.
+
+
+ 4Interestingly, there was no settlement of the prior case as between
+ Layton and BCRE, nor was there any judgment “against” Layton on
+ BCRE’s claims in the prior case, calling into question the
+ applicability of section 13-80-104(1)(b)(II), C.R.S. 2016, under its
+ own terms. But Shaw has not raised that issue, so we will not
+ address it.
+
+                                   6
+¶ 11   To the extent Layton’s contentions require us to construe
+
+ CDARA, that presents a question of law that we also review de novo.
+
+ Sperry v. Field, 205 P.3d 365, 367 (Colo. 2009). In interpreting a
+
+ statute we strive to discern and give effect to the General
+
+ Assembly’s intent. Hassler v. Account Brokers of Larimer Cty., Inc.,
+
+ 2012 CO 24, ¶ 15. To do this, we look first to the statutory
+
+ language itself; we give the words and phrases used therein their
+
+ plain and ordinary meanings, and we read the language in the dual
+
+ contexts of the entire statute and the comprehensive statutory
+
+ scheme. Id.; Jefferson Cty. Bd. of Equalization v. Gerganoff, 241
+
+ P.3d 932, 935 (Colo. 2010); BP Am. Prod. Co. v. Patterson, 185 P.3d
+
+ 811, 813 (Colo. 2008). After doing this, if we conclude that the
+
+ statutory language is unambiguous we apply it as written and we
+
+ do not resort to other rules of statutory construction. Reno v.
+
+ Marks, 2015 CO 33, ¶ 20; Klinger v. Adams Cty. Sch. Dist. No. 50,
+
+ 130 P.3d 1027, 1031 (Colo. 2006).
+
+                 III. General Law of Claim Preclusion
+
+¶ 12   “Claim preclusion works to preclude the relitigation of matters
+
+ that have already been decided as well as matters that could have
+
+ been raised in a prior proceeding but were not.” Argus Real Estate,
+
+
+                                   7
+ Inc. v. E-470 Pub. Highway Auth., 109 P.3d 604, 608 (Colo. 2005);
+
+ accord Lobato v. Taylor, 70 P.3d 1152, 1165 (Colo. 2003). It serves
+
+ two primary purposes: protecting litigants from the burden of
+
+ relitigating issues against the same party (or its privy) and
+
+ promoting judicial economy by preventing needless litigation.
+
+ Parklane Hosiery Co. v. Shore, 439 U.S. 322, 326 (1979); Lobato, 70
+
+ P.3d at 1165-55.
+
+¶ 13     “For a claim in a second judicial proceeding to be precluded by
+
+ a previous judgment, there must exist: (1) finality of the first
+
+ judgment, (2) identity of subject matter, (3) identity of claims for
+
+ relief, and (4) identity or privity between parties to the actions.”
+
+ Argus Real Estate, 109 P.3d at 608; accord Loveland Essential Grp.,
+
+ ¶ 14.
+
+                               IV. Analysis
+
+¶ 14     Layton makes three fundamental contentions: (1) its claims
+
+ against Shaw in this case are not identical to those it asserted
+
+ against Shaw in the prior case; (2) CDARA modifies the doctrine of
+
+ claim preclusion in the construction defect context by requiring (or
+
+ at least allowing) splitting of indemnification claims; and (3) various
+
+
+
+
+                                     8
+ exceptions to the claim preclusion doctrine apply to this action. We
+
+ address and reject each of these contentions in turn.
+
+                          A. Identity of Claims
+
+¶ 15   Layton argues that its claims in this case are not identical to
+
+ those it asserted in the prior case both because it did not seek
+
+ indemnity for attorney fees and costs in the prior case and because
+
+ its claims in this case do not arise out of the same transaction as
+
+ its claims in the prior case.5 Both of these arguments are based on
+
+ distortions of, or are flat out contrary to, applicable, well-settled
+
+ legal principles.
+
+¶ 16   We need not decide whether Layton sought indemnification for
+
+ fees and costs in the prior case because it obviously could have
+
+ done so, a fact it admitted in opposing Shaw’s summary judgment
+
+ motion.6 Layton does not contest that any claim for indemnification
+
+
+
+
+ 5Layton concedes that the other three requirements of claim
+ preclusion are met.
+ 6 Shaw, however, has much the better of the argument on whether
+ Layton sought indemnification of fees and costs in the defect case.
+ Layton’s sworn discovery responses in the prior case said that the
+ attorney fees and costs it had incurred and were incurring in
+ defending against BCRE’s claims were included in its
+ indemnification claim. And the language of Layton’s complaint in
+
+                                     9
+based on Shaw’s duty to defend accrued, at the latest, in 2009
+
+when it first began incurring attorney fees and costs in connection
+
+with BCRE’s claims, which Shaw would not pay. See Jones v. Sun
+
+Carriers, Inc., 856 F.2d 1091, 1094 (8th Cir. 1988) (indemnity claim
+
+for costs and expenses accrues when indemnitee has made a
+
+payment or otherwise expended sums, while indemnity claim for
+
+liabilities arises when a liability is legally imposed; applying
+
+Arkansas law); Farmers Ins. Exch. v. Am. Mfrs. Mut. Ins. Co., 897
+
+P.2d 880, 882 (Colo. App. 1995) (duty to defend arises when claims
+
+are asserted against party to whom the duty is owed); see also
+
+Sterenbuch v. Goss, 266 P.3d 428, 433 (Colo. App. 2011) (once some
+
+injury has occurred, a claim has accrued even if further injury
+
+continues to occur).7 That Layton may not have known the full
+
+extent of Shaw’s liability while Shaw was a party in the prior case
+
+does not matter; as Layton conceded in opposing Shaw’s summary
+
+
+
+that case was certainly broad enough to include a claim for such
+fees and costs.
+7 Layton’s complaint in this case expressly alleges that in 2009 it
+incurred such fees and costs before it added Shaw to the prior case.
+In responding to Shaw’s motion for summary judgment, Layton
+submitted an affidavit repeating this allegation. Its opening brief in
+this appeal does so as well.
+
+                                   10
+ judgment motion, it could have presented evidence of and obtained
+
+ a judgment for all attorney fees and costs incurred or likely to be
+
+ incurred in the prior case. (Indeed, after the district 

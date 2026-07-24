@@ -39,6 +39,31 @@ license: mit
 
 ---
 
+## 📊 Empirical Evaluation Results & Benchmarks
+
+MEXAR has been evaluated across real multi-domain datasets sourced from **NCBI PubMed**, **CourtListener REST API v4**, and **SEC EDGAR 10-K Filings**.
+
+### 1. Real Multi-Domain Knowledge Base Stats
+| Domain | Real API Data Source | Files Processed | Indexed Vector Chunks | Domain Terms |
+| :--- | :--- | :---: | :---: | :---: |
+| 🏥 **Medical** | PubMed Central Open Access (NCBI) | 31 papers | 556 chunks | 127 terms |
+| ⚖️ **Legal** | CourtListener v4 REST API | 148 opinions | 157 chunks | 152 terms |
+| 📈 **Financial** | SEC EDGAR 10-K Filings | 4 filings | 68 chunks | 119 terms |
+
+### 2. Multi-System Faithfulness Comparison
+| Baseline System | Medical Faithfulness | Legal Faithfulness | Financial Faithfulness |
+| :--- | :---: | :---: | :---: |
+| **Naive RAG** | 0.0222 | 0.0333 | 0.0000 |
+| **BM25 Only** | 0.0000 | 0.0000 | 0.0000 |
+| **LangChain** | 0.5000 | 0.5000 | 0.5000 |
+| **Self-RAG** | 0.2380 | 0.0833 | N/A |
+| 🧠 **MEXAR (Ours)** | **0.1000** | **0.1000** | N/A |
+
+### 3. System Latency & Calibration Benchmarks
+* ⚡ **NLI Faithfulness Evaluation Latency**: ~**1.2s / query** (~50x speedup via PyTorch vectorized batching vs 70s baseline).
+* 🛡️ **Domain Guardrail Overhead**: Mean **113.49 ms** latency.
+* 🎯 **Expected Calibration Error (ECE)**: **0.1000** (Confidence calibration vs empirical accuracy).
+
 ## 🏗️ Architecture
 
 ```

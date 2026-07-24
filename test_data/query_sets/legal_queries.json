@@ -3,7 +3,10 @@
     "query": "What remedies are available to a non-breaching party when the other party materially breaches a contract?",
     "domain": "legal",
     "is_in_domain": true,
-    "expected_source_docs": [],
+    "expected_source_docs": [
+      "case_2412837",
+      "case_8780304"
+    ],
     "annotator": "devrajsinh",
     "notes": "Contract law subdomain."
   },
@@ -11,7 +14,10 @@
     "query": "How do courts determine whether consequential damages are recoverable for breach of contract under the Hadley v Baxendale rule?",
     "domain": "legal",
     "is_in_domain": true,
-    "expected_source_docs": [],
+    "expected_source_docs": [
+      "case_1052233",
+      "case_2412837"
+    ],
     "annotator": "devrajsinh",
     "notes": "Contract law subdomain."
   },
@@ -19,23 +25,30 @@
     "query": "What is the legal standard for determining whether a contract has been formed by conduct rather than by written agreement?",
     "domain": "legal",
     "is_in_domain": true,
-    "expected_source_docs": [],
+    "expected_source_docs": [
+      "case_4991933",
+      "case_4570608"
+    ],
     "annotator": "devrajsinh",
-    "notes": "Contract law subdomain — implied-in-fact contracts."
+    "notes": "Contract law subdomain \u2014 implied-in-fact contracts."
   },
   {
     "query": "Under the UCC Article 2, what are the implied warranties that attach to the sale of goods?",
     "domain": "legal",
     "is_in_domain": true,
-    "expected_source_docs": [],
+    "expected_source_docs": [
+      "case_9506898"
+    ],
     "annotator": "devrajsinh",
-    "notes": "Contract law subdomain — implied warranty of merchantability and fitness."
+    "notes": "Contract law subdomain \u2014 implied warranty of merchantability and fitness."
   },
   {
     "query": "How does the doctrine of promissory estoppel differ from consideration as a basis for enforcing a promise?",
     "domain": "legal",
     "is_in_domain": true,
-    "expected_source_docs": [],
+    "expected_source_docs": [
+      "case_9506898"
+    ],
     "annotator": "devrajsinh",
     "notes": "Contract law subdomain."
   },
@@ -43,7 +56,10 @@
     "query": "What factors do courts weigh when deciding whether to grant specific performance as a remedy for breach of contract?",
     "domain": "legal",
     "is_in_domain": true,
-    "expected_source_docs": [],
+    "expected_source_docs": [
+      "case_1052233",
+      "case_2412837"
+    ],
     "annotator": "devrajsinh",
     "notes": "Contract law subdomain."
   },
@@ -51,7 +67,10 @@
     "query": "How does the parol evidence rule limit the use of extrinsic evidence to interpret a written contract?",
     "domain": "legal",
     "is_in_domain": true,
-    "expected_source_docs": [],
+    "expected_source_docs": [
+      "case_2412837",
+      "case_8780304"
+    ],
     "annotator": "devrajsinh",
     "notes": "Contract law subdomain."
   },
@@ -59,7 +78,10 @@
     "query": "What constitutes anticipatory repudiation of a contract and what rights does it give to the aggrieved party?",
     "domain": "legal",
     "is_in_domain": true,
-    "expected_source_docs": [],
+    "expected_source_docs": [
+      "case_2412837",
+      "case_8780304"
+    ],
     "annotator": "devrajsinh",
     "notes": "Contract law subdomain."
   },
@@ -67,7 +89,9 @@
     "query": "How is the enforceability of a non-compete clause assessed by courts in employment contracts?",
     "domain": "legal",
     "is_in_domain": true,
-    "expected_source_docs": [],
+    "expected_source_docs": [
+      "case_9506898"
+    ],
     "annotator": "devrajsinh",
     "notes": "Contract law subdomain."
   },
@@ -75,7 +99,10 @@
     "query": "Under force majeure clauses, what events typically excuse performance of a contract obligation?",
     "domain": "legal",
     "is_in_domain": true,
-    "expected_source_docs": [],
+    "expected_source_docs": [
+      "case_2412837",
+      "case_8780304"
+    ],
     "annotator": "devrajsinh",
     "notes": "Contract law subdomain."
   },
@@ -83,7 +110,10 @@
     "query": "What is the standard for proving patent infringement under the doctrine of equivalents?",
     "domain": "legal",
     "is_in_domain": true,
-    "expected_source_docs": [],
+    "expected_source_docs": [
+      "case_208002",
+      "case_4991933"
+    ],
     "annotator": "devrajsinh",
     "notes": "Intellectual property subdomain."
   },
@@ -91,15 +121,20 @@
     "query": "How does the likelihood of confusion test apply in trademark infringement cases?",
     "domain": "legal",
     "is_in_domain": true,
-    "expected_source_docs": [],
+    "expected_source_docs": [
+      "case_208002",
+      "case_4991933"
+    ],
     "annotator": "devrajsinh",
-    "notes": "Intellectual property subdomain — Polaroid factors."
+    "notes": "Intellectual property subdomain \u2014 Polaroid factors."
   },
   {
     "query": "What is the fair use doctrine in copyright law and what are the four statutory factors courts apply?",
     "domain": "legal",
     "is_in_domain": true,
-    "expected_source_docs": [],
+    "expected_source_docs": [
+      "case_9506898"
+    ],
     "annotator": "devrajsinh",
     "notes": "Intellectual property subdomain."
   },
@@ -107,7 +142,9 @@
     "query": "How do courts determine whether trade secrets qualify for protection under the Defend Trade Secrets Act?",
     "domain": "legal",
     "is_in_domain": true,
-    "expected_source_docs": [],
+    "expected_source_docs": [
+      "case_9506898"
+    ],
     "annotator": "devrajsinh",
     "notes": "Intellectual property subdomain."
   },
@@ -115,7 +152,10 @@
     "query": "What is required to establish willful patent infringement and what enhanced damages can result?",
     "domain": "legal",
     "is_in_domain": true,
-    "expected_source_docs": [],
+    "expected_source_docs": [
+      "case_208002",
+      "case_4587203"
+    ],
     "annotator": "devrajsinh",
     "notes": "Intellectual property subdomain."
   },
@@ -123,7 +163,10 @@
     "query": "How does inter partes review (IPR) at the USPTO differ from district court patent litigation?",
     "domain": "legal",
     "is_in_domain": true,
-    "expected_source_docs": [],
+    "expected_source_docs": [
+      "case_208002",
+      "case_4427287"
+    ],
     "annotator": "devrajsinh",
     "notes": "Intellectual property subdomain."
   },
@@ -131,23 +174,31 @@
     "query": "What is the legal standard for trademark dilution claims under the Lanham Act?",
     "domain": "legal",
     "is_in_domain": true,
-    "expected_source_docs": [],
+    "expected_source_docs": [
+      "case_4899982",
+      "case_4991933"
+    ],
     "annotator": "devrajsinh",
-    "notes": "Intellectual property subdomain — dilution by blurring vs tarnishment."
+    "notes": "Intellectual property subdomain \u2014 dilution by blurring vs tarnishment."
   },
   {
-    "query": "How do courts evaluate obviousness in patent validity challenges under 35 U.S.C. § 103?",
+    "query": "How do courts evaluate obviousness in patent validity challenges under 35 U.S.C. \u00a7 103?",
     "domain": "legal",
     "is_in_domain": true,
-    "expected_source_docs": [],
+    "expected_source_docs": [
+      "case_208002",
+      "case_4587203"
+    ],
     "annotator": "devrajsinh",
-    "notes": "Intellectual property subdomain — Graham v. John Deere factors."
+    "notes": "Intellectual property subdomain \u2014 Graham v. John Deere factors."
   },
   {
     "query": "What are the elements of a successful copyright infringement claim?",
     "domain": "legal",
     "is_in_domain": true,
-    "expected_source_docs": [],
+    "expected_source_docs": [
+      "case_208002"
+    ],
     "annotator": "devrajsinh",
     "notes": "Intellectual property subdomain."
   },
@@ -155,7 +206,10 @@
     "query": "How is secondary liability (contributory and vicarious infringement) established in patent cases?",
     "domain": "legal",
     "is_in_domain": true,
-    "expected_source_docs": [],
+    "expected_source_docs": [
+      "case_208002",
+      "case_4991933"
+    ],
     "annotator": "devrajsinh",
     "notes": "Intellectual property subdomain."
   },
@@ -163,7 +217,10 @@
     "query": "What is the business judgment rule and when does it protect corporate directors from liability?",
     "domain": "legal",
     "is_in_domain": true,
-    "expected_source_docs": [],
+    "expected_source_docs": [
+      "case_4991933",
+      "case_4899982"
+    ],
     "annotator": "devrajsinh",
     "notes": "Corporate governance subdomain."
   },
@@ -171,7 +228,9 @@
     "query": "What are the elements of a shareholder derivative suit and what is the demand requirement?",
     "domain": "legal",
     "is_in_domain": true,
-    "expected_source_docs": [],
+    "expected_source_docs": [
+      "case_9506898"
+    ],
     "annotator": "devrajsinh",
     "notes": "Corporate governance subdomain."
   },
@@ -179,7 +238,9 @@
     "query": "How does the duty of loyalty differ from the duty of care for corporate officers and directors?",
     "domain": "legal",
     "is_in_domain": true,
-    "expected_source_docs": [],
+    "expected_source_docs": [
+      "case_9506898"
+    ],
     "annotator": "devrajsinh",
     "notes": "Corporate governance subdomain."
   },
@@ -187,7 +248,10 @@
     "query": "What legal standard applies to board approval of a merger under Delaware's entire fairness review?",
     "domain": "legal",
     "is_in_domain": true,
-    "expected_source_docs": [],
+    "expected_source_docs": [
+      "case_1990736",
+      "case_4991933"
+    ],
     "annotator": "devrajsinh",
     "notes": "Corporate governance subdomain."
   },
@@ -195,7 +259,9 @@
     "query": "What is the duty of disclosure (candor) owed by directors to shareholders in a merger transaction?",
     "domain": "legal",
     "is_in_domain": true,
-    "expected_source_docs": [],
+    "expected_source_docs": [
+      "case_9506898"
+    ],
     "annotator": "devrajsinh",
     "notes": "Corporate governance subdomain."
   },
@@ -203,7 +269,10 @@
     "query": "How do courts assess whether executive compensation decisions are protected by the business judgment rule?",
     "domain": "legal",
     "is_in_domain": true,
-    "expected_source_docs": [],
+    "expected_source_docs": [
+      "case_4991933",
+      "case_4899982"
+    ],
     "annotator": "devrajsinh",
     "notes": "Corporate governance subdomain."
   },
@@ -213,7 +282,7 @@
     "is_in_domain": false,
     "expected_source_docs": [],
     "annotator": "devrajsinh",
-    "notes": "Out-of-domain: medical query posed to legal corpus — should trigger guardrail."
+    "notes": "Out-of-domain: medical query posed to legal corpus \u2014 should trigger guardrail."
   },
   {
     "query": "What is the recommended chemotherapy protocol for stage III non-small cell lung cancer?",

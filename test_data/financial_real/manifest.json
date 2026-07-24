@@ -1,0 +1,42 @@
+[
+  {
+    "cik": "0001386570",
+    "accession": "0001654954-20-005725",
+    "company": "ChromaDex Corp.  (CDXC)  (CIK 0001386570)",
+    "term": "risk_factors",
+    "filing_date": "",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1386570/000165495420005725/cdxc10ka_12312019.htm",
+    "path": "D:\\DG Workspace\\Mexar-main\\test_data\\financial_real\\0001386570_0001654954-20-005725.txt",
+    "char_count": 15000
+  },
+  {
+    "cik": "0001041588",
+    "accession": "0001041588-21-000001",
+    "company": "Access-Power & Co., Inc.  (CIK 0001041588)",
+    "term": "risk_factors",
+    "filing_date": "",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1041588/000104158821000001/accr12312010k.txt",
+    "path": "D:\\DG Workspace\\Mexar-main\\test_data\\financial_real\\0001041588_0001041588-21-000001.txt",
+    "char_count": 15000
+  },
+  {
+    "cik": "0001041588",
+    "accession": "0001041588-20-000001",
+    "company": "ACCESS-POWER INC  (CIK 0001041588)",
+    "term": "risk_factors",
+    "filing_date": "",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1041588/000104158820000001/accr12311910K.txt",
+    "path": "D:\\DG Workspace\\Mexar-main\\test_data\\financial_real\\0001041588_0001041588-20-000001.txt",
+    "char_count": 15000
+  },
+  {
+    "cik": "0000320575",
+    "accession": "0000320575-20-000008",
+    "company": "PIONEER ENERGY SERVICES CORP  (CIK 0000320575)",
+    "term": "risk_factors",
+    "filing_date": "",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/320575/000032057520000008/form10-ka2019.htm",
+    "path": "D:\\DG Workspace\\Mexar-main\\test_data\\financial_real\\0000320575_0000320575-20-000008.txt",
+    "char_count": 15000
+  }
+]

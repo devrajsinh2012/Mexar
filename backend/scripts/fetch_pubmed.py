@@ -28,6 +28,8 @@ from pathlib import Path
 from typing import Dict, List, Optional
 
 import requests
+from dotenv import load_dotenv
+load_dotenv()
 
 try:
     from lxml import etree
@@ -51,20 +53,14 @@ logger = logging.getLogger(__name__)
 DEFAULT_NCBI_EMAIL: str = os.getenv("NCBI_EMAIL", "your_email@example.com")
 NCBI_API_KEY: Optional[str] = os.getenv("NCBI_API_KEY")  # optional; raises rate cap to 10/s
 
-# One .txt per doc, one manifest.json — relative to repo root.
-OUTPUT_DIR = Path("test_data/medical_real")
+REPO_ROOT = Path(__file__).resolve().parent.parent.parent
+OUTPUT_DIR = REPO_ROOT / "test_data" / "medical_real"
 
 # Three subdomains × 75 docs ≈ 220 total (some may fail or be empty).
 SEARCH_TERMS: Dict[str, str] = {
-    "cardiology": (
-        '"cardiology treatment guideline"[Title/Abstract] AND "open access"[filter]'
-    ),
-    "oncology": (
-        '"oncology treatment protocol"[Title/Abstract] AND "open access"[filter]'
-    ),
-    "internal_medicine": (
-        '"internal medicine diagnostic criteria"[Title/Abstract] AND "open access"[filter]'
-    ),
+    "cardiology": "cardiology AND open access[filter]",
+    "oncology": "oncology AND open access[filter]",
+    "internal_medicine": "internal medicine AND open access[filter]",
 }
 DOCS_PER_SUBDOMAIN: int = 75
 

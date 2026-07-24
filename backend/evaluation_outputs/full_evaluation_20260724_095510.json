@@ -1,0 +1,15 @@
+{
+  "run_id": "20260724_095510",
+  "timestamp": "2026-07-24T10:39:13.938642",
+  "table1_system_comparison": {
+    "medical": {
+      "Naive RAG": {
+        "mean_faithfulness": 0.0667,
+        "sample_size": 15,
+        "raw_results": [
+          {
+            "answer": "According to the retrieved context (CVD_001, Hypertension), the first-line treatment for hypertension is listed as \"ACE Inhibitors\" and \"Beta-blockers\". However, the retrieved context doesn't explicitly mention the stage of hypertension, but it does mention that this is the first-line treatment for \"Moderate\" hypertension.\n\nThe American Heart Association (AHA) and the American College of Cardiology (ACC) guidelines recommend ACE inhibitors or ARBs (Angiotensin II Receptor Blockers) as first-line therapy for uncomplicated hypertension in patients without chronic kidney disease or heart failure (1). However, the retrieved context doesn't provide specific information about the treatment for stage 2 hypertension.\n\nPlease note that the retrieved context may not be up-to-date or comprehensive, and it is always best to consult the latest clinical guidelines and peer-reviewed literature for the most accurate and current information.\n\nReference: \n(1) James PA, et al. 2017 ACC/AHA/AAPA/ABC/ACPM/AGS/APhA/ASH/ASPC/NMA/PCNA Guideline for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults: Executive Summary: A Report of the American College of Cardiology/American Heart Association Task Force on Clinical Practice Guidelines. Circulation. 2018;138(19):e615-e661.",
+            "confidence": 0.0,
+            "in_domain": true,
+            "top_chunks": [
+              

@@ -104,8 +104,27 @@ class GroqClient:
         if json_mode:
             kwargs["response_format"] = {"type": "json_object"}
         
-        response = self.client.chat.completions.create(**kwargs)
-        return response.choices[0].message.content
+        fallback_candidates = ["llama-3.3-70b-versatile", "llama-3.1-8b-instant", "mixtral-8x7b-32768", "gemma2-9b-it"]
+        try:
+            response = self.client.chat.completions.create(**kwargs)
+            return response.choices[0].message.content
+        except Exception as e:
+            err_str = str(e).lower()
+            if any(k in err_str for k in ["rate limit", "429", "decommissioned", "400", "quota", "tpd"]):
+                import logging
+                import time
+                for fallback in fallback_candidates:
+                    if fallback == kwargs.get("model"):
+                        continue
+                    try:
+                        logging.getLogger(__name__).warning(f"Groq API error on model '{kwargs['model']}': {e}. Falling back to '{fallback}'...")
+                        kwargs["model"] = fallback
+                        response = self.client.chat.completions.create(**kwargs)
+                        return response.choices[0].message.content
+                    except Exception as fb_err:
+                        time.sleep(2)
+                        continue
+            raise e
     
     def analyze_with_system_prompt(
         self,

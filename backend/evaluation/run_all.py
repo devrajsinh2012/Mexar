@@ -13,6 +13,10 @@ from typing import Dict, List, Any
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
+from dotenv import load_dotenv
+env_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), ".env")
+load_dotenv(env_path)
+
 from modules.reasoning_engine import create_reasoning_engine, PipelineConfig
 from evaluation.retrieval_metrics import precision_at_k, recall_at_k, mrr, ndcg_at_k
 from evaluation.baseline_runner import run_table_1_comparison
@@ -163,9 +167,9 @@ def run_full_evaluation():
         t3_res = run_table_3_ablation(engine, in_domain_queries[:10], agent_name)
         all_table3_results[domain] = t3_res
 
-        # Collect latency and calibration records for MEXAR runs
-        for q in in_domain_queries[:15]:
-            res = engine.reason(agent_name, q["query"])
+        # Collect latency and calibration records for MEXAR runs from Table I results
+        mexar_runs = t1_res.get("MEXAR", {}).get("raw_results", [])
+        for res in mexar_runs:
             if "timings" in res:
                 all_latency_records.append(res["timings"])
             all_confidences.append(res.get("confidence", 0.5))
@@ -229,12 +233,34 @@ def run_full_evaluation():
         "significance_and_effect_size": significance_summary
     }
 
+    from datetime import date
+    def json_serializer(obj):
+        if hasattr(obj, "to_dict"):
+            return obj.to_dict()
+        if obj.__class__.__name__ == "DocumentChunk":
+            return {
+                "id": getattr(obj, "id", None),
+                "content": getattr(obj, "content", ""),
+                "source": getattr(obj, "source", ""),
+                "section_title": getattr(obj, "section_title", "")
+            }
+        if isinstance(obj, (datetime, date)):
+            return obj.isoformat()
+        return str(obj)
+
     out_file = os.path.join(OUTPUT_DIR, f"full_evaluation_{run_id}.json")
     with open(out_file, "w", encoding="utf-8") as f:
-        json.dump(master_output, f, indent=2)
+        json.dump(master_output, f, indent=2, default=json_serializer)
+
+    # Also save to repo root evaluation_outputs
+    root_output_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "evaluation_outputs")
+    os.makedirs(root_output_dir, exist_ok=True)
+    root_out_file = os.path.join(root_output_dir, f"full_evaluation_{run_id}.json")
+    with open(root_out_file, "w", encoding="utf-8") as f:
+        json.dump(master_output, f, indent=2, default=json_serializer)
 
     print("\n" + "=" * 60)
-    print(f"EVALUATION COMPLETE! Output saved to: {out_file}")
+    print(f"EVALUATION COMPLETE! Output saved to: {out_file} and {root_out_file}")
     print("=" * 60)
     return out_file
 

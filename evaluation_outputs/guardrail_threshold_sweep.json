@@ -1,0 +1,128 @@
+{
+  "sweep_results": [
+    {
+      "threshold": 0.02,
+      "tp": 209,
+      "fp": 82,
+      "fn": 0,
+      "tn": 0,
+      "precision": 0.7182,
+      "recall": 1.0,
+      "f1": 0.836,
+      "false_rejection_rate": 1.0
+    },
+    {
+      "threshold": 0.05,
+      "tp": 209,
+      "fp": 82,
+      "fn": 0,
+      "tn": 0,
+      "precision": 0.7182,
+      "recall": 1.0,
+      "f1": 0.836,
+      "false_rejection_rate": 1.0
+    },
+    {
+      "threshold": 0.08,
+      "tp": 209,
+      "fp": 82,
+      "fn": 0,
+      "tn": 0,
+      "precision": 0.7182,
+      "recall": 1.0,
+      "f1": 0.836,
+      "false_rejection_rate": 1.0
+    },
+    {
+      "threshold": 0.1,
+      "tp": 209,
+      "fp": 82,
+      "fn": 0,
+      "tn": 0,
+      "precision": 0.7182,
+      "recall": 1.0,
+      "f1": 0.836,
+      "false_rejection_rate": 1.0
+    },
+    {
+      "threshold": 0.15,
+      "tp": 209,
+      "fp": 82,
+      "fn": 0,
+      "tn": 0,
+      "precision": 0.7182,
+      "recall": 1.0,
+      "f1": 0.836,
+      "false_rejection_rate": 1.0
+    },
+    {
+      "threshold": 0.2,
+      "tp": 209,
+      "fp": 82,
+      "fn": 0,
+      "tn": 0,
+      "precision": 0.7182,
+      "recall": 1.0,
+      "f1": 0.836,
+      "false_rejection_rate": 1.0
+    },
+    {
+      "threshold": 0.25,
+      "tp": 209,
+      "fp": 82,
+      "fn": 0,
+      "tn": 0,
+      "precision": 0.7182,
+      "recall": 1.0,
+      "f1": 0.836,
+      "false_rejection_rate": 1.0
+    },
+    {
+      "threshold": 0.3,
+      "tp": 209,
+      "fp": 82,
+      "fn": 0,
+      "tn": 0,
+      "precision": 0.7182,
+      "recall": 1.0,
+      "f1": 0.836,
+      "false_rejection_rate": 1.0
+    },
+    {
+      "threshold": 0.35,
+      "tp": 209,
+      "fp": 82,
+      "fn": 0,
+      "tn": 0,
+      "precision": 0.7182,
+      "recall": 1.0,
+      "f1": 0.836,
+      "false_rejection_rate": 1.0
+    },
+    {
+      "threshold": 0.4,
+      "tp": 209,
+      "fp": 82,
+      "fn": 0,
+      "tn": 0,
+      "precision": 0.7182,
+      "recall": 1.0,
+      "f1": 0.836,
+      "false_rejection_rate": 1.0
+    }
+  ],
+  "optimal_threshold": 0.02,
+  "optimal_f1": 0.836,
+  "optimal_false_rejection_rate": 1.0,
+  "best_metrics": {
+    "threshold": 0.02,
+    "tp": 209,
+    "fp": 82,
+    "fn": 0,
+    "tn": 0,
+    "precision": 0.7182,
+    "recall": 1.0,
+    "f1": 0.836,
+    "false_rejection_rate": 1.0
+  }
+}

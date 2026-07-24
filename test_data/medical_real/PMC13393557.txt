@@ -1,0 +1,171 @@
+Prognostic significance of atrial fibrillation resolution after left ventricular assist device implantation
+
+2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure: a report of the American College of Cardiology/American Heart Association Joint Committee on Clinical Practice Guidelines
+
+Durable mechanical circulatory support: JACC Scientific Statement
+
+The Society of Thoracic Surgeons Intermacs 2022 Annual Report: Focus on the 2018 Heart Transplant Allocation System
+
+Consensus Report on Destination Therapy in Japan　- From the DT Committee of the Council for Clinical Use of Ventricular Assist Device Related Academic Societies
+
+Late-onset right ventricular dysfunction after mechanical support by a continuous-flow left ventricular assist device
+
+The incidence, risk factors, and outcomes associated with late right-sided heart failure in patients supported with an axial-flow left ventricular assist device
+
+Comorbidity of atrial fibrillation and heart failure
+
+Atrial arrhythmias and electroanatomical remodeling in patients with left ventricular assist devices
+
+Left atrial reverse remodeling in patients supported with durable left ventricular assist devices and clinical implications
+
+Guidelines for the Echocardiographic Assessment of the Right Heart in Adults and Special Considerations in Pulmonary Hypertension: Recommendations from the American Society of Echocardiography
+
+Pulmonary artery pulsatility index is associated with right ventricular failure after left ventricular assist device surgery
+
+Late right heart failure after left ventricular assist device implantation: contemporary insights and future perspectives
+
+Subcommittee on Control of Anticoagulation of the Scientific and Standardization Committee of the International Society on Thrombosis and Haemostasis. Definition of major bleeding in clinical investigations of antihemostatic medicinal products in non-surgical patients
+
+Physiology of continuous-flow left ventricular assist device therapy
+
+Device therapy and arrhythmia management in left ventricular assist device recipients: a scientific statement from the American Heart Association
+
+Clinical impact of atrial fibrillation in patients with the HeartMate II left ventricular assist device
+
+Survival and adverse events in patients with atrial fibrillation at left ventricular assist device implantation: an analysis of the European Registry for Patients with Mechanical Circulatory Support
+
+Atrial tachyarrhythmias among patients with left ventricular assist devices: prevalence, clinical outcomes, and impact of rhythm control strategies
+
+Atrial fibrillation in patients with left ventricular assist devices: incidence, predictors, and clinical outcomes
+
+Implication of preoperative existence of atrial fibrillation on hemocompatibility-related adverse events during left ventricular assist device support
+
+Current issues of destination therapy in Japan: to achieve 5-year or even longer survival
+
+Reverse remodeling with left ventricular assist devices
+
+Drug therapy and catheter ablation for management of arrhythmias in continuous flow left ventricular assist device's patients: a Clinical Consensus Statement of the European Heart Rhythm Association and the Heart Failure Association of the ESC
+
+Catheter ablation for atrial fibrillation in left ventricular assist device: a case report
+
+First experience of percutaneous radio-frequency ablation for atrial flutter and atrial fibrillation in a patient with HeartMate II left ventricular assist device
+
+Catheter ablation of atrial flutter in patients with left ventricular assist device improves symptoms of right heart failure
+
+Rate control versus rhythm control in patients with left ventricular assist devices and atrial fibrillation
+
+Background 
+
+The clinical impact of atrial fibrillation (AF) in patients undergoing left ventricular assist device (LVAD) implantation remains uncertain, particularly regarding whether the post-LVAD rhythm status carries prognostic value. 
+
+Methods 
+
+We retrospectively reviewed consecutive LVAD recipients at our institution between 2008 and 2023. Patients were categorized as no AF, new-onset AF, resolved AF, or recurrent AF according to rhythm status before and after implantation. The primary endpoint was hospitalization for heart failure, and the secondary endpoints were all-cause death, stroke, and major bleeding. Left atrial (LA) reverse remodeling was quantified as the percent reduction in LA diameter. 
+
+Results 
+
+Among 115 patients (mean age 46 years; 69.6% male; 14.8% ischemic etiology), 44 (38.3%) had AF before implantation. Over a median follow-up of 50.8 months, 29 of 44 patients (65.9%) had no AF recurrence by 3 months after implantation (resolved AF group), whereas 15 had AF (recurrent AF group); among the 71 patients without pre-LVAD AF, three developed new-onset AF. Compared with the recurrent AF group, the resolved AF group had a significantly lower risk of heart failure hospitalization (hazard ratio, 0.25; 95% confidence interval, 0.07–0.86; P = 0.027). LA diameter decreased to a greater extent in the resolved AF group than in the recurrent AF group (LA reduction rate: 24.5% vs. 10.8%; P = 0.032). 
+
+Conclusions 
+
+LVAD implantation was associated with LA reduction through reverse remodeling and led to AF resolution in a subset of patients. Patients with AF resolution experienced fewer heart failure events during LVAD support.
+
+Graphical abstract
+
+Introduction 
+
+Left ventricular assist devices (LVAD) have become an established therapy for patients with advanced heart failure. 1 , 2 Initially used primarily as a bridge to transplantation, LVADs are now increasingly employed as destination therapy, resulting in longer durations of device support and a growing population of LVAD recipients. 3 , 4 With prolonged support, late complications such as right heart failure, bleeding, thromboembolic events, and infections have emerged as critical challenges. 5 In particular, late-onset right heart failure remains a serious event that can worsen survival even among LVAD recipients. 6 Meanwhile, atrial fibrillation (AF) is closely associated with the progression of heart failure in the general population. 7 Continuous mechanical unloading by an LVAD induces reverse remodeling of the left ventricle and left atrium (LA), and several studies have suggested a reduction in AF burden after LVAD implantation. 8 , 9 However, the clinical impact of any decrease in AF following LVAD implantation on subsequent cardiovascular events remains uncertain. 
+
+The aim of this study was to investigate the relationship between the clinical course of AF before and after LVAD implantation and heart failure events during long-term LVAD support. 
+
+Methods 
+
+Study population and data analysis 
+
+This single-center, retrospective observational study was conducted at Kyushu University Hospital. We reviewed consecutive patients who underwent durable LVAD implantation between 2008 and 2023. Exclusion criteria were: age <18 years; arrhythmia-associated cardiomyopathy (e.g., arrhythmogenic right ventricular cardiomyopathy or laminopathies); adult congenital heart disease; muscular dystrophy; insufficient follow-up data; and death within 90 days after surgery. Of 124 screened patients, 9 were excluded: 2 with arrhythmogenic right ventricular cardiomyopathy, 5 with adult congenital heart disease, 1 with muscular dystrophy, and 1 who died within 90 days after surgery. No patients with laminopathy or insufficient follow-up data were identified. Baseline clinical characteristics, implantable device interrogations, operative records, and postoperative events were collected from the institutional database. 
+
+Laboratory values were obtained from samples collected within 1 week prior to LVAD implantation. Echocardiography data were obtained before implantation and at 6–12 months after surgery. Left ventricular ejection fraction, LA diameter, right ventricular fractional area change, and tricuspid annular plane systolic excursion were measured in accordance with American Society of Echocardiography guidelines. 10 Right heart catheterization was performed before LVAD implantation and during follow-up (6–12 months post-LVAD). The pulmonary artery pulsatility index was calculated as pulmonary artery pulse pressure divided by mean right atrial pressure. 11 Medication data were assessed based on prescriptions at 3 months after LVAD implantation. 
+
+Patients were categorized by pre-implant AF and subsequent rhythm during LVAD support ( Figure 1 ) into four groups: no AF (no AF documented before and after implantation), new-onset AF (no pre-implant AF, AF first documented after implantation), resolved AF and recurrent AF. Among those with pre-implant AF, we defined “resolved AF” as no documented AF at any time during the first 3 months after LVAD implantation; “recurrent AF” was defined as at least one AF episode within those 3 months. AF was defined as an atrial tachyarrhythmia lasting ≥30 s on Holter monitoring or at least one episode on a standard 12-lead ECG obtained ≥3 months after surgery. According to this definition, atrial flutter and atrial tachycardia were also included in the AF category for analysis. All patients received warfarin plus aspirin as the standard antithrombotic regimen during LVAD support. The target PT-INR was 2.5–3.5 for EVAHEART (Sun Medical Technology Research Corp., Nagano, Japan), and 2.0–3.0 for Jarvik 2000 (Jarvik Heart, Inc., New York, NY, USA), HeartWare HVAD (Medtronic, Minneapolis, MN, USA), DuraHeart (Terumo Heart, Inc., Ann Arbor, MI, USA), HeartMate II, and HeartMate 3 (Abbott, Abbott Park, IL, USA). Aspirin 100 mg once daily was used in all device types unless contraindicated. The study protocol was approved by the Ethics Committee of Kyushu University (approval number 25145), and the investigation conformed to the Declaration of Helsinki. Informed consent was obtained using an opt-out approach. Figure 1 
+
+Prevalence of AF before and after LVAD implantation. Patients were stratified into four groups by rhythm status: no AF, new-onset AF, resolved AF, and recurrent AF. For those with pre-implant AF, “resolved” and “recurrent” were defined by rhythm within the first 3 months after LVAD implantation. 
+
+Evaluation of clinical outcomes 
+
+The primary endpoint was hospitalization for heart failure during LVAD support. The secondary endpoints were all-cause death, stroke, and major bleeding during LVAD support. Events occurring within the first 3 months after surgery were excluded from the analysis. We conducted a 3-month landmark analysis; therefore, only patients who were alive and still being followed at 3 months were included in the analysis. Accordingly, follow-up began 3 months after LVAD implantation and was censored at heart transplantation, LVAD explantation for recovery, or the last follow-up date, whichever occurred first. Events after heart transplantation and LVAD explantation were not included. For analyses of heart failure hospitalization, stroke, and major bleeding, patients were censored at the time of death if the event had not occurred. Causes of death were ascertained by chart review and autopsy reports. Heart failure hospitalization was defined as hospitalization with clinical signs of congestion (e.g., peripheral edema, pleural effusion, ascites, or renal/hepatic congestion) requiring intravenous diuretics, inotropes, or pump flow adjustment. 12 Hemorrhagic stroke was included in the stroke endpoint. Major bleeding was defined according to the International Society on Thrombosis and Hemostasis criteria. 13 
+
+Statistical analysis 
+
+Continuous variables were expressed as mean ± standard deviation or as median with interquartile range. Categorical variables were presented as numbers with percentages. Patient characteristics between two groups were compared using Student's t test or the Mann–Whitney U test for continuous variables and Fisher's exact test for categorical variables. Serial changes in echocardiographic measurements were assessed with paired t tests. For LA reverse remodeling, we calculated the percent reduction in LA diameter as “LA reduction rate (LARR)” = [(pre-LVAD LA diameter − post-LVAD LA diameter) / pre-LVAD LA diameter] × 100 ; larger LARR values indicate a greater reduction in LA size. Cox proportional hazards models were applied to identify predictors of AF recurrence and clinical outcomes, with predefined clinically relevant variables from previous literature and the results of univariable analyses. For Kaplan–Meier curves of clinical events, time zero was set at 3 months after LVAD implantation. All statistical analyses were two-tailed, and a P value < 0.05 was considered statistically significant. These analyses were conducted using R, version 4.2.1 (R Foundation for Statistical Computing, Vienna, Austria). 
+
+Results 
+
+Baseline characteristics and LVAD implantation 
+
+The mean age was 46 years, and 80 patients (69.6%) were male ( Table 1 ). Non-ischemic etiology accounted for 98 patients (85.2%), including dilated cardiomyopathy (n=68, 59.1%), followed by dilated-phase hypertrophic cardiomyopathy (n=11), myocarditis (n=9), and sarcoidosis (n=5). AF was present in 44 patients (38.3%) before LVAD implantation, including 17 with persistent AF. Nine patients had a history of catheter ablation for AF before surgery. Table 1 
+
+Baseline characteristics of patients receiving LVAD Overall (n=115) no-AF before LVAD (n=71) AF before LVAD (n=44) P value Age, years 46.2±13.2 43.6±13.8 50.3±11.1 0.0086 Male (%) 80 (69.6) 52 (73.2) 28 (63.6) 0.28 BMI, kg/m 2 22.3±3.8 22.3±3.9 22.4±3.6 0.93 Ischemic etiology (%) 17 (14.8) 13 (18.3) 4 (9.1) 0.16 Hypertension (%) 15 (13.0) 8 (11.3) 7 (15.9) 0.48 Diabetes (%) 25 (21.7) 14 (19.7) 11 (25.0) 0.51 Ischemic stroke (%) 10 (8.7) 5 (7.0) 5 (11.4) 0.43 Dyslipidemia (%) 26 (22.6) 19 (26.8) 7 (15.9) 0.17 CIED (%) 59 (51.3) 28 (39.4) 31 (70.5) 0.0011 History of AF ablation (%) 9 (7.8) 0 (0.0) 9 (20.5) <0.0001 Hemoglobin, g/dl 11.8±1.6 12.0±1.6 11.6±1.4 0.20 Albumin, g/dl 3.6±0.6 3.7±0.6 3.6±0.5 0.40 Serum creatinine, mg/dl 1.14±0.53 1.03±0.43 1.32±0.61 0.0048 BNP, pg/ml 702.9±672.4 598.9±488.4 861.4±864.9 0.044 LVEF, % 22.7±8.5 21.3±7.8 24.9±9.2 0.030 LA diameter, mm 46.0±9.9 43.2±10.2 50.5±7.8 <0.0001 FAC, % 26.9±9.8 25.9±9.7 28.4±10.1 0.27 TAPSE, mm 14.4±4.4 15.2±4.4 13.3±4.1 0.036 CI, l/min/m 2 2.0±0.5 2.1±0.5 2.0±0.5 0.52 PAWP, mmHg 22.3±8.9 22.1±8.6 22.7±9.5 0.74 PAPi 4.0±3.8 4.2±4.1 3.7±3.5 0.58 PVR, dyne/sec/cm −5 238.7±150.4 219.6±136.5 268.2±167.0 0.10 RAP/PAWP ratio 0.43±0.26 0.41±0.27 0.46±0.25 0.30 Centrifugal-flow pump (%) 62 (53.9) 37 (52.9) 25 (56.8) 0.73 Surgical pulmonary vein isolation (%) 9 (7.8) 0 (0.0) 9 (20.5) <0.0001 LA appendage closure (%) 28 (24.3) 11 (15.5) 17 (38.6) 0.0054 Mitral valve surgery (%) 17 (14.8) 6 (8.5) 11 (25.0) 0.017 Tricuspid valve surgery (%) 26 (22.6) 11 (15.5) 15 (34.1) 0.022 Beta blocker (%) 101 (87.8) 64 (90.1) 37 (84.1) 0.34 RAS inhibitors (%) 98 (85.2) 61 (85.9) 37 (84.1) 0.78 MRA (%) 73 (63.5) 43 (60.6) 30 (68.2) 0.41 AAD (%) 19 (16.5) 10 (14.1) 9 (20.5) 0.37 Amiodarone (%) 9 (7.8) 6 (8.5) 3 (6.8) - Sotalol (%) 7 (6.1) 4 (5.6) 3 (6.8) - Bepridil (%) 3 (2.6) 0 (0) 3 (6.8) - 
+
+Categorical variables are presented as n (%). Continuous variables are presented as mean ± SD. 
+
+[LVAD, left ventricular assist device; BMI, body mass index; CIED, cardiovascular implantable electronic device; AF, atrial fibrillation; BNP, brain natriuretic peptide; LVEF, left ventricular ejection fraction; LA, left atrium; FAC, fractional area change; TAPSE, tricuspid annular plane systolic excursion; CI, cardiac index; PAWP, pulmonary artery wedge pressure; PAPi, pulmonary artery pulsatility index; PVR, pulmonary vascular resistance; RAS, renin-angiotensin system; MRA, mineralcorticoid receptor antagonist; AAD, anti-arrhythmic drug]. 
+
+Compared with those without AF, patients with pre-LVAD AF were older and more frequently had cardiac implantable electronic devices. Serum creatinine and B-type natriuretic peptide levels were higher in the AF group. On echocardiography, the AF group had larger LA size. 
+
+LVAD implantation was successful in all patients. Device types included HeartMate II (n=47), HeartMate 3 (n=35), EVAHEART (n=12), HeartWare HVAD (n=10), DuraHeart (n=6), and Jarvik 2000 (n=5). Concomitant procedures included mitral valve repair in 17 patients and tricuspid valve repair in 26; one patient underwent total cavopulmonary connection. Among the 44 patients with pre-LVAD AF, surgical pulmonary vein isolation was performed in 9, and LA appendage closure in 17. Concomitant mitral and/or tricuspid valve surgery was more common in the AF group. 
+
+AF after LVAD implantation 
+
+The perioperative course of AF is summarized in Figure 1 . The median follow-up period after LVAD implantation was 50.8 months [36.4, 61.7 months]. Among the 44 patients with pre-LVAD AF, 29 (65.9%) had no recurrence after LVAD implantation (“resolved AF group”), whereas the remainder experienced AF (“recurrent AF group”). Of the 29 patients classified as resolved AF at 3 months, 23 had no AF recurrence thereafter during the entire follow-up. Conversely, among the 72 patients without pre-LVAD AF, 3 developed new-onset AF after LVAD implantation; their underlying etiologies were dilated cardiomyopathy in 2 and ischemic cardiomyopathy in 1 patient. In both the multivariable model incorporating baseline patient characteristics (model 1) and the multivariable model additionally including concomitant surgical procedures (model 2), persistent AF at baseline was associated with AF recurrence ( Table 2 ). Table 2 
+
+Cox proportional hazards analysis for the predictors of arrhythmia recurrence after LVAD implantation Univariable Multivariable (model 1) Multivariable (model 2) HR (95%CI) P value HR (95%CI) P value HR (95%CI) P value Age 1.00 (0.96–1.04) 0.84 Male 1.09 (0.43–2.71) 0.85 Persistent AF 4.64 (1.76–12.24) 0.0019 3.54 (1.27–9.81) 0.015 4.48 (1.61–12.42) 0.0039 Hypertension 0.23 (0.03–1.75) 0.27 Diabetes 1.63 (0.63–4.22) 0.31 History of AF ablation 0.71 (0.23–2.15) 0.56 LVEF 1.03 (0.98–1.08) 0.20 LA diameter 1.06 (0.99–1.12) 0.065 1.06 (0.98–1.12) 0.11 TAPSE 1.01 (0.89–1.12) 0.90 Surgical pulmonary vein isolation 0.57 (0.16–1.94) 0.37 0.63 (0.17–2.31) 0.48 LA appendage closure 1.66 (0.72–3.84) 0.24 Mitral or tricuspid valve surgery 2.27 (0.97–5.30) 0.057 2.61 (1.08–6.33) 0.033 Beta blocker 0.92 (0.27–3.13) 0.89 RAS inhibitors 0.30 (0.10–0.88) 0.029 MRA 0.77 (0.32–1.85) 0.56 AAD 3.29 (1.25–8.67) 0.015 2.41 (0.88–6.59) 0.084 
+
+Model 1 included baseline patient characteristics; Model 2 additionally included concomitant surgical procedures. [HR, hazard ratio; CI, confidence interval; RAS, renin-angiotensin system; MRA, mineralcorticoid receptor antagonist; AAD, anti-arrhythmic drug]. 
+
+After LVAD implantation, 5 patients developed atrial flutter or atrial tachycardia. Atrial flutter or tachycardia was not more common in patients who underwent tricuspid valve surgery than in those who did not (2/26 vs. 3/89, P = 0.34). One patient with atrial flutter or tachycardia also had concomitant AF. Compared with AF, atrial flutter or tachycardia was associated with a significantly higher heart rate (88.3 ± 22.7 vs. 138.2 ± 21.9 beats/min, P = 0.0003). 
+
+Clinical outcomes after LVAD implantation 
+
+During follow-up, 56 patients (48.7%) underwent heart transplantation, 40 (34.8%) remained on durable LVAD support, 18 (15.7%) died, and 1 (0.9%) was successfully explanted for recovery. For the primary endpoint, heart failure hospitalization occurred in 20 patients (17.4%). For secondary endpoints, all-cause death occurred in 18 patients (15.7%), stroke in 24 (20.9%), and major bleeding in 10 (8.7%). 
+
+Clinical outcomes were compared between those with resolved AF and with recurrent AF ( Figure 2 and Supplementary Figure 1). The hazard of first heart failure hospitalization was lower in the resolved AF group (Log-rank P = 0.017, HR, 0.25, 95% CI, 0.08–0.85, P = 0.027). There were no significant differences in the events of all-cause death, stroke, or major bleeding. In both the multivariable model incorporating heart failure–related covariates ( Table 3 , model 1) and the multivariable model incorporating covariates related to concomitant surgical procedures (model 2), AF resolution was associated with a lower risk of heart failure hospitalization. Figure 2 
+
+Cumulative incidence of heart failure hospitalization in patients with AF after LVAD implantation. Kaplan–Meier curves comparing the resolved AF and recurrent AF groups. Time zero was set at 3 months after LVAD implantation. Other outcomes are presented in Supplementary Figure 1. Table 3 
+
+Cox proportional hazards analysis for the predictors of heart failure hospitalization after LVAD implantation Univariable Multivariable (model 1) Multivariable (model 2) HR (95%CI) P value HR (95%CI) P value HR (95%CI) P value Age 1.04 (0.99–1.12) 0.12 Male 1.24 (0.37–4.13) 0.72 Ischemic etiology 3.30 (0.67–16.19) 0.14 LVEF 1.00 (0.93–1.06) 0.95 LA diameter 0.98 (0.91–1.06) 0.71 TAPSE 1.03 (0.86–1.21) 0.71 CI 2.12 (0.58–6.26) 0.23 PAWP 1.01 (0.94–1.07) 0.67 PVR 1.00 (0.99–1.01) 0.24 PAPi 0.90 (0.71–1.06) 0.23 0.87 (0.67–1.05) 0.22 Centrifugal flow pump 0.66 (0.21–2.14) 0.49 Use of Heartmate 3 0.62 (0.18–2.09) 0.44 1.11 (0.26–4.68) 0.88 Surgical pulmonary vein isolation 0.86 (0.18–4.09) 0.86 1.31 (0.27–6.31) 0.73 LA appendage closure 0.83 (0.25–2.79) 0.77 Mitral or tricuspid valve surgery 0.69 (0.21–2.29) 0.55 0.35 (0.10–1.29) 0.12 Beta blocker 0.62 (0.13–2.91) 0.54 RAS inhibitors 0.53 (0.11–2.54) 0.43 MRA 0.51 (0.16–1.64) 0.26 AAD 1.34 (0.36–4.99) 0.66 Resolved AF 0.25 (0.08–0.85) 0.027 0.23 (0.06–0.94) 0.041 0.17 (0.05–0.61) 0.0064 
+
+Model 1 included heart failure–related covariates; Model 2 included covariates related to concomitant surgical procedures. 
+
+Details of clinical events are as follows. During follow-up, 20 patients (17.4%) had 30 hospitalizations for heart failure, with a median time to the first event of 20.4 months after LVAD implantation. In the no AF and resolved AF groups, precipitating factors were most often dietary sodium excess and infection, and in two patients in the no AF group ventricular arrhythmias worsened heart failure. In the resolved AF group, one patient remained free of AF for 3 years and then experienced AF recurrence that precipitated heart failure (Supplementary Figure 2A). In the recurrent AF group, among the 9 patients who were hospitalized for heart failure, AF preceded and appeared to contribute to worsening heart failure in 4, whereas AF had already been continuously present before the onset of heart failure in the remaining 5. In addition, comparison of the mean heart rate immediately before heart-failure onset showed no significant difference between patients with and without heart-failure events (95.1 ± 33.6 vs. 102.4 ± 25.3 beats/min, P = 0.59). Among the three patients with new-onset AF, two developed heart failure and required electrical cardioversion; in one of these cases, AF with high ventricular rate induced ventricular tachycardia (Supplementary Figure 2B). No patient underwent catheter ablation or LA appendage closure during LVAD support. Aortic insufficiency occurred in five patients overall, and one subsequently underwent aortic valve replacement. The most common cause of death was infection (n=7, 38.9%), followed by cerebrovascular disease (n=6) and gastrointestinal bleeding (n=1); only one death was attributed to severe right heart failure. Of the 24 strokes, 19 were hemorrhagic and 8 were ischemic, with three patients experiencing both hemorrhage and infarction. At the time of hemorrhagic stroke, the international normalized ratio was 2.4 ± 0.9; eleven patients underwent craniotomy for hematoma evacuation and six died. At the time of ischemic stroke, the international normalized ratio was 2.5 ± 0.8, and no deaths occurred. Among stroke survivors, the modified Rankin Scale score at discharge was 2.7 ± 1.3. Major bleeding occurred in 10 patients, including five gastrointestinal events and three of ovarian or endometrial origin. At presentation, hemoglobin was 8.3 ± 2.5 g/dL and the international normalized ratio was 3.3 ± 0.9, and five patients required invasive hemostatic therapy, including endoscopic intervention. 
+
+Change in LA size before and after LVAD implantation 
+
+We compared LA diameter before and after LVAD implantation between the recurrent and resolved AF groups ( Figure 3 ). Baseline LA diameter did not differ between groups (recurrent AF vs. resolved AF = 52.6 ± 8.4 mm vs. 48.5 ± 6.8 mm, P = 0.082). After implantation, LA diameter significantly decreased in both groups, with a larger reduction in the resolved AF group than in the recurrent AF group (LARR; 24.5 ± 19.4% vs. 10.8 ± 19.8%; P = 0.032). Figure 3 
+
+Change in left atrial diameter by AF status. Left atrial diameter pre- and post-LVAD in recurrent AF and resolved AF groups. Both decreased after implantation, with a greater reduction in the resolved AF group. 
+
+Discussion 
+
+The main findings of this study are as follows: (1) AF was common among LVAD recipients; by 3 months after surgery, 65.9% of patients with pre-implant AF had no recurrence, and 52.3% remained free of AF throughout follow-up. (2) Patients in whom AF resolved experienced fewer heart-failure events during long-term LVAD support. (3) The magnitude of LA reverse remodeling was greater in the resolved AF group. 
+
+LVAD support unloads the left ventricle, lowers left-sided filling pressures, and increases right-sided preload; as a result, cardiac output during support depends largely on right-ventricular performance. 14 When AF occurs, rapid and irregular ventricular response without atrial contraction can reduce right-atrial reservoir and pump function, thereby lowering right-ventricular forward flow and precipitating systemic congestion. 15 Consistent with this physiology, prior study has identified AF as a risk factor for adverse outcomes including death and heart failure hospitalization, 8 , 16 these data indicate that AF is not necessarily a benign arrhythmia in LVAD recipients and should be regarded as a marker of vulnerability to right heart failure. 
+
+Evidence on AF and post-LVAD outcomes has been controversial: some studies report higher mortality with AF, 8 , 9 , 16 , 17 whereas others show no association. 18 , 19 , 20 Enriquez and colleagues linked AF to death and heart failure but primarily in persistent AF. 16 In our cohort, there were no differences between paroxysmal and persistent AF regarding subsequent heart failure events. A likely reason we did not observe a clear association with mortality is the high proportion of infection-related deaths (38.9%) and the low number of deaths directly attributed to heart failure, which differs from an earlier report. 16 In addition, many studies above used shorter follow-up periods (10–20 months), whereas our mean follow-up was 50.6 months. The median time to the first heart-failure admission was 20.4 months in our study. The longer follow-up reflects longer transplant waiting times in Japan rather than a design feature, 21 yet it allowed observation of later events that shorter studies may miss. A further contribution of this study is the evaluation of rhythm status both before and after implantation, providing a more complete view of risk than pre-LVAD AF alone. 
+
+LVAD support promotes reverse remodeling of the left ventricle and atrium by reducing pressures and volumes, mitigating mitral regurgitation, relieving atrial stretch, and improving neurohormonal activation. 22 Consistent with these mechanisms, paroxysmal AF resolved in 43% of LVAD recipients in prior study, 8 which is consistent with our rate of 52.3%. Another report also suggests that LA structural and functional improvements correlate with all-cause death. 9 In our study, patients with resolved AF exhibited larger reductions in LA size. Moreover, improvements in LA function observed early after implantation were maintained at 12 months in a previous study. 9 These observations support the concept that LVAD-driven reverse remodeling can reduce AF burden. 
+
+The clinical evidence of AF management in LVAD recipients remains limited. 23 Small series indicate that catheter ablation for AF can restore sinus rhythm and relieve right heart failure in selected patients, 24 , 25 , 26 whereas retrospective studies have not shown a mortality benefit of rhythm control over rate control. 19 , 27 Procedure-specific issues, such as concerns about iatrogenic right-to-left atrial shunting with transseptal puncture, also argue against routine catheter ablation in all patients. Accordingly, in this population AF should be viewed primarily as a risk indicator for right heart failure, prompting careful assessment of symptoms, hemodynamics, and comorbidities. Because LVAD support often leads to LA reverse remodeling and AF may resolve in many patients, the case with new-onset or recurrent AF after implantation should require closer surveillance and individualized decisions about rhythm control. Prospective studies are needed to determine whether targeted rhythm-control strategies can reduce heart-failure or other adverse outcomes in LVAD recipients. 
+
+This study has several limitations. First, this was a single-center retrospective study with a limited number of primary endpoint events and heterogeneous concomitant procedures, which may have reduced statistical power and introduced residual confounding despite adjustment. The new-onset AF group was small; findings for this group are primarily descriptive. Second, ECG and echocardiographic assessments were not performed at uniform intervals. Detection bias is possible because AF may have been more readily identified in patients with cardiac implantable electronic devices. Third, echocardiographic parameters such as LA volume or strain were limited in availability. Finally, we were unable to determine whether rhythm-control strategies for AF improve clinical outcomes. Addressing these limitations will require prospective, multicenter studies specifically designed to evaluate the effectiveness of rhythm control in LVAD recipients. 
+
+Conclusions 
+
+LVAD support promotes LA reverse remodeling and leads to AF resolution in a subset of patients. This improvement may be associated with lower events of heart failure during LVAD support. 
+
+Funding 
+
+This work was supported by JSPS KAKENHI (Grant Numbers JP25K11413 and JP25K11300). 
+
+Declaration of Interest 
+
+Takeo Fujino is affiliated with an endowed department supported by Nipro Corporation, Abbott Medical Japan LLC, and Medtronic Japan Co., Ltd. The sponsors had no role in the design or conduct of this study; data collection, management, analysis, or interpretation; manuscript preparation; or the decision to submit for publication.

@@ -1,0 +1,102 @@
+[
+  {
+    "id": 9479368,
+    "subdomain": "contract_law",
+    "case_name": "Contract Pharmacal Corp. v. Air Indus. Group",
+    "court": "Appellate Division of the Supreme Court of the State of New York",
+    "date_filed": "2024-02-28",
+    "source_url": "/opinion/9479368/contract-pharmacal-corp-v-air-indus-group/",
+    "path": "D:\\DG Workspace\\Mexar-main\\test_data\\legal_real\\case_9479368.txt",
+    "char_count": 6303
+  },
+  {
+    "id": 4897958,
+    "subdomain": "contract_law",
+    "case_name": "Zurich American Insurance Company of Illinois v. Palmetto Contract Services, Inc.",
+    "court": "Court of Appeals of South Carolina",
+    "date_filed": "2021-07-07",
+    "source_url": "/opinion/4897958/zurich-american-insurance-company-of-illinois-v-palmetto-contract/",
+    "path": "D:\\DG Workspace\\Mexar-main\\test_data\\legal_real\\case_4897958.txt",
+    "char_count": 15000
+  },
+  {
+    "id": 4316372,
+    "subdomain": "contract_law",
+    "case_name": "Layton Construction Co. v. Shaw Contract Flooring Services, Inc.",
+    "court": "Colorado Court of Appeals",
+    "date_filed": "2016-10-20",
+    "source_url": "/opinion/4316372/layton-construction-co-v-shaw-contract-flooring-services-inc/",
+    "path": "D:\\DG Workspace\\Mexar-main\\test_data\\legal_real\\case_4316372.txt",
+    "char_count": 15000
+  },
+  {
+    "id": 1052233,
+    "subdomain": "contract_law",
+    "case_name": "This Is the Second Appeal of this Breach of Contract Case in Gary Weaver v. Thomas",
+    "court": "Court of Appeals of Tennessee",
+    "date_filed": "2007-10-08",
+    "source_url": "/opinion/1052233/this-is-the-second-appeal-of-this-breach-of-contra/",
+    "path": "D:\\DG Workspace\\Mexar-main\\test_data\\legal_real\\case_1052233.txt",
+    "char_count": 15000
+  },
+  {
+    "id": 7330465,
+    "subdomain": "contract_law",
+    "case_name": "In re Yahoo! Inc. Customer Data Sec. Breach Litig.",
+    "court": "District Court, N.D. California",
+    "date_filed": "2018-03-09",
+    "source_url": "/opinion/7330465/in-re-yahoo-inc-customer-data-sec-breach-litig/",
+    "path": "D:\\DG Workspace\\Mexar-main\\test_data\\legal_real\\case_7330465.txt",
+    "char_count": 447
+  },
+  {
+    "id": 8789780,
+    "subdomain": "contract_law",
+    "case_name": "In re Target Corp. Customer Data Security Breach Litigation",
+    "court": "District Court, D. Minnesota",
+    "date_filed": "2015-09-15",
+    "source_url": "/opinion/8789780/in-re-target-corp-customer-data-security-breach-litigation/",
+    "path": "D:\\DG Workspace\\Mexar-main\\test_data\\legal_real\\case_8789780.txt",
+    "char_count": 465
+  },
+  {
+    "id": 7318430,
+    "subdomain": "contract_law",
+    "case_name": "In re Anthem, Inc. Data Breach Litigation",
+    "court": "District Court, N.D. California",
+    "date_filed": "2016-02-14",
+    "source_url": "/opinion/7318430/in-re-anthem-inc-data-breach-litigation/",
+    "path": "D:\\DG Workspace\\Mexar-main\\test_data\\legal_real\\case_7318430.txt",
+    "char_count": 420
+  },
+  {
+    "id": 10668606,
+    "subdomain": "contract_law",
+    "case_name": "Mitchell v. Atha, Dir. of Pub. Utilities",
+    "court": "Ohio Court of Appeals",
+    "date_filed": "2025-09-09",
+    "source_url": "/opinion/10668606/mitchell-v-atha-dir-of-pub-utilities/",
+    "path": "D:\\DG Workspace\\Mexar-main\\test_data\\legal_real\\case_10668606.txt",
+    "char_count": 387
+  },
+  {
+    "id": 4631839,
+    "subdomain": "contract_law",
+    "case_name": "U.S. Office of Pers. Mgmt. Data SEC. Breach Litig. v. Office of Pers. Mgmt.",
+    "court": "Court of Appeals for the D.C. Circuit",
+    "date_filed": "2019-06-21",
+    "source_url": "/opinion/4631839/us-office-of-pers-mgmt-data-sec-breach-litig-v-office-of-pers-mgmt/",
+    "path": "D:\\DG Workspace\\Mexar-main\\test_data\\legal_real\\case_4631839.txt",
+    "char_count": 540
+  },
+  {
+    "id": 9506898,
+    "subdomain": "contract_law",
+    "case_name": "United Cleaning & Restoration, LLC v. Bank of America, N.A.",
+    "court": "Connecticut Appellate Court",
+    "date_filed": "2024-05-28",
+    "source_url": "/opinion/9506898/united-cleaning-restoration-llc-v-bank-of-america-na/",
+    "path": "D:\\DG Workspace\\Mexar-main\\test_data\\legal_real\\case_9506898.txt",
+    "char_count": 462
+  }
+]
