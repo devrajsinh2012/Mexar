@@ -63,5 +63,6 @@ torch>=2.0.0
 langchain>=0.1.0
 langchain-community>=0.0.20
 langchain-groq>=0.1.0
-chromadb>=0.4.20
+# chromadb>=0.4.20  # Optional (Requires C++ Build Tools on Python 3.12)
+
 
