@@ -270,13 +270,32 @@ class ReasoningEngine:
                     "chunk_count": 0
                 }
             else:
+                # Build combined signature: domain_signature (TF-IDF terms from docs)
+                # + domain_keywords (generic domain terms from prompt analysis)
+                # This ensures generic queries like "medical question" match the guardrail
+                raw_signature = list(agent.domain_signature or [])
+                prompt_analysis = agent.prompt_analysis or {"domain": agent.domain or "general"}
+                domain_keywords = agent.domain_keywords or prompt_analysis.get("domain_keywords", [])
+                
+                # Merge domain_keywords into signature (deduped)
+                existing = set(s.lower() for s in raw_signature)
+                for kw in domain_keywords:
+                    if kw.lower() not in existing:
+                        raw_signature.append(kw.lower())
+                        existing.add(kw.lower())
+                
+                # Also add the domain name itself (e.g., "medical")
+                domain_name = (agent.domain or "general").lower()
+                if domain_name not in existing:
+                    raw_signature.append(domain_name)
+                
                 agent_data = {
                     "id": agent.id,
                     "name": agent.name,
                     "system_prompt": agent.system_prompt,
                     "domain": agent.domain or "general",
-                    "domain_signature": agent.domain_signature or [],
-                    "prompt_analysis": agent.prompt_analysis or {"domain": agent.domain or "general"},
+                    "domain_signature": raw_signature,
+                    "prompt_analysis": prompt_analysis,
                     "knowledge_graph": agent.knowledge_graph_json or {},
                     "chunk_count": agent.chunk_count or 0
                 }
@@ -316,6 +335,10 @@ class ReasoningEngine:
         }
 
         sigma = set(s.lower() for s in (domain_signature or []))
+
+        if not sigma:
+            logger.info("Guardrail: sigma is empty — no domain signature, allowing query through.")
+            return True, 1.0
 
         if not phi_q:
             logger.info("Guardrail: phi_q is empty — query has no content tokens, rejecting.")
