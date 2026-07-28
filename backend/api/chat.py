@@ -85,8 +85,7 @@ async def chat_json(
     
     try:
         # Use agent's storage path for reasoning engine
-        storage_path = Path(agent.storage_path).parent
-        engine = create_reasoning_engine(str(storage_path))
+        engine = create_reasoning_engine(str(agent.storage_path))
         
         result = engine.reason(
             agent_name=agent.name,
@@ -271,8 +270,7 @@ async def chat_multimodal(
                 pass
         
         # Run reasoning
-        storage_path = Path(agent.storage_path).parent
-        engine = create_reasoning_engine(str(storage_path))
+        engine = create_reasoning_engine(str(agent.storage_path))
         
         result = engine.reason(
             agent_name=agent.name,

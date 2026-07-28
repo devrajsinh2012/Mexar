@@ -85,6 +85,9 @@ def _run_compilation_thread(
         agent.status = "ready"
         agent.domain = prompt_analysis.get("domain", "general")
         agent.domain_keywords = prompt_analysis.get("domain_keywords", [])
+        agent.prompt_analysis = prompt_analysis
+        agent.domain_signature = result.get("domain_signature", [])
+        agent.compilation_stats = result.get("stats", {})
         agent.entity_count = result.get("stats", {}).get("total_entries", 0)
         
         # Step 5: Complete (100%)

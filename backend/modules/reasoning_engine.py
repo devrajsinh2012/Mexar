@@ -123,7 +123,7 @@ class ReasoningEngine:
             timings["total_ms"] = round((time.perf_counter() - t0) * 1000, 1)
             resp = self._create_out_of_domain_response(
                 query=query,
-                domain=agent["prompt_analysis"].get("domain", "unknown"),
+                domain=agent.get("domain") or agent["prompt_analysis"].get("domain", "general"),
                 domain_score=domain_score
             )
             resp["timings"] = timings
@@ -248,11 +248,11 @@ class ReasoningEngine:
             agent = db.query(Agent).filter(Agent.name == agent_name).first()
             
             if not agent:
-                clean_name = agent_name.replace("_agent", "").replace("agent", "").strip()
+                clean_name = agent_name.replace("_agent", "").replace("agent", "").strip() or agent_name
                 agent = db.query(Agent).filter(Agent.domain.ilike(f"%{clean_name}%")).first()
             
-            if not agent:
-                agent = db.query(Agent).filter(Agent.name.ilike(f"%{clean_name}%")).first()
+                if not agent:
+                    agent = db.query(Agent).filter(Agent.name.ilike(f"%{clean_name}%")).first()
                 
             if not agent:
                 agent = db.query(Agent).first()
@@ -274,9 +274,9 @@ class ReasoningEngine:
                     "id": agent.id,
                     "name": agent.name,
                     "system_prompt": agent.system_prompt,
-                    "domain": agent.domain,
+                    "domain": agent.domain or "general",
                     "domain_signature": agent.domain_signature or [],
-                    "prompt_analysis": agent.prompt_analysis or {},
+                    "prompt_analysis": agent.prompt_analysis or {"domain": agent.domain or "general"},
                     "knowledge_graph": agent.knowledge_graph_json or {},
                     "chunk_count": agent.chunk_count or 0
                 }
