@@ -1,13 +1,3 @@
-# Stage 1: Build Frontend
-FROM node:18-alpine AS frontend-builder
-WORKDIR /app/frontend
-COPY frontend/package*.json ./
-RUN npm ci || npm install
-COPY frontend/ ./
-ENV REACT_APP_API_URL=""
-RUN npm run build
-
-# Stage 2: Python Backend Runtime
 FROM python:3.11-slim
 
 WORKDIR /app
@@ -24,13 +14,9 @@ COPY backend/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 RUN python -m spacy download en_core_web_sm
 
-# Copy backend application code
+# Copy application code from backend directory
 COPY backend/ ./backend/
-
-# Copy built frontend assets into backend/static
-COPY --from=frontend-builder /app/frontend/build/ ./backend/static/
-
-# Entry point environment
+# Main entry point needs to be at root level for some runners, or we point pythonpath
 ENV PYTHONPATH=/app/backend
 
 # Set environment for model caching to /tmp (only writable dir in HF Spaces)
@@ -41,5 +27,5 @@ ENV SENTENCE_TRANSFORMERS_HOME=/tmp/.cache/sentence-transformers
 # Expose port 7860 (required by Hugging Face Spaces)
 EXPOSE 7860
 
-# Run FastAPI with uvicorn
+# Run FastAPI with uvicorn (pointing to nested app)
 CMD ["uvicorn", "backend.main:app", "--host", "0.0.0.0", "--port", "7860"]
