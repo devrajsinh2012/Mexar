@@ -110,26 +110,17 @@ app.include_router(prompts.router)
 app.include_router(diagnostics.router)
 
 
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
+
+STATIC_DIR = Path(__file__).parent / "static"
+
+# Mount static subfolder for compiled CSS/JS assets if present
+if (STATIC_DIR / "static").exists():
+    app.mount("/static", StaticFiles(directory=str(STATIC_DIR / "static")), name="static_assets")
+
+
 # ===== CORE UTILITY ENDPOINTS =====
-
-@app.get("/")
-async def root():
-    """Root endpoint - serves landing page."""
-    from fastapi.responses import FileResponse
-    from pathlib import Path
-    
-    html_path = Path(__file__).parent / "static" / "index.html"
-    if html_path.exists():
-        return FileResponse(html_path, media_type="text/html")
-    else:
-        # Fallback to JSON if HTML not found
-        return {
-            "name": "MEXAR Core Engine",
-            "version": "2.0.0",
-            "status": "operational",
-            "docs": "/docs"
-        }
-
 
 @app.get("/api/health")
 async def health_check():
@@ -138,6 +129,36 @@ async def health_check():
         "status": "healthy",
         "groq_configured": bool(os.getenv("GROQ_API_KEY"))
     }
+
+
+@app.get("/{full_path:path}")
+async def serve_spa(full_path: str):
+    """Serve React SPA frontend for root and all client-side routes."""
+    # Do not intercept API, docs, or WebSocket endpoints
+    if full_path.startswith("api/") or full_path.startswith("ws/") or full_path in ["docs", "redoc", "openapi.json"]:
+        return JSONResponse(status_code=404, content={"detail": "Not found"})
+
+    # Direct static file request (e.g. favicon.ico, asset-manifest.json)
+    if full_path:
+        file_path = STATIC_DIR / full_path
+        if file_path.exists() and file_path.is_file():
+            return FileResponse(file_path)
+
+    # Fallback to index.html for SPA routing
+    index_path = STATIC_DIR / "index.html"
+    if index_path.exists():
+        return FileResponse(index_path, media_type="text/html")
+
+    return JSONResponse(
+        status_code=404,
+        content={
+            "name": "MEXAR Core Engine",
+            "version": "2.0.0",
+            "status": "operational",
+            "docs": "/docs"
+        }
+    )
+
 
 
 

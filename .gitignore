@@ -58,6 +58,7 @@ backend/data/storage/
 backend/data/temp/
 backend/data/tts_cache/
 backend/data/agents/
+data/
 *.db
 
 # Test data (optional - uncomment if you want to include)
